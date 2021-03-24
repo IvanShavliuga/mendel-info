@@ -1,32 +1,30 @@
 <template>
   <div class="home">
-  <table class="home__table">
-    <app-rows
-      v-for="(r, k) in rows"
-      :key="k"
-      :count="r.count"
-      :start="r.start"
-      :jamp-start="r.break"
-      :jamp-offset="r.offset"
-      :elements="elements"
-    />
-  </table>
-  {{ elementindex(87) }}
+    <div class="home__table">
+      <app-elemtable/>
+      <app-viewelement/>
+    </div>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import appRows from '../components/Rows.vue'
-import { mapGetters } from 'vuex'
+import appElemtable from '../components/elemtable.vue'
+import appViewelement from '../components/viewelement.vue'
 
 export default {
   name: 'Home',
   components: {
-    appRows
-  },
-  computed: {
-    ...mapGetters(['elements', 'elementindex', 'rows'])
+    appViewelement,
+    appElemtable
   }
 }
 </script>
+
+<style scoped lang="less">
+.home {
+  &__table {
+    display: flex;
+  }
+}
+</style>
