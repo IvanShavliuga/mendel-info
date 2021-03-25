@@ -1,6 +1,10 @@
 <template>
-  <td :bgcolor="background" class="element">
-    {{ shortName }}
+  <td
+    @mouseover="selelem"
+    @click="clelem"
+    :bgcolor="background"
+    class="element">
+    {{ shortName }} {{ ind }}
   </td>
 </template>
 
@@ -16,6 +20,20 @@ export default {
     index: {
       type: Number
     }
+  },
+  data () {
+    return {
+      ind: null
+    }
+  },
+  methods: {
+    selelem () {
+      console.log(this.index)
+      this.$store.dispatch('selElement', this.index)
+    },
+    clelem () {
+      this.ind = this.$store.getters.elementindex(this.index)
+    }
   }
 }
 </script>
@@ -25,6 +43,7 @@ export default {
 .element {
   height: 21px;
   width: 5%;
+  opacity: 0.6;
 }
 a {
   color: #42b983;
