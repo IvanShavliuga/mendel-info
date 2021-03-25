@@ -8,6 +8,7 @@ export default new Vuex.Store({
     baseUrl: 'https://mendel-info.usite.pro/publ/ehlementy/',
     elements: elements.list,
     select: {},
+    selrow: null,
     rows: [
       { count: 2, start: 1, break: 0, offset: 0 },
       { count: 8, start: 3, break: 0, offset: 0 },
@@ -21,14 +22,14 @@ export default new Vuex.Store({
     ]
   },
   mutations: {
-    SEL_ELEMENT (state, ind) {
-      state.select = state.elements[ind]
+    SEL_ELEMENT (state, obj) {
+      state.select = state.elements[obj.index]
+      state.selrow = obj.row
     }
   },
   actions: {
-    selElement ({ commit }, ind) {
-      console.log(ind)
-      commit('SEL_ELEMENT', ind)
+    selElement ({ commit }, obj) {
+      commit('SEL_ELEMENT', obj)
     }
   },
   getters: {
@@ -40,6 +41,7 @@ export default new Vuex.Store({
       })
     },
     select: state => state.select,
+    selrow: state => state.selrow,
     fullurl: state => (url) => state.baseUrl + url
   }
 })

@@ -6,6 +6,8 @@
     <h4 class="element__box-rus">{{ select.rusname }}</h4>
     <p class="element__box-mass">{{ select.mass }}</p>
     <p class="element__box-oxidation">{{ select.oxidation }}</p>
+    <p class="element__box-type">{{ select.type }}</p>
+    <p class="element__box-position">Группа: {{ selrow }}</p>
   </div>
 </div>
 </template>
@@ -14,7 +16,7 @@ import { mapGetters } from 'vuex'
 
 export default {
   computed: {
-    ...mapGetters(['select', 'fullurl'])
+    ...mapGetters(['select', 'fullurl', 'selrow'])
   }
 }
 </script>
@@ -58,6 +60,20 @@ export default {
       color: black;
     }
     &-oxidation {
+      font-size: 18px;
+      line-height: 20px;
+      margin: 0;
+      padding: 0;
+      color: black;
+    }
+    &-type {
+      font-size: 18px;
+      line-height: 20px;
+      margin: 0;
+      padding: 0;
+      color: black;
+    }
+    &-position {
       font-size: 18px;
       line-height: 20px;
       margin: 0;

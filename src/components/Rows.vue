@@ -5,6 +5,7 @@
       :index="0"
       :short-name="elements[0].shortname"
       :background="elements[0].bgcolor"
+      :type-element="elements[0].type"
     />
     <td :colspan="18-count">
     </td>
@@ -12,6 +13,7 @@
       :index="1"
       :short-name="elements[1].shortname"
       :background="elements[1].bgcolor"
+      :type-element="elements[1].type"
     />
   </tr>
   <tr v-if="count === 8">
@@ -19,11 +21,13 @@
       :index="start - 1"
       :short-name="elements[start - 1].shortname"
       :background="elements[start - 1].bgcolor"
+      :type-element="elements[start - 1].type"
     />
     <app-element
       :index="start"
       :short-name="elements[start].shortname"
       :background="elements[start].bgcolor"
+      :type-element="elements[start].type"
     />
     <td :colspan="18-count">
     </td>
@@ -33,6 +37,7 @@
       :key="elements[start + ind].index"
       :short-name="elements[start + ind].shortname"
       :background="elements[start + ind].bgcolor"
+      :type-element="elements[start + ind].type"
     />
   </tr>
   <tr v-if="count === 18 && jampStart === 0">
@@ -42,6 +47,7 @@
       :key="elements[start + ind - 2].index"
       :short-name="elements[start + ind - 2].shortname"
       :background="elements[start + ind - 2].bgcolor"
+      :type-element="elements[start + ind - 2].type"
     />
   </tr>
   <tr v-if="count === 18 && jampStart !== 0">
@@ -51,6 +57,7 @@
       :index="-1 + elements[start + ind - 2].index"
       :short-name="elements[start + ind - 2].shortname"
       :background="elements[start + ind - 2].bgcolor"
+      :type-element="elements[start + ind - 2].type"
     />
     <app-element
       v-for="ind in 15"
@@ -58,6 +65,7 @@
       :key="elements[start + jampOffset + ind + 1].index"
       :short-name="elements[start + jampOffset + ind + 1].shortname"
       :background="elements[start + jampOffset + ind + 1].bgcolor"
+      :type-element="elements[start + jampOffset + ind + 1].type"
     />
   </tr>
   <tr v-if="count === 14">
@@ -67,6 +75,7 @@
       :key="elements[start + ind - 1].index"
       :short-name="elements[start + ind - 1].shortname"
       :background="elements[start + ind - 1].bgcolor"
+      :type-element="elements[start + ind - 1].type"
     />
   </tr>
 </tbody>
