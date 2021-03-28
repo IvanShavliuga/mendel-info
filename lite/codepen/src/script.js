@@ -1,5 +1,7 @@
-export default {
-  list: [
+const store = new Vuex.Store({
+  state: {
+    baseUrl: 'https://mendel-info.usite.pro/publ/ehlementy/',
+    elements: [
     { bgcolor: '#00FF00', type: 'неметалл', link: 'nemetally/vodorod_lat_hydrogenium/11-1-0-39', rusname: 'Водород', mass: '1.00794', oxidation: ' -1, +1', index: 1, shortname: 'H' },
     { bgcolor: '#00FFFF', type: 'инертный газ', link: 'inertnye-gazy/gelij_lat_helium/10-1-0-40', rusname: 'Гелий', mass: '4.002602', oxidation: 'в реакции не вступает', index: 2, shortname: 'He' },
     { bgcolor: '#00FF00', type: 'щелочный металл', link: 'shhelochnye-metally/litij_lat_lithium/4-1-0-51', rusname: 'Литий', mass: '6.941', oxidation: ' +1', index: 3, shortname: 'Li' },
@@ -123,5 +125,279 @@ export default {
     { bgcolor: '#00FFFF', type: 'легкий металл', link: 'legkie-metally/livermo_rij_lat_livermorium/7-1-0-119', rusname: 'Ливерморий', mass: '293', oxidation: '−2, +2, +4, +6 ', index: 116, shortname: 'Lv' },
     { bgcolor: '#00FFFF', type: 'галоген', link: 'galogeny/tennessin_lat_tennessine/9-1-0-121', rusname: 'Теннессин ', mass: ' 294', oxidation: ' -1, +1, +3, +5, +7', index: 117, shortname: 'Ts' },
     { bgcolor: '#00FFFF', type: 'инертный газ', link: 'inertnye-gazy/oganeson_lat_oganesson/10-1-0-118', rusname: 'Оганесон', mass: ' 294', oxidation: ' -1, 0, +1, +2, +4, +6', index: 118, shortname: 'Og' }
-  ]
+  ],
+    select: {},
+    selrow: null,
+    rows: [
+      { count: 2, start: 1, break: 0, offset: 0 },
+      { count: 8, start: 3, break: 0, offset: 0 },
+      { count: 8, start: 11, break: 0, offset: 0 },
+      { count: 18, start: 19, break: 0, offset: 0 },
+      { count: 18, start: 37, break: 0, offset: 0 },
+      { count: 18, start: 55, break: 57, offset: 14 },
+      { count: 18, start: 87, break: 89, offset: 14 },
+      { count: 14, start: 57, break: 0, offset: 0 },
+      { count: 14, start: 89, break: 0, offset: 0 }
+    ]
+  },
+  mutations: {
+    SEL_ELEMENT (state, obj) {
+      state.select = state.elements[obj.index]
+      state.selrow = obj.row
+    }
+  },
+  actions: {
+    selElement ({ commit }, obj) {
+      commit('SEL_ELEMENT', obj)
+    }
+  },
+  getters: {
+    elements: state => state.elements,
+    rows: state => state.rows,
+    elementindex: state => (id) => {
+      return state.elements.findIndex((el) => {
+        return el.index === id
+      })
+    },
+    select: state => state.select,
+    selrow: state => state.selrow,
+    fullurl: state => (url) => state.baseUrl + url
+  }
+})
+Vue.component('app-element', {
+  name: 'appElement',
+  props: {
+    shortName: {
+      type: String
+    },
+    background: {
+      type: String
+    },
+    index: {
+      type: Number
+    },
+    typeElement: {
+      type: String
+    }
+  },
+  data () {
+    return {
+      ind: null
+    }
+  },
+  computed: {
+    typecolor () {
+      switch (this.typeElement) {
+        case 'неметалл': return '#3473d2'
+        case 'инертный газ': return '#239e8e'
+        case 'щелочный металл': return '#d3a223'
+        case 'щелочныйземельный металл': return '#d35223'
+        case 'полуметалл': return '#a1a310'
+        case 'галоген': return '#914390'
+        case 'легкий металл': return '#bb80a0'
+        case 'переходной металл': return '#9b9040'
+        case 'лантанид': return '#e455d0'
+        case 'актинид': return '#849880'
+      }
+      return '#232323'
+    },
+    getRowInd () {
+      if (this.index <= 2) return 1
+      if (this.index > 2 && this.index <= 10) return 2
+      if (this.index >= 11 && this.index <= 18) return 3
+      if (this.index >= 19 && this.index <= 36) return 4
+      if (this.index >= 37 && this.index <= 54) return 5
+      if (this.index >= 55 && this.index <= 86) return 6
+      if (this.index >= 87 && this.index <= 118) return 7
+      return null
+    }
+  },
+  methods: {
+    selelem () {
+      console.log(this.index)
+      this.$store.dispatch('selElement', {
+        index: this.index,
+        row: this.getRowInd
+      })
+    },
+    clelem () {
+      this.ind = this.$store.getters.elementindex(this.index)
+    }
+  },
+  template: `<td
+    @mouseover="selelem"
+    @click="selelem"
+    :bgcolor="typecolor"
+    class="element">
+    {{ shortName }} {{ ind }}
+  </td>`
+})
+Vue.component('app-rows', {
+  props: {
+    count: {
+      type: Number
+    },
+    start: {
+      type: Number
+    },
+    elements: {
+      type: Array
+    },
+    jampStart: {
+      type: Number
+    },
+    jampOffset: {
+      type: Number
+    }
+  },
+  template: `<tbody>
+  <tr v-if="count === 2">
+    <app-element
+      :index="0"
+      :short-name="elements[0].shortname"
+      :background="elements[0].bgcolor"
+      :type-element="elements[0].type"
+    />
+    <td :colspan="18-count">
+    </td>
+    <app-element
+      :index="1"
+      :short-name="elements[1].shortname"
+      :background="elements[1].bgcolor"
+      :type-element="elements[1].type"
+    />
+  </tr>
+  <tr v-if="count === 8">
+    <app-element
+      :index="start - 1"
+      :short-name="elements[start - 1].shortname"
+      :background="elements[start - 1].bgcolor"
+      :type-element="elements[start - 1].type"
+    />
+    <app-element
+      :index="start"
+      :short-name="elements[start].shortname"
+      :background="elements[start].bgcolor"
+      :type-element="elements[start].type"
+    />
+    <td :colspan="18-count">
+    </td>
+    <app-element
+      v-for="ind in (count - 2)"
+      :index="-1 + elements[start + ind].index"
+      :key="elements[start + ind].index"
+      :short-name="elements[start + ind].shortname"
+      :background="elements[start + ind].bgcolor"
+      :type-element="elements[start + ind].type"
+    />
+  </tr>
+  <tr v-if="count === 18 && jampStart === 0">
+    <app-element
+      v-for="ind in count"
+      :index="-1 + elements[start + ind - 2].index"
+      :key="elements[start + ind - 2].index"
+      :short-name="elements[start + ind - 2].shortname"
+      :background="elements[start + ind - 2].bgcolor"
+      :type-element="elements[start + ind - 2].type"
+    />
+  </tr>
+  <tr v-if="count === 18 && jampStart !== 0">
+    <app-element
+      v-for="ind in 3"
+      :key="elements[start + ind - 2].index"
+      :index="-1 + elements[start + ind - 2].index"
+      :short-name="elements[start + ind - 2].shortname"
+      :background="elements[start + ind - 2].bgcolor"
+      :type-element="elements[start + ind - 2].type"
+    />
+    <app-element
+      v-for="ind in 15"
+      :index="-1 + elements[start + jampOffset + ind + 1].index"
+      :key="elements[start + jampOffset + ind + 1].index"
+      :short-name="elements[start + jampOffset + ind + 1].shortname"
+      :background="elements[start + jampOffset + ind + 1].bgcolor"
+      :type-element="elements[start + jampOffset + ind + 1].type"
+    />
+  </tr>
+  <tr v-if="count === 14">
+    <app-element
+      v-for="ind in 14"
+      :index="-1 + elements[start + ind - 1].index"
+      :key="elements[start + ind - 1].index"
+      :short-name="elements[start + ind - 1].shortname"
+      :background="elements[start + ind - 1].bgcolor"
+      :type-element="elements[start + ind - 1].type"
+    />
+  </tr>
+</tbody>`
+})
+Vue.component('app-elemtable', {
+  data () {
+    return {
+      elements: [],
+      rows: [],
+      elementindex: 0
+    }
+  },
+  created () {
+     this.elements = this.$store.getters.elements
+    this.elementindex = this.$store.getters.elementindex
+    this.rows = this.$store.getters.rows
+  },
+  template: `<table class="table" border="0" cellspacing="1px" width="100%">
+    <app-rows
+      v-for="(r, k) in rows"
+      :key="k"
+      :count="r.count"
+      :start="r.start"
+      :jamp-start="r.break"
+      :jamp-offset="r.offset"
+      :elements="elements"
+    />
+    <!-- <tbody>
+      <tr
+        v-for="(el, k) in elements"
+        :key="100+k"
+      >
+      <td>DB: {{ el.index }}</td>
+      <td>ARRINDEX: {{ elementindex(el.index) }}</td>
+      <td>NAME: {{ el.rusname }}</td>
+      <td>SHNAME: {{ el.shortname }}</td>
+      </tr>
+    </tbody> -->
+  </table>`
+})
+Vue.component('app-viewelement',{
+  data() {
+    return {
+      select: {},
+      fullurl: ''
+    }
+  },
+  created () {
+    this.select = this.$store.getters.select
+    this.fullurl = this.$store.getters.fullurl
+  },
+  updated () {
+    this.select = this.$store.getters.select
+    this.fullurl = this.$store.getters.fullurl
+  },
+
+  template: `<div class="element">
+  <div class="element__box" v-if="select">
+    <h2 class="element__box-short">{{ select.shortname }}</h2>
+    <h3 class="element__box-index">{{ select.index }}</h3>
+    <h4 class="element__box-rus">{{ select.rusname }}</h4>
+    <p class="element__box-mass">{{ select.mass }}</p>
+    <p class="element__box-oxidation">{{ select.oxidation }}</p>
+    <p class="element__box-type">{{ select.type }}</p>
+    <p class="element__box-position">Группа: {{ selrow }}</p>
+  </div>
+</div>`
+})
+window.onload=function(){
+      var app = new Vue({
+        store,
+        el: '#app',
+      });
 }

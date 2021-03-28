@@ -1,9 +1,11 @@
-export default {
-  list: [
+const store = new Vuex.Store({
+  state: {
+    baseUrl: 'https://mendel-info.usite.pro/publ/ehlementy/',
+    elements: [
     { bgcolor: '#00FF00', type: 'неметалл', link: 'nemetally/vodorod_lat_hydrogenium/11-1-0-39', rusname: 'Водород', mass: '1.00794', oxidation: ' -1, +1', index: 1, shortname: 'H' },
     { bgcolor: '#00FFFF', type: 'инертный газ', link: 'inertnye-gazy/gelij_lat_helium/10-1-0-40', rusname: 'Гелий', mass: '4.002602', oxidation: 'в реакции не вступает', index: 2, shortname: 'He' },
     { bgcolor: '#00FF00', type: 'щелочный металл', link: 'shhelochnye-metally/litij_lat_lithium/4-1-0-51', rusname: 'Литий', mass: '6.941', oxidation: ' +1', index: 3, shortname: 'Li' },
-    { bgcolor: '#00FF00', type: 'щелочныйземельный металл', link: 'shhelochnozemelnye-metally/berillij_lat_veryllium/5-1-0-11', rusname: 'Бериллий', mass: '9.012182', oxidation: ' +2', index: 4, shortname: 'Be' },
+    { bgcolor: '#00FF00', type: 'щелочноземельный металл', link: 'shhelochnozemelnye-metally/berillij_lat_veryllium/5-1-0-11', rusname: 'Бериллий', mass: '9.012182', oxidation: ' +2', index: 4, shortname: 'Be' },
     { bgcolor: '#00FFFF', type: 'полуметалл', link: 'polumetally/bor_lat_borum/8-1-0-9', rusname: 'Бор', mass: '10.811', oxidation: ' -3, +3', index: 5, shortname: 'B' },
     { bgcolor: '#00FFFF', type: 'неметалл', link: 'nemetally/uglerod_lat_carboneum/11-1-0-16', rusname: 'Углерод', mass: '12.0107', oxidation: ' -4, +2,+4', index: 6, shortname: 'C' },
     { bgcolor: '#00FFFF', type: 'неметалл', link: 'nemetally/azot_lat_nitrogenium/11-1-0-59', rusname: ' Азот', mass: '14.00674', oxidation: ' -3,+1,+2,+3,+4,+5', index: 7, shortname: 'N' },
@@ -11,7 +13,7 @@ export default {
     { bgcolor: '#00FFFF', type: 'галоген', link: 'galogeny/ftor_lat_fluorum/9-1-0-32', rusname: 'Фтор', mass: '18.9984032', oxidation: ' -1', index: 9, shortname: 'F' },
     { bgcolor: '#00FFFF', type: 'инертный газ', link: 'inertnye-gazy/neon_lat_neon/10-1-0-63', rusname: 'Неон', mass: '20.1797', oxidation: 'в реакции не вступает', index: 10, shortname: 'Ne' },
     { bgcolor: '#00FF00', type: 'щелочный металл', link: 'shhelochnye-metally/natrij_lat_natrium/4-1-0-60', rusname: 'Натрий', mass: '22.98970', oxidation: ' +1', index: 11, shortname: 'Na' },
-    { bgcolor: '#00FF00', type: 'щелочныйземельный металл', link: 'shhelochnozemelnye-metally/magnij_lat_magnesium/5-1-0-55', rusname: 'Магний', mass: '26.3050', oxidation: ' +2', index: 12, shortname: 'Mg' },
+    { bgcolor: '#00FF00', type: 'щелочноземельный металл', link: 'shhelochnozemelnye-metally/magnij_lat_magnesium/5-1-0-55', rusname: 'Магний', mass: '26.3050', oxidation: ' +2', index: 12, shortname: 'Mg' },
     { bgcolor: '#00FFFF', type: 'легкий металл', link: 'legkie-metally/aljuminij/7-1-0-3', rusname: 'Алюминий', mass: '26.981538', oxidation: ' +3', index: 13, shortname: 'Al' },
     { bgcolor: '#00FFFF', type: 'полуметалл', link: 'polumetally/kremnij_lat_silicium/8-1-0-90', rusname: 'Кремний', mass: '28.0855', oxidation: ' -4, +2,+4', index: 14, shortname: 'Si' },
     { bgcolor: '#00FFFF', type: 'неметалл', link: 'nemetally/fosfor_lat_phosphopus/11-1-0-69', rusname: 'Фосфор', mass: '30.973761', oxidation: ' -3,+1,+3,+4,+5', index: 15, shortname: 'P' },
@@ -19,7 +21,7 @@ export default {
     { bgcolor: '#00FFFF', type: 'галоген', link: 'galogeny/khlor_lat_shlorum/9-1-0-21', rusname: 'Хлор', mass: '35.4527', oxidation: ' -1, +1,+3,+5,+7', index: 17, shortname: 'Cl' },
     { bgcolor: '#00FFFF', type: 'инертный газ', link: 'inertnye-gazy/argon_lat_argon/10-1-0-5', rusname: 'Аргон', mass: '38.948', oxidation: 'в реакции не вступает', index: 18, shortname: 'Ar' },
     { bgcolor: '#00FF00', type: 'щелочный металл', link: 'shhelochnye-metally/kalij_lat_kalium/4-1-0-48', rusname: 'Калий', mass: '39.09870', oxidation: ' +1', index: 19, shortname: 'K' },
-    { bgcolor: '#00FF00', type: 'щелочныйземельный металл', link: 'shhelochnozemelnye-metally/kalcij_lat_calcium/5-1-0-17', rusname: 'Кальций', mass: '40.078', oxidation: ' +2', index: 20, shortname: 'Ca' },
+    { bgcolor: '#00FF00', type: 'щелочноземельный металл', link: 'shhelochnozemelnye-metally/kalcij_lat_calcium/5-1-0-17', rusname: 'Кальций', mass: '40.078', oxidation: ' +2', index: 20, shortname: 'Ca' },
     { bgcolor: '#FFFF00', type: 'переходной металл', link: 'perekhodnye-metally//skandij_lat_scandium/6-1-0-87', rusname: 'Скандий', mass: '44.955910', oxidation: ' +3', index: 21, shortname: 'Sc' },
     { bgcolor: '#FFFF00', type: 'переходной металл', link: 'perekhodnye-metally//titan_lat_titanium/6-1-0-99', rusname: 'Титан', mass: '47.867', oxidation: ' +3,+4', index: 22, shortname: 'Ti' },
     { bgcolor: '#FFFF00', type: 'переходной металл', link: 'perekhodnye-metally//vanadij_lat_vanadium/6-1-0-103', rusname: 'Ванадий', mass: '50.9415', oxidation: ' +2,+3,+4,+5', index: 23, shortname: 'V' },
@@ -37,7 +39,7 @@ export default {
     { bgcolor: '#00FFFF', type: 'галоген', link: 'galogeny/brom_lat_bromum/9-1-0-15', rusname: ' Бром', mass: '79.904', oxidation: ' -1,+1,+3,+5,+7', index: 35, shortname: 'Br' },
     { bgcolor: '#00FFFF', type: 'инертный газ', link: 'inertnye-gazy/kripton_lat_krypton/10-1-0-49', rusname: 'Криптон', mass: '83.80', oxidation: ' +2,+4', index: 36, shortname: 'Kr' },
     { bgcolor: '#00FF00', type: 'щелочный металл', link: 'shhelochnye-metally/rubidij_lat_rubidium/4-1-0-79', rusname: 'Рубидий', mass: '85.4678', oxidation: ' +1', index: 37, shortname: 'Rb' },
-    { bgcolor: '#00FF00', type: 'щелочныйземельный металл', link: 'shhelochnozemelnye-metally/stroncij_lat_strontium/5-1-0-93', rusname: ' Стронций', mass: '87.62', oxidation: ' +2', index: 38, shortname: 'Sr' },
+    { bgcolor: '#00FF00', type: 'щелочноземельный металл', link: 'shhelochnozemelnye-metally/stroncij_lat_strontium/5-1-0-93', rusname: ' Стронций', mass: '87.62', oxidation: ' +2', index: 38, shortname: 'Sr' },
     { bgcolor: '#FFFF00', type: 'переходной металл', link: 'perekhodnye-metally//ittrij_lat_yttrium/6-1-0-106', rusname: ' Иттрий', mass: '88.90585', oxidation: ' +3', index: 39, shortname: 'Y' },
     { bgcolor: '#FFFF00', type: 'переходной металл', link: 'perekhodnye-metally//cirkonij_lat_zirconium/6-1-0-109', rusname: ' Цирконий', mass: '91.224', oxidation: ' +4', index: 40, shortname: 'Zr' },
     { bgcolor: '#FFFF00', type: 'переходной металл', link: 'perekhodnye-metally//niobij_lat_niobium/6-1-0-61', rusname: 'Ниобий', mass: '92.90638', oxidation: ' +2,+3,+4,+5', index: 41, shortname: 'Nb' },
@@ -55,7 +57,7 @@ export default {
     { bgcolor: '#00FFFF', type: 'галоген', link: 'galogeny/iod_lat_iodum/9-1-0-45', rusname: ' Иод', mass: '126.90447', oxidation: ' -1, +1,+3,+5,+7', index: 53, shortname: 'I' },
     { bgcolor: '#00FFFF', type: 'инертный газ', link: 'inertnye-gazy/ksenon_lat_xeno/10-1-0-105', rusname: ' Ксенон', mass: '131.29', oxidation: ' +2,+4,+6,+8', index: 54, shortname: 'Xe' },
     { bgcolor: '#00FF00', type: 'щелочный металл', link: 'shhelochnye-metally/francij_lat_francium/4-1-0-35', rusname: ' Цезий', mass: '132.90545', oxidation: ' +1', index: 55, shortname: 'Cs' },
-    { bgcolor: '#00FF00', type: 'щелочныйземельный металл', link: 'shhelochnozemelnye-metally/barij_lat_baryum/5-1-0-10', rusname: ' Барий', mass: '137.327', oxidation: ' +2', index: 56, shortname: 'Ba' },
+    { bgcolor: '#00FF00', type: 'щелочноземельный металл', link: 'shhelochnozemelnye-metally/barij_lat_baryum/5-1-0-10', rusname: ' Барий', mass: '137.327', oxidation: ' +2', index: 56, shortname: 'Ba' },
     { bgcolor: '#FFFF00', type: 'лантанид', link: 'lantanoidy//lantan_lat_lanthanum/13-1-0-50', rusname: ' Лантан', mass: '138.9055', oxidation: ' +3', index: 57, shortname: 'La' },
 
     { bgcolor: '#FF00FF', type: 'лантанид', link: 'lantanoidy//cerij_lat_cerium/13-1-0-19', rusname: ' Церий', mass: '140.116', oxidation: ' +3,+4', index: 58, shortname: 'Ce' },
@@ -90,7 +92,7 @@ export default {
     { bgcolor: '#00FFFF', type: 'инертный газ', link: 'inertnye-gazy/radon_lat_radon/10-1-0-83', rusname: ' Радон', mass: '222.017', oxidation: ' +2,+4,+6', index: 86, shortname: 'Rn' },
 
     { bgcolor: '#00FF00', type: 'щелочный металл', link: 'shhelochnye-metally/francij_lat_francium/4-1-0-35', rusname: ' Франций', mass: '223.019', oxidation: '+1', index: 87, shortname: 'Fr' },
-    { bgcolor: '#00FF00', type: 'щелочныйземельный металл', link: 'shhelochnozemelnye-metally/radij_lat_radium/5-1-0-78', rusname: ' Радий', mass: '226.', oxidation: ' +2', index: 88, shortname: 'Ra' },
+    { bgcolor: '#00FF00', type: 'щелочноземельный металл', link: 'shhelochnozemelnye-metally/radij_lat_radium/5-1-0-78', rusname: ' Радий', mass: '226.', oxidation: ' +2', index: 88, shortname: 'Ra' },
     { bgcolor: '#FFFF00', type: 'актинид', link: 'aktinoidy/aktinij/12-1-0-1', rusname: ' Актиний', mass: '227.027', oxidation: ' +3', index: 89, shortname: 'Ac' },
 
     { bgcolor: '#FF00FF', type: 'актинид', link: 'aktinoidy/torij_lat_thorium/12-1-0-98', rusname: ' Торий', mass: '232.0381', oxidation: ' +3,+4', index: 90, shortname: 'Th' },
@@ -123,5 +125,285 @@ export default {
     { bgcolor: '#00FFFF', type: 'легкий металл', link: 'legkie-metally/livermo_rij_lat_livermorium/7-1-0-119', rusname: 'Ливерморий', mass: '293', oxidation: '−2, +2, +4, +6 ', index: 116, shortname: 'Lv' },
     { bgcolor: '#00FFFF', type: 'галоген', link: 'galogeny/tennessin_lat_tennessine/9-1-0-121', rusname: 'Теннессин ', mass: ' 294', oxidation: ' -1, +1, +3, +5, +7', index: 117, shortname: 'Ts' },
     { bgcolor: '#00FFFF', type: 'инертный газ', link: 'inertnye-gazy/oganeson_lat_oganesson/10-1-0-118', rusname: 'Оганесон', mass: ' 294', oxidation: ' -1, 0, +1, +2, +4, +6', index: 118, shortname: 'Og' }
-  ]
+  ],
+    select: {},
+    selrow: null,
+    rows: [
+      { count: 2, start: 1, break: 0, offset: 0 },
+      { count: 8, start: 3, break: 0, offset: 0 },
+      { count: 8, start: 11, break: 0, offset: 0 },
+      { count: 18, start: 19, break: 0, offset: 0 },
+      { count: 18, start: 37, break: 0, offset: 0 },
+      { count: 18, start: 55, break: 57, offset: 14 },
+      { count: 18, start: 87, break: 89, offset: 14 },
+      { count: 14, start: 57, break: 0, offset: 0 },
+      { count: 14, start: 89, break: 0, offset: 0 }
+    ]
+  },
+  mutations: {
+    SEL_ELEMENT (state, obj) {
+      state.select = state.elements[obj.index]
+      state.selrow = obj.row
+      console.log(state.select)
+    }
+  },
+  actions: {
+    selElement ({ commit }, obj) {
+      console.log(obj)
+      commit('SEL_ELEMENT', obj)
+    }
+  },
+  getters: {
+    elements: state => state.elements,
+    rows: state => state.rows,
+    elementindex: state => (id) => {
+      return state.elements.findIndex((el) => {
+        return el.index === id
+      })
+    },
+    select: state => state.select,
+    selrow: state => state.selrow,
+    fullurl: state => (url) => state.baseUrl + url
+  }
+})
+Vue.component('app-element', {
+  name: 'appElement',
+  props: {
+    shortName: {
+      type: String
+    },
+    background: {
+      type: String
+    },
+    index: {
+      type: Number
+    },
+    typeElement: {
+      type: String
+    }
+  },
+  data () {
+    return {
+      ind: null
+    }
+  },
+  computed: {
+    typecolor () {
+      switch (this.typeElement) {
+        case 'неметалл': return '#3473d2'
+        case 'инертный газ': return '#239e8e'
+        case 'щелочный металл': return '#d3a223'
+        case 'щелочноземельный металл': return '#d35223'
+        case 'полуметалл': return '#a1a310'
+        case 'галоген': return '#914390'
+        case 'легкий металл': return '#bb80a0'
+        case 'переходной металл': return '#9b9040'
+        case 'лантанид': return '#e455d0'
+        case 'актинид': return '#849880'
+      }
+      return '#232323'
+    },
+    getRowInd () {
+      if (this.index <= 2) return 1
+      if (this.index > 2 && this.index <= 10) return 2
+      if (this.index >= 11 && this.index <= 18) return 3
+      if (this.index >= 19 && this.index <= 36) return 4
+      if (this.index >= 37 && this.index <= 54) return 5
+      if (this.index >= 55 && this.index <= 86) return 6
+      if (this.index >= 87 && this.index <= 118) return 7
+      return null
+    }
+  },
+  methods: {
+    selelem () {
+      console.log(this.index)
+      this.$store.dispatch('selElement', {
+        index: this.index,
+        row: this.getRowInd
+      })
+    },
+    clelem () {
+      this.ind = this.$store.getters.elementindex(this.index)
+    }
+  },
+  template: `<td
+    @mouseover="selelem"
+    @click="selelem"
+    :bgcolor="typecolor"
+    class="element">
+    {{ shortName }} {{ ind }}
+  </td>`
+})
+Vue.component('app-rows', {
+  props: {
+    count: {
+      type: Number
+    },
+    start: {
+      type: Number
+    },
+    elements: {
+      type: Array
+    },
+    jampStart: {
+      type: Number
+    },
+    jampOffset: {
+      type: Number
+    }
+  },
+  template: `<tbody>
+  <tr v-if="count === 2">
+    <app-element
+      :index="0"
+      :short-name="elements[0].shortname"
+      :background="elements[0].bgcolor"
+      :type-element="elements[0].type"
+    />
+    <td :colspan="18-count">
+    </td>
+    <app-element
+      :index="1"
+      :short-name="elements[1].shortname"
+      :background="elements[1].bgcolor"
+      :type-element="elements[1].type"
+    />
+  </tr>
+  <tr v-if="count === 8">
+    <app-element
+      :index="start - 1"
+      :short-name="elements[start - 1].shortname"
+      :background="elements[start - 1].bgcolor"
+      :type-element="elements[start - 1].type"
+    />
+    <app-element
+      :index="start"
+      :short-name="elements[start].shortname"
+      :background="elements[start].bgcolor"
+      :type-element="elements[start].type"
+    />
+    <td :colspan="18-count">
+    </td>
+    <app-element
+      v-for="ind in (count - 2)"
+      :index="-1 + elements[start + ind].index"
+      :key="elements[start + ind].index"
+      :short-name="elements[start + ind].shortname"
+      :background="elements[start + ind].bgcolor"
+      :type-element="elements[start + ind].type"
+    />
+  </tr>
+  <tr v-if="count === 18 && jampStart === 0">
+    <app-element
+      v-for="ind in count"
+      :index="-1 + elements[start + ind - 2].index"
+      :key="elements[start + ind - 2].index"
+      :short-name="elements[start + ind - 2].shortname"
+      :background="elements[start + ind - 2].bgcolor"
+      :type-element="elements[start + ind - 2].type"
+    />
+  </tr>
+  <tr v-if="count === 18 && jampStart !== 0">
+    <app-element
+      v-for="ind in 3"
+      :key="elements[start + ind - 2].index"
+      :index="-1 + elements[start + ind - 2].index"
+      :short-name="elements[start + ind - 2].shortname"
+      :background="elements[start + ind - 2].bgcolor"
+      :type-element="elements[start + ind - 2].type"
+    />
+    <app-element
+      v-for="ind in 15"
+      :index="-1 + elements[start + jampOffset + ind + 1].index"
+      :key="elements[start + jampOffset + ind + 1].index"
+      :short-name="elements[start + jampOffset + ind + 1].shortname"
+      :background="elements[start + jampOffset + ind + 1].bgcolor"
+      :type-element="elements[start + jampOffset + ind + 1].type"
+    />
+  </tr>
+  <tr v-if="count === 14">
+    <app-element
+      v-for="ind in 14"
+      :index="-1 + elements[start + ind - 1].index"
+      :key="elements[start + ind - 1].index"
+      :short-name="elements[start + ind - 1].shortname"
+      :background="elements[start + ind - 1].bgcolor"
+      :type-element="elements[start + ind - 1].type"
+    />
+  </tr>
+</tbody>`
+})
+Vue.component('app-elemtable', {
+  data () {
+    return {
+      elements: [],
+      rows: [],
+      elementindex: 0
+    }
+  },
+  created () {
+     this.elements = this.$store.getters.elements
+    this.elementindex = this.$store.getters.elementindex
+    this.rows = this.$store.getters.rows
+  },
+  template: `<table class="table" border="0" cellspacing="1px" width="100%">
+    <app-rows
+      v-for="(r, k) in rows"
+      :key="k"
+      :count="r.count"
+      :start="r.start"
+      :jamp-start="r.break"
+      :jamp-offset="r.offset"
+      :elements="elements"
+    />
+    <!-- <tbody>
+      <tr
+        v-for="(el, k) in elements"
+        :key="100+k"
+      >
+      <td>DB: {{ el.index }}</td>
+      <td>ARRINDEX: {{ elementindex(el.index) }}</td>
+      <td>NAME: {{ el.rusname }}</td>
+      <td>SHNAME: {{ el.shortname }}</td>
+      </tr>
+    </tbody> -->
+  </table>`
+})
+Vue.component('app-viewelement',{
+  computed: {
+    select () {
+      return this.$store.getters.select
+    },
+    fullurl () {
+      return this.$store.getters.fullurl
+    }
+  },
+
+  template: `<div class="element">
+  <div class="element__box" v-if="select">
+    <h2 class="element__box-short">{{ select.shortname }}</h2>
+    <h3 class="element__box-index">{{ select.index }}</h3>
+    <h4 class="element__box-rus">{{ select.rusname }}</h4>
+    <p class="element__box-mass">{{ select.mass }}</p>
+    <p class="element__box-oxidation">{{ select.oxidation }}</p>
+    <p class="element__box-type">{{ select.type }}</p>
+    <a :href="fullurl+select.link">открыть</a>
+  </div>
+</div>`
+})
+Vue.component('app-roottable', {
+  template: `<div style="display: flex;"> <app-elemtable/>
+  <app-viewelement/> </div>`,
+  created () {
+    this.$store.dispatch('selElement', {
+      index: 0,
+      row: 0
+    })
+  }
+})
+window.onload=function(){
+      var app = new Vue({
+        store,
+        el: '#app',
+      });
 }
