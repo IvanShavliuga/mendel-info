@@ -6,6 +6,8 @@
       :short-name="elements[0].shortname"
       :background="elements[0].bgcolor"
       :type-element="elements[0].type"
+      :select-element="elements[0].select"
+      :mode-view="modeView"
     />
     <td :colspan="18-count">
     </td>
@@ -14,6 +16,8 @@
       :short-name="elements[1].shortname"
       :background="elements[1].bgcolor"
       :type-element="elements[1].type"
+      :select-element="elements[1].select"
+      :mode-view="modeView"
     />
   </tr>
   <tr v-if="count === 8">
@@ -22,12 +26,16 @@
       :short-name="elements[start - 1].shortname"
       :background="elements[start - 1].bgcolor"
       :type-element="elements[start - 1].type"
+      :select-element="elements[start - 1].select"
+      :mode-view="modeView"
     />
     <app-element
       :index="start"
       :short-name="elements[start].shortname"
       :background="elements[start].bgcolor"
       :type-element="elements[start].type"
+      :select-element="elements[start].select"
+      :mode-view="modeView"
     />
     <td :colspan="18-count">
     </td>
@@ -38,6 +46,8 @@
       :short-name="elements[start + ind].shortname"
       :background="elements[start + ind].bgcolor"
       :type-element="elements[start + ind].type"
+      :select-element="elements[start + ind].select"
+      :mode-view="modeView"
     />
   </tr>
   <tr v-if="count === 18 && jampStart === 0">
@@ -48,6 +58,8 @@
       :short-name="elements[start + ind - 2].shortname"
       :background="elements[start + ind - 2].bgcolor"
       :type-element="elements[start + ind - 2].type"
+      :select-element="elements[start + ind - 2].select"
+      :mode-view="modeView"
     />
   </tr>
   <tr v-if="count === 18 && jampStart !== 0">
@@ -58,6 +70,8 @@
       :short-name="elements[start + ind - 2].shortname"
       :background="elements[start + ind - 2].bgcolor"
       :type-element="elements[start + ind - 2].type"
+      :select-element="elements[start + ind - 2].select"
+      :mode-view="modeView"
     />
     <app-element
       v-for="ind in 15"
@@ -66,6 +80,8 @@
       :short-name="elements[start + jampOffset + ind + 1].shortname"
       :background="elements[start + jampOffset + ind + 1].bgcolor"
       :type-element="elements[start + jampOffset + ind + 1].type"
+      :select-element="elements[start + jampOffset + ind + 1].select"
+      :mode-view="modeView"
     />
   </tr>
   <tr v-if="count === 14">
@@ -76,6 +92,8 @@
       :short-name="elements[start + ind - 1].shortname"
       :background="elements[start + ind - 1].bgcolor"
       :type-element="elements[start + ind - 1].type"
+      :select-element="elements[start + ind - 1].select"
+      :mode-view="modeView"
     />
   </tr>
 </tbody>
@@ -98,6 +116,9 @@ export default {
     },
     jampOffset: {
       type: Number
+    },
+    modeView: {
+      type: Boolean
     }
   },
   components: {

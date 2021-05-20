@@ -9,6 +9,7 @@ export default new Vuex.Store({
     elements: elements.list,
     select: {},
     selrow: null,
+    modeview: false, // true => select, false => all
     rows: [
       { count: 2, start: 1, break: 0, offset: 0 },
       { count: 8, start: 3, break: 0, offset: 0 },
@@ -25,11 +26,41 @@ export default new Vuex.Store({
     SEL_ELEMENT (state, obj) {
       state.select = state.elements[obj.index]
       state.selrow = obj.row
+    },
+    SEL_ELEMENTS (state, obj) {
+      let count = 0
+      console.log(count)
+      console.log(obj)
+      for (let i = 0; i < state.elements.length; i++) {
+        state.elements[i].select = false
+      }
+      for (let i = 0; i < state.elements.length; i++) {
+        if (obj.type === 'type') {
+          console.log('enter if 1')
+          if (state.elements[i].type === obj.query) {
+            state.elements[i].select = true
+            count++
+
+            console.log('enter if 2')
+            console.log(state.elements[i].select)
+          }
+        }
+      }
+      if (count) {
+        state.modeview = true
+      } else {
+        state.modeview = false
+      }
+      console.log(state.modeview)
     }
   },
   actions: {
     selElement ({ commit }, obj) {
       commit('SEL_ELEMENT', obj)
+    },
+    selElements ({ commit }, obj) {
+      console.log('action')
+      commit('SEL_ELEMENTS', obj)
     }
   },
   getters: {
@@ -42,6 +73,7 @@ export default new Vuex.Store({
     },
     select: state => state.select,
     selrow: state => state.selrow,
+    modeview: state => state.modeview,
     fullurl: state => (url) => state.baseUrl + url
   }
 })

@@ -2,7 +2,7 @@
   <td
     @mouseover="selelem"
     @click="clelem"
-    :bgcolor="typecolor"
+    :bgcolor="selcolor"
     class="element">
     {{ shortName }} {{ ind }}
   </td>
@@ -22,6 +22,12 @@ export default {
     },
     typeElement: {
       type: String
+    },
+    selectElement: {
+      type: Boolean
+    },
+    modeView: {
+      type: Boolean
     }
   },
   data () {
@@ -41,9 +47,20 @@ export default {
         case 'легкий металл': return '#bb80a0'
         case 'переходной металл': return '#9b9040'
         case 'лантанид': return '#e455d0'
-        case 'актинид': return '#849880'
+        case 'актинид': return '#245870'
       }
       return '#232323'
+    },
+    selcolor () {
+      if (this.modeView) {
+        if (this.selectElement) {
+          return this.typecolor
+        } else {
+          return '#aaa'
+        }
+      } else {
+        return this.typecolor
+      }
     },
     getRowInd () {
       if (this.index <= 2) return 1
