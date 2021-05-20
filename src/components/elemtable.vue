@@ -8,6 +8,7 @@
       :jamp-start="r.break"
       :jamp-offset="r.offset"
       :elements="elements"
+      :mode-view="modeview"
     />
     <!-- <tbody>
       <tr
@@ -30,7 +31,7 @@ export default {
     appRows
   },
   computed: {
-    ...mapGetters(['elements', 'elementindex', 'rows'])
+    ...mapGetters(['elements', 'elementindex', 'rows', 'modeview'])
   }
 }
 </script>

@@ -7,7 +7,7 @@
     <p class="element__box-mass">{{ select.mass }}</p>
     <p class="element__box-oxidation">{{ select.oxidation }}</p>
     <p class="element__box-type">{{ select.type }}</p>
-    <p class="element__box-position">Группа: {{ selrow }}</p>
+    <p class="element__box-position">Период: {{ selrow }}</p>
   </div>
 </div>
 </template>
