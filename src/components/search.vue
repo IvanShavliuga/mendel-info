@@ -1,5 +1,5 @@
 <template>
-  <form>
+  <form onsubmit="return false">
     <select v-model="selt" @click="seltype">
       <option
         v-for="(t, k) in types"
@@ -8,6 +8,7 @@
         {{ t }}
       </option>
     </select>
+    <input v-model="nameelem" type="text" @keypress="filtername"/>
   </form>
 </template>
 <script>
@@ -15,6 +16,7 @@ export default {
   data () {
     return {
       types: [
+        'все',
         'неметалл',
         'инертный газ',
         'щелочный металл',
@@ -27,17 +29,26 @@ export default {
         'лантанид',
         'актинид'
       ],
-      selt: ''
+      selt: '',
+      nameelem: ''
     }
   },
   methods: {
     seltype () {
-      console.log('enter search')
-      console.log(this.selt)
       this.$store.dispatch('selElements', {
         type: 'type',
         query: this.selt
       })
+    },
+    filtername () {
+      this.selt = 'все'
+      this.$store.dispatch('selElements', {
+        type: 'runame',
+        query: this.nameelem
+      })
+    },
+    resetfilter () {
+      this.$store.dispatch('resetFilter')
     }
   }
 }

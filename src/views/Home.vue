@@ -20,6 +20,11 @@ export default {
     appSearch,
     appViewelement,
     appElemtable
+  },
+  methods: {
+    resetSel () {
+      this.$store.dispatch('resetSelelem')
+    }
   }
 }
 </script>
