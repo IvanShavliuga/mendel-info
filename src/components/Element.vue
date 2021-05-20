@@ -1,10 +1,10 @@
 <template>
   <td
     @mouseover="selelem"
-    @click="clelem"
+    @click="selelem"
     :bgcolor="selcolor"
     class="element">
-    {{ shortName }} {{ ind }}
+    {{ shortName }}
   </td>
 </template>
 
@@ -28,11 +28,6 @@ export default {
     },
     modeView: {
       type: Boolean
-    }
-  },
-  data () {
-    return {
-      ind: null
     }
   },
   computed: {
@@ -80,9 +75,6 @@ export default {
         index: this.index,
         row: this.getRowInd
       })
-    },
-    clelem () {
-      this.ind = this.$store.getters.elementindex(this.index)
     }
   }
 }

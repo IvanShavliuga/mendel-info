@@ -1,5 +1,5 @@
 <template>
-  <form>
+  <form onsubmit="return false">
     <select v-model="selt" @click="seltype">
       <option
         v-for="(t, k) in types"
@@ -41,11 +41,14 @@ export default {
       })
     },
     filtername () {
-      console.log('enter ru name')
+      this.selt = 'все'
       this.$store.dispatch('selElements', {
         type: 'runame',
         query: this.nameelem
       })
+    },
+    resetfilter () {
+      this.$store.dispatch('resetFilter')
     }
   }
 }

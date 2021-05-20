@@ -7,7 +7,7 @@ export default new Vuex.Store({
   state: {
     baseUrl: 'https://mendel-info.usite.pro/publ/ehlementy/',
     elements: elements.list,
-    select: {},
+    select: null,
     selrow: null,
     modeview: false, // true => select, false => all
     rows: [
@@ -32,28 +32,41 @@ export default new Vuex.Store({
       for (let i = 0; i < state.elements.length; i++) {
         state.elements[i].select = false
       }
-      for (let i = 0; i < state.elements.length; i++) {
-        if (obj.type === 'type') {
-          if (state.elements[i].type === obj.query) {
-            state.elements[i].select = true
-            count++
-          }
-        }
-        if (obj.type === 'runame') {
-          const qu = obj.query.toUpperCase()
-          const rn = state.elements[i].rusname.toUpperCase()
-          if (rn.indexOf(qu) > -1) {
-            state.elements[i].select = true
-            count++
-          }
-        }
-      }
-      if (count) {
+      if (obj.query.length <= 1) {
         state.modeview = true
       } else {
-        state.modeview = false
+        for (let i = 0; i < state.elements.length; i++) {
+          if (obj.type === 'type') {
+            if (state.elements[i].type === obj.query) {
+              state.elements[i].select = true
+              count++
+            }
+          }
+          if (obj.type === 'runame') {
+            const qu = obj.query.toUpperCase()
+            const rn = state.elements[i].rusname.toUpperCase()
+            if (rn.indexOf(qu) > -1) {
+              state.elements[i].select = true
+              count++
+            }
+          }
+        }
+        if (count) {
+          state.modeview = true
+        } else {
+          state.modeview = false
+        }
       }
       console.log(state.modeview)
+    },
+    RESET_FILTER (state) {
+      state.modeview = false
+      for (let i = 0; i < state.elements.length; i++) {
+        state.elements[i].select = false
+      }
+    },
+    RESET_SELELEM (state) {
+      state.select = null
     }
   },
   actions: {
@@ -63,6 +76,12 @@ export default new Vuex.Store({
     selElements ({ commit }, obj) {
       console.log('action')
       commit('SEL_ELEMENTS', obj)
+    },
+    resetFilter ({ commit }) {
+      commit('RESET_FILTER')
+    },
+    resetSelelem ({ commit }) {
+      commit('RESET_SELELEM')
     }
   },
   getters: {
