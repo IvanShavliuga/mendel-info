@@ -29,20 +29,22 @@ export default new Vuex.Store({
     },
     SEL_ELEMENTS (state, obj) {
       let count = 0
-      console.log(count)
-      console.log(obj)
       for (let i = 0; i < state.elements.length; i++) {
         state.elements[i].select = false
       }
       for (let i = 0; i < state.elements.length; i++) {
         if (obj.type === 'type') {
-          console.log('enter if 1')
           if (state.elements[i].type === obj.query) {
             state.elements[i].select = true
             count++
-
-            console.log('enter if 2')
-            console.log(state.elements[i].select)
+          }
+        }
+        if (obj.type === 'runame') {
+          const qu = obj.query.toUpperCase()
+          const rn = state.elements[i].rusname.toUpperCase()
+          if (rn.indexOf(qu) > -1) {
+            state.elements[i].select = true
+            count++
           }
         }
       }
