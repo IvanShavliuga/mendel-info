@@ -96,7 +96,8 @@ export default new Vuex.Store({
         }
       }
       state.searchcount = count
-      if (obj.type === 'short' && count === 1) state.select = state.sellist[0]
+      if (count === 1) state.select = state.sellist[0]
+      if (count === 0) state.select = null
       if (obj.type === 'type' && obj.query === 'все') state.modeview = false
       else state.modeview = true
     },

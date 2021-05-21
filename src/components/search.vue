@@ -23,6 +23,7 @@
           class="searchelem__input"
           v-model="nameelem"
           type="text"
+          placeholder="Xe"
           @input="filtername"
         />
       </span>
@@ -35,6 +36,7 @@
           type="number"
           id="mass"
           v-model="masselem"
+          placeholder="1"
           @keypress.space="resetfilter"
           @input="selmass"
         />
@@ -48,6 +50,7 @@
           type="number"
           id="num"
           v-model="numselem"
+          placeholder="1"
           @keypress.space="resetfilter"
           @input="selnum"
         />
@@ -63,8 +66,12 @@
           v-model="oxi"
           @keypress.space="resetfilter"
           @input="seloxi"
+          placeholder="-1, +2"
         />
       </span>
+    </div>
+    <div class="searchelem__block">
+      <button class="searchelem__button" @click="resetfilter" @keypress.space="resetfilter">Очистить</button>
     </div>
   </form>
 </template>
@@ -98,6 +105,14 @@
   }
   &__select {
     padding: 5px;
+  }
+  &__button {
+    padding: 10px 15px;
+    margin: auto;
+    background-color: #238e9e;
+    border-radius: 12px;
+    border: none;
+    color: white;
   }
   &__checkpanel {
     display: inline-block;
@@ -142,8 +157,8 @@ export default {
       selt: 'все',
       nameelem: '',
       nametype: 'short',
-      masselem: 0,
-      numselem: 0,
+      masselem: 1,
+      numselem: 1,
       oxi: ''
     }
   },
