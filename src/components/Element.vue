@@ -70,7 +70,6 @@ export default {
   },
   methods: {
     selelem () {
-      console.log(this.index)
       this.$store.dispatch('selElement', {
         index: this.index,
         row: this.getRowInd
