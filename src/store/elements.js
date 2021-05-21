@@ -1,7 +1,7 @@
 export default {
   list: [
     { select: false, bgcolor: '#00FF00', type: 'неметалл', link: 'nemetally/vodorod_lat_hydrogenium/11-1-0-39', rusname: 'Водород', mass: 1.00794, oxidation: ' -1, +1', index: 1, shortname: 'H' },
-    { select: false, bgcolor: '#00FFFF', type: 'инертный газ', link: 'inertnye-gazy/gelij_lat_helium/10-1-0-40', rusname: 'Гелий', mass: 4.002602, oxidation: 'в реакции не вступает', index: 2, shortname: 'He' },
+    { select: false, bgcolor: '#00FFFF', type: 'инертный газ', link: 'inertnye-gazy/gelij_lat_helium/10-1-0-40', rusname: 'Гелий', mass: 4.002602, oxidation: 'not', index: 2, shortname: 'He' },
     { select: false, bgcolor: '#00FF00', type: 'щелочный металл', link: 'shhelochnye-metally/litij_lat_lithium/4-1-0-51', rusname: 'Литий', mass: 6.941, oxidation: ' +1', index: 3, shortname: 'Li' },
     { select: false, bgcolor: '#00FF00', type: 'щелочныйземельный металл', link: 'shhelochnozemelnye-metally/berillij_lat_veryllium/5-1-0-11', rusname: 'Бериллий', mass: 9.012182, oxidation: ' +2', index: 4, shortname: 'Be' },
     { select: false, bgcolor: '#00FFFF', type: 'полуметалл', link: 'polumetally/bor_lat_borum/8-1-0-9', rusname: 'Бор', mass: 10.811, oxidation: ' -3, +3', index: 5, shortname: 'B' },
@@ -9,7 +9,7 @@ export default {
     { select: false, bgcolor: '#00FFFF', type: 'неметалл', link: 'nemetally/azot_lat_nitrogenium/11-1-0-59', rusname: ' Азот', mass: 14.00674, oxidation: ' -3,+1,+2,+3,+4,+5', index: 7, shortname: 'N' },
     { select: false, bgcolor: '#00FFFF', type: 'неметалл', link: 'nemetally/kislorod_lat_okhygenium/11-1-0-67', rusname: 'Кислород', mass: 15.9994, oxidation: ' -2,-1,+2', index: 8, shortname: 'O' },
     { select: false, bgcolor: '#00FFFF', type: 'галоген', link: 'galogeny/ftor_lat_fluorum/9-1-0-32', rusname: 'Фтор', mass: 18.9984032, oxidation: ' -1', index: 9, shortname: 'F' },
-    { select: false, bgcolor: '#00FFFF', type: 'инертный газ', link: 'inertnye-gazy/neon_lat_neon/10-1-0-63', rusname: 'Неон', mass: 20.1797, oxidation: 'в реакции не вступает', index: 10, shortname: 'Ne' },
+    { select: false, bgcolor: '#00FFFF', type: 'инертный газ', link: 'inertnye-gazy/neon_lat_neon/10-1-0-63', rusname: 'Неон', mass: 20.1797, oxidation: 'not', index: 10, shortname: 'Ne' },
     { select: false, bgcolor: '#00FF00', type: 'щелочный металл', link: 'shhelochnye-metally/natrij_lat_natrium/4-1-0-60', rusname: 'Натрий', mass: 22.98970, oxidation: ' +1', index: 11, shortname: 'Na' },
     { select: false, bgcolor: '#00FF00', type: 'щелочныйземельный металл', link: 'shhelochnozemelnye-metally/magnij_lat_magnesium/5-1-0-55', rusname: 'Магний', mass: 26.3050, oxidation: ' +2', index: 12, shortname: 'Mg' },
     { select: false, bgcolor: '#00FFFF', type: 'легкий металл', link: 'legkie-metally/aljuminij/7-1-0-3', rusname: 'Алюминий', mass: 26.981538, oxidation: ' +3', index: 13, shortname: 'Al' },
@@ -17,7 +17,7 @@ export default {
     { select: false, bgcolor: '#00FFFF', type: 'неметалл', link: 'nemetally/fosfor_lat_phosphopus/11-1-0-69', rusname: 'Фосфор', mass: 30.973761, oxidation: ' -3,+1,+3,+4,+5', index: 15, shortname: 'P' },
     { select: false, bgcolor: '#00FFFF', type: 'неметалл', link: 'nemetally/sera_lat_sulfur/11-1-0-85', rusname: 'Сера', mass: 32.066, oxidation: ' -2,+2,+4,+6', index: 16, shortname: 'S' },
     { select: false, bgcolor: '#00FFFF', type: 'галоген', link: 'galogeny/khlor_lat_shlorum/9-1-0-21', rusname: 'Хлор', mass: 35.4527, oxidation: ' -1, +1,+3,+5,+7', index: 17, shortname: 'Cl' },
-    { select: false, bgcolor: '#00FFFF', type: 'инертный газ', link: 'inertnye-gazy/argon_lat_argon/10-1-0-5', rusname: 'Аргон', mass: 38.948, oxidation: 'в реакции не вступает', index: 18, shortname: 'Ar' },
+    { select: false, bgcolor: '#00FFFF', type: 'инертный газ', link: 'inertnye-gazy/argon_lat_argon/10-1-0-5', rusname: 'Аргон', mass: 38.948, oxidation: 'not', index: 18, shortname: 'Ar' },
     { select: false, bgcolor: '#00FF00', type: 'щелочный металл', link: 'shhelochnye-metally/kalij_lat_kalium/4-1-0-48', rusname: 'Калий', mass: 39.09870, oxidation: ' +1', index: 19, shortname: 'K' },
     { select: false, bgcolor: '#00FF00', type: 'щелочныйземельный металл', link: 'shhelochnozemelnye-metally/kalcij_lat_calcium/5-1-0-17', rusname: 'Кальций', mass: 40.078, oxidation: ' +2', index: 20, shortname: 'Ca' },
     { select: false, bgcolor: '#FFFF00', type: 'переходной металл', link: 'perekhodnye-metally//skandij_lat_scandium/6-1-0-87', rusname: 'Скандий', mass: 44.955910, oxidation: ' +3', index: 21, shortname: 'Sc' },

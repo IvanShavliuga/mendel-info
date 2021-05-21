@@ -1,6 +1,6 @@
 <template>
   <form class="searchelem" onsubmit="return false">
-    <div class="searchelem__block">
+    <!-- <div class="searchelem__block">
       <label class="searchelem__block-label" for="typeelem">Тип элемента</label>
       <select  class="searchelem__select" id="typeelem" v-model="selt" @click="seltype">
         <option
@@ -11,19 +11,19 @@
           {{ t }}
         </option>
       </select>
-    </div>
+    </div> -->
     <div class="searchelem__block">
       <label class="searchelem__block-label" for="names">Имя элемента</label>
       <span class="searchelem__block-label">
         <select class="searchelem__select" id="names" v-model="nametype">
           <option class="searchelem__select-option" value="short">Символ элемента</option>
           <option class="searc-labelhelem__select-option" value="runame">Русское название</option>
-          <option class="searchelem__select-option" value="latname">Латинское название</option>
         </select>
         <input
           class="searchelem__input"
           v-model="nameelem"
           type="text"
+          placeholder="Xe"
           @input="filtername"
         />
       </span>
@@ -36,41 +36,42 @@
           type="number"
           id="mass"
           v-model="masselem"
+          placeholder="1"
           @keypress.space="resetfilter"
           @input="selmass"
         />
       </span>
     </div>
     <div class="searchelem__block">
+      <label class="searchelem__block-label" for="mass">Порядковый номер</label>
+      <span class="searchelem__block-label">
+        <input
+          class="searchelem__input"
+          type="number"
+          id="num"
+          v-model="numselem"
+          placeholder="1"
+          @keypress.space="resetfilter"
+          @input="selnum"
+        />
+      </span>
+    </div>
+    <div class="searchelem__block">
       <label class="searchelem__block-label">Степени окисления</label>
       <span class="searchelem__block-label">
-        <div
-          v-for="(c, k) in oxi"
-          :key="k"
-          class="searchelem__checkpanel"
-        >
-          <input
-            v-model="c.check"
-            :id="'oxi'+k"
-            type="checkbox"
-            class="searchelem__checkpanel-default"
-          />
-          <label
-            v-if="c.check"
-            :for="'oxi'+k"
-            class="searchelem__checkpanel-true"
-          >
-            {{ c.val }}
-          </label>
-          <label
-            v-else
-            :for="'oxi'+k"
-            class="searchelem__checkpanel-false"
-          >
-            {{ c.val }}
-          </label>
-        </div>
+        <input
+          class="searchelem__input"
+          type="text"
+          id="mass"
+          v-model="oxi"
+          @keypress.space="resetfilter"
+          @input="seloxi"
+          placeholder="-1, +2"
+        />
       </span>
+    </div>
+    <div class="searchelem__block">
+      <button class="searchelem__button" @click="resetfilter" @keypress.space="resetfilter">Очистить</button>
     </div>
   </form>
 </template>
@@ -104,6 +105,14 @@
   }
   &__select {
     padding: 5px;
+  }
+  &__button {
+    padding: 10px 15px;
+    margin: auto;
+    background-color: #238e9e;
+    border-radius: 12px;
+    border: none;
+    color: white;
   }
   &__checkpanel {
     display: inline-block;
@@ -148,26 +157,9 @@ export default {
       selt: 'все',
       nameelem: '',
       nametype: 'short',
-      masselem: 0,
-      oxi: [
-        { val: '-8', check: false },
-        { val: '-7', check: false },
-        { val: '-6', check: false },
-        { val: '-5', check: false },
-        { val: '-4', check: false },
-        { val: '-3', check: false },
-        { val: '-2', check: false },
-        { val: '-1', check: false },
-        { val: ' 0', check: false },
-        { val: '+1', check: false },
-        { val: '+2', check: false },
-        { val: '+3', check: false },
-        { val: '+4', check: false },
-        { val: '+5', check: false },
-        { val: '+6', check: false },
-        { val: '+7', check: false },
-        { val: '+8', check: false }
-      ]
+      masselem: 1,
+      numselem: 1,
+      oxi: ''
     }
   },
   methods: {
@@ -180,17 +172,26 @@ export default {
         query: this.selt
       })
     },
-    keyeve (e) {
-      console.log(e)
+    seloxi () {
+      this.$store.dispatch('selElements', {
+        type: 'oxi',
+        query: this.oxi,
+        num: 0
+      })
     },
-    selmass (e) {
-      if (e.inputType === 'deleteContentBackward') {
-        this.resetfilter()
-      }
+    selmass () {
       this.$store.dispatch('selElements', {
         type: 'mass',
         query: '' + this.masselem,
         num: this.masselem
+      })
+    },
+    selnum () {
+      console.log(this.numselem)
+      this.$store.dispatch('selElements', {
+        type: 'num',
+        query: '' + this.numselem,
+        num: this.numselem
       })
     },
     filtername () {
@@ -198,6 +199,7 @@ export default {
       if (!this.nameelem.length) {
         this.resetfilter()
       }
+      console.log(this.nameelem)
       this.$store.dispatch('selElements', {
         type: this.nametype,
         query: this.nameelem
