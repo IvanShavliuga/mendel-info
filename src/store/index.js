@@ -49,26 +49,56 @@ export default new Vuex.Store({
         if (obj.type === 'short') {
           flt = state.elements[i].shortname.toUpperCase()
         }
-        if (obj.type !== 'mass') {
+        if (obj.type !== 'mass' && obj.type !== 'num') {
           const qu = obj.query.toUpperCase()
           if (flt.indexOf(qu) > -1) {
             state.elements[i].select = true
             count++
+            state.sellist.push(state.elements[i])
+          }
+        }
+        if (obj.type === 'num') {
+          const isrc = state.elements[i].index
+          const idta = obj.num
+          // const cmp = (me > mq) ? (me - mq) : (mq - me)
+          if (~isrc === ~idta) {
+            state.elements[i].select = true
+            count++
+            state.select = state.elements[i]
+            state.sellist.push(state.elements[i])
           }
         }
         if (obj.type === 'mass') {
           const me = state.elements[i].mass
           const mq = obj.num
-          const cmp = (me > mq) ? (me - mq) : (mq - me)
-          if (cmp < 1) {
-            console.log('mass: ' + cmp)
+          // const cmp = (me > mq) ? (me - mq) : (mq - me)
+          if (~me === ~mq) {
             state.elements[i].select = true
             count++
+            state.sellist.push(state.elements[i])
+          }
+        }
+        if (obj.type === 'oxi') {
+          if (state.elements[i].oxidation !== 'not') {
+            let cm = 0
+            let cd = 0
+            for (const dta of obj.query.split(',')) {
+              cd++
+              for (const src of state.elements[i].oxidation.split(',')) {
+                if (dta.trim() === src.trim()) cm++
+              }
+            }
+            if (cm === cd) {
+              state.elements[i].select = true
+              count++
+            }
           }
         }
       }
       state.searchcount = count
-      state.modeview = true
+      if (obj.type === 'short' && count === 1) state.select = state.sellist[0]
+      if (obj.type === 'type' && obj.query === 'все') state.modeview = false
+      else state.modeview = true
     },
     RESET_FILTER (state) {
       state.modeview = false
