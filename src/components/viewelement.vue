@@ -7,6 +7,7 @@
     <p class="element__box-mass">{{ select.mass }}</p>
     <p class="element__box-oxidation">{{ select.oxidation }}</p>
     <p class="element__box-type">{{ select.type }}</p>
+    <button class="element__box-btn" @click="btnClick">Открыть</button>
     <!-- <p class="element__box-position">Период: {{ selrow }}</p> -->
   </div>
 </div>
@@ -17,6 +18,11 @@ import { mapGetters } from 'vuex'
 export default {
   computed: {
     ...mapGetters(['select', 'fullurl', 'selrow'])
+  },
+  methods: {
+    btnClick () {
+      window.open('https://mendel-info.usite.pro/publ/ehlementy/' + this.select.link)
+    }
   }
 }
 </script>
@@ -29,7 +35,7 @@ export default {
     padding: 5px 35px;
     position: relative;
     width: 250px;
-    height: 150px;
+    height: 250px;
     background: rgba(0, 200, 200, 0.2);
     &-short {
       font-size: 35px;
@@ -79,6 +85,14 @@ export default {
       margin: 0;
       padding: 0;
       color: black;
+    }
+    &-btn {
+      padding: 10px 15px;
+      margin: auto;
+      background-color: #238e9e;
+      border-radius: 12px;
+      border: none;
+      color: white;
     }
   }
 }
