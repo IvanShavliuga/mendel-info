@@ -1,9 +1,18 @@
 <template>
   <div id="app">
-    <router-view/>
+    <app-home/>
   </div>
 </template>
+<script>
+import appHome from './views/Home.vue'
 
+export default {
+  name: 'Home',
+  components: {
+    appHome
+  }
+}
+</script>
 <style lang="less">
 #app {
   background: rgba(170, 170, 170, 0.4);
