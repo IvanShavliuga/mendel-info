@@ -8,7 +8,7 @@ readFile2("./elements.json", "utf8")
   .then((data) => {
     dt = data.toString();
     jsdt = JSON.parse(data);
-    console.log(typeof jsdt);
+    //console.log(typeof jsdt);
     return data.toString();
   })
   .catch((err) => {
@@ -18,9 +18,9 @@ readFile2("./elements.json", "utf8")
 http
   .createServer(function (req, res) {
     let c = 0;
-    
+
     for (let dtt of jsdt.list) {
-      console.log(dtt);
+      // console.log(dtt);
       const s = dtt.link.split("lat_");
       if (s.length === 2) {
         const s1 = s[1].split("/");
@@ -31,16 +31,33 @@ http
         // res.write("none");
         dtt.lat = "none";
       }
+      //let rf = await findPosition('./'+dtt.shortname+'.html')
+      let rf= readFile2('./'+dtt.shortname+'.html', "utf8")
+      .then((data) => {
+        let dta = data.toString();
+        let indst = dta.indexOf('ÐŸÐ¾Ð»Ð¾Ð¶ÐµÐ½Ð¸Ðµ Ð² Ñ‚Ð°Ð±Ð»Ð¸Ñ†Ðµ')
+        let ln = 'ÐŸÐ¾Ð»Ð¾Ð¶ÐµÐ½Ð¸Ðµ Ð² Ñ‚Ð°Ð±Ð»Ð¸Ñ†Ðµ'.length
+        let indend = indst + ln
+        let indstop = dta.indexOf('<br>', indend)
+        let fnstr = dta.slice(indend, indstop)
+        dtt.pos = fnstr
+        return { findres: fnstr, status: 200}
+      })
+      .catch((err) => {
+        console.log(err);
+        return { findres: 'not', status: 404}
+      });
+      res.write(dtt.pos+"");
       res.write(" ");
+      console.log(rf)
     }
-  fs.writeFile('test.txt',JSON.stringify(jsdt), (err) => {
-  if (err) {
-    console.error(err)
-    return
-  }
-  //ôàéë çàïèñàí óñïåøíî
-})
-    res.write(JSON.stringify(jsdt)); //write a response to the client
+  // fs.writeFile('test.txt',JSON.stringify(jsdt), (err) => {
+  // if (err) {
+  //  console.error(err)
+  //  return
+  //}
+  //ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+    // res.write(JSON.stringify(jsdt)); //write a response to the client
     res.end(); //end the response
   })
   .listen(3000); //the server object listens on port 3000
