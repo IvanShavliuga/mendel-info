@@ -35,12 +35,14 @@ http
       let rf= readFile2('./'+dtt.shortname+'.html', "utf8")
       .then((data) => {
         let dta = data.toString();
-        let indst = dta.indexOf('Положение в таблице')
-        let ln = 'Положение в таблице'.length
-        let indend = indst + ln
-        let indstop = dta.indexOf('<br>', indend)
-        let fnstr = dta.slice(indend, indstop)
-        dtt.pos = fnstr
+        let indst = dta.indexOf('<H1') + 1
+        let indend = dta.indexOf('<a name=1')
+        let fnstr = dta.slice(indst, indend)
+        fs.writeFile('./short/'+dtt.shortname+'.html',fnstr,(err) => {
+   if (err) {
+    console.error(err)
+    return
+		}})
         return { findres: fnstr, status: 200}
       })
       .catch((err) => {
