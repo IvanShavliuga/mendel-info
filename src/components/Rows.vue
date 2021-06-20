@@ -98,6 +98,11 @@
   </tr>
 </tbody>
 </template>
+<style>
+tr {
+  border: none;
+}
+</style>
 <script>
 import appElement from './Element.vue'
 export default {
