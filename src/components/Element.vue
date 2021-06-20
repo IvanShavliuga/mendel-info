@@ -98,10 +98,12 @@ a {
     font-size: 16px;
   }
 }
-@media (max-width: 385px) {
+@media (max-width: 488px) {
   .element {
-    max-width: 15px;
-    font-size: 16px;
+    max-width: 20px;
+    font-size: 14px;
+    border: none;
+    border-collapse: collapse;
   }
 }
 </style>

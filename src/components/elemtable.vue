@@ -39,5 +39,7 @@ export default {
 .table {
   width: 90%;
   margin: 0 auto;
+  border: none;
+  border-collapse: collapse;
 }
 </style>
