@@ -37,6 +37,7 @@ export default {
 </script>
 <style scoped lang="less">
 .table {
-  width: 100%;
+  width: 90%;
+  margin: 0 auto;
 }
 </style>

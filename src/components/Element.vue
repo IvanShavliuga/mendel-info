@@ -92,4 +92,16 @@ export default {
 a {
   color: #42b983;
 }
+@media (max-width: 820px) {
+  .element {
+    width: 5%;
+    font-size: 16px;
+  }
+}
+@media (max-width: 385px) {
+  .element {
+    max-width: 15px;
+    font-size: 16px;
+  }
+}
 </style>

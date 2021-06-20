@@ -14,10 +14,11 @@
     </div> -->
     <div class="searchelem__block">
       <label class="searchelem__block-label" for="names">Имя элемента</label>
-      <span class="searchelem__block-label">
+      <span class="searchelem__block-label searchelem__block-combo">
         <select class="searchelem__select" id="names" v-model="nametype">
           <option class="searchelem__select-option" value="short">Символ элемента</option>
           <option class="searc-labelhelem__select-option" value="runame">Русское название</option>
+          <option class="searc-labelhelem__select-option" value="lat">Латинское название</option>
         </select>
         <input
           class="searchelem__input"
@@ -77,18 +78,45 @@
 </template>
 <style scoped lang="less">
 .searchelem {
-  margin: 15px;
   padding: 15px;
+  width: 90%;
+  margin: 0 auto;
   border: 1px solid #45dbab;
   border-radius: 12px;
   background-color: rgba(#457bab ,0.5);
   display: flex;
   justify-content: space-between;
+  @media (max-width: 830px) {
+    flex-wrap: wrap;
+  }
+  @media (max-width: 555px) {
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100vw;
+    margin: 0;
+  }
+  /* @media (max-width: 430px) {
+  } */
   &__block {
     display: flex;
     flex-direction: column;
+    /* @media (max-width: 740px) {
+      width: 170px;
+      margin: 10px auto;
+    }*/
+    @media (max-width: 555px) {
+      width: 80%;
+      margin: 10px auto;
+    }
     &-label {
       color: #222;
+    }
+    &-combo {
+      @media (max-width: 830px) {
+        display: flex;
+        flex-direction: column;
+      }
     }
   }
   &__input,
@@ -102,9 +130,28 @@
   }
   &__input {
     padding: 6px 5px;
+    width: 150px;
+    @media (max-width: 555px) {
+      width: 300px;
+    }
+    @media (max-width: 345px) {
+      width: 200px;
+    }
+    @media (max-width: 240px) {
+      width: 180px;
+    }
   }
   &__select {
     padding: 5px;
+    @media (max-width: 555px) {
+      width: 310px;
+    }
+    @media (max-width: 345px) {
+      width: 210px;
+    }
+    @media (max-width: 240px) {
+      width: 190px;
+    }
   }
   &__button {
     padding: 10px 15px;
@@ -113,6 +160,10 @@
     border-radius: 12px;
     border: none;
     color: white;
+    @media (max-width: 800px) {
+      display: block;
+      margin-top: 15px;
+    }
   }
   &__checkpanel {
     display: inline-block;
