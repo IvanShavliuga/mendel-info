@@ -5,7 +5,6 @@
       <app-elemtable/>
       <app-viewelement/>
     </div>
-    <app-page/>
   </div>
 </template>
 
@@ -14,15 +13,13 @@
 import appElemtable from '../components/elemtable.vue'
 import appViewelement from '../components/viewelement.vue'
 import appSearch from '../components/search.vue'
-import appPage from '../components/pageview.vue'
 
 export default {
   name: 'Home',
   components: {
     appSearch,
     appViewelement,
-    appElemtable,
-    appPage
+    appElemtable
   },
   methods: {
     resetSel () {
@@ -36,6 +33,10 @@ export default {
 .home {
   &__table {
     display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    margin: 20px 5px;
   }
 }
+
 </style>

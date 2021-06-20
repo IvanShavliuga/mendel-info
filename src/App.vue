@@ -15,12 +15,12 @@ export default {
 </script>
 <style lang="less">
 #app {
-  background: rgba(170, 170, 170, 0.4);
+  background: white;
   font-family: Avenir, Helvetica, Arial, sans-serif;
   height: 100vh;
 }
 body {
-  background: rgba(200, 200, 200, 0.2);
+  background: white;
   height: 100vh;
 }
 #nav {
