@@ -105,8 +105,8 @@
       width: 170px;
       margin: 10px auto;
     }*/
-    @media (max-width: 420px) {
-      width: 40%;
+    @media (max-width: 555px) {
+      width: 80%;
       margin: 10px auto;
     }
     &-label {
@@ -134,11 +134,23 @@
     @media (max-width: 555px) {
       width: 300px;
     }
+    @media (max-width: 345px) {
+      width: 200px;
+    }
+    @media (max-width: 240px) {
+      width: 180px;
+    }
   }
   &__select {
     padding: 5px;
     @media (max-width: 555px) {
       width: 310px;
+    }
+    @media (max-width: 345px) {
+      width: 210px;
+    }
+    @media (max-width: 240px) {
+      width: 190px;
     }
   }
   &__button {

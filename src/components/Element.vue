@@ -98,4 +98,10 @@ a {
     font-size: 16px;
   }
 }
+@media (max-width: 385px) {
+  .element {
+    max-width: 15px;
+    font-size: 16px;
+  }
+}
 </style>
