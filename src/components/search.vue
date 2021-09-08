@@ -73,6 +73,7 @@
     </div>
     <div class="searchelem__block">
       <button class="searchelem__button" @click="resetfilter" @keypress.space="resetfilter">Очистить</button>
+      <button class="searchelem__button" style="display: none">Списком</button>
     </div>
   </form>
 </template>
@@ -111,6 +112,12 @@
       width: 170px;
       margin: 10px auto;
     }*/
+    &:last-child {
+      flex-direction: row;
+      @media (max-width: 1125px) and (min-width: 800px){
+        flex-direction: column;
+      }
+    }
     @media (max-width: 600px) {
       // width: 80%;
       margin: 0 auto;
@@ -167,13 +174,12 @@
   }
   &__button {
     padding: 10px 15px;
-    margin: auto;
+    margin: 5px;
     background-color: #238e9e;
     border-radius: 12px;
     border: none;
     color: white;
     @media (max-width: 800px) {
-      display: block;
       margin-top: 15px;
     }
   }

@@ -18,10 +18,14 @@ export default {
   background: white;
   font-family: Avenir, Helvetica, Arial, sans-serif;
   height: 100vh;
+  width: 100%;
+  margin: 0;
 }
 body {
   background: white;
   height: 100vh;
+  width: 100%;
+  margin: 0;
 }
 #nav {
   padding: 30px;

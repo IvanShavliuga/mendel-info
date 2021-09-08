@@ -83,7 +83,7 @@ export default {
 <style scoped lang="less">
 .element {
   height: 21px;
-  width: 5%;
+  width: 26px;
   padding: 5px 2px;
   opacity: 0.8;
   font-size: 18px;
@@ -94,7 +94,6 @@ a {
 }
 @media (max-width: 820px) {
   .element {
-    width: 5%;
     font-size: 16px;
   }
 }
