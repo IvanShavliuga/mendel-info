@@ -31,11 +31,17 @@ export default {
 
 <style scoped lang="less">
 .home {
+  min-width: 100%;
+  max-width: 100vw;
+  margin: 0;
+  padding: 0;
   &__table {
+    min-width: 100%;
+    max-width: 100vw;
     display: flex;
     flex-direction: column-reverse;
     justify-content: center;
-    margin: 20px 5px;
+    margin: 20px 0;
   }
 }
 

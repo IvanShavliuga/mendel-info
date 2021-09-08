@@ -66,7 +66,7 @@ export default {
     top: -20px;
     left: auto; */
     border: 1px dotted #34a9c0;
-    padding: 5px 35px;
+    padding: 5px 15px;
     margin: -10px auto 10px auto;
     max-width: 300px;
     height: 190px;
@@ -81,6 +81,7 @@ export default {
     @media (max-width: 495px) {
       max-width: 200px;
       padding: 5px 5px;
+      // font-size: 12px;
       & > p, & > h3, & > h4 {
         font-size: 14px;
         line-height: 15px;

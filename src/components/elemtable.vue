@@ -37,8 +37,9 @@ export default {
 </script>
 <style scoped lang="less">
 .table {
-  width: 90%;
-  margin: 0 auto;
+  min-width: 100%;
+  max-width: 100vw;
+  margin: 0;
   border: none;
   border-collapse: collapse;
 }
