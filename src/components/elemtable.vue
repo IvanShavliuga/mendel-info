@@ -10,17 +10,6 @@
       :elements="elements"
       :mode-view="modeview"
     />
-    <!-- <tbody>
-      <tr
-        v-for="(el, k) in elements"
-        :key="100+k"
-      >
-      <td>DB: {{ el.index }}</td>
-      <td>ARRINDEX: {{ elementindex(el.index) }}</td>
-      <td>NAME: {{ el.rusname }}</td>
-      <td>SHNAME: {{ el.shortname }}</td>
-      </tr>
-    </tbody> -->
   </table>
 </template>
 <script>
@@ -41,6 +30,7 @@ export default {
   max-width: 100vw;
   margin: 0;
   border: none;
+  // background-color: rgba(12,12,12,0.7);
   border-collapse: collapse;
 }
 </style>
