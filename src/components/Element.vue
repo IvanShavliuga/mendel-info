@@ -87,7 +87,6 @@ export default {
   padding: 5px 2px;
   opacity: 0.8;
   font-size: 18px;
-  color: rgba(255, 255, 255, 0.8);
 }
 a {
   color: #42b983;
