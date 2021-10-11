@@ -3,18 +3,37 @@ const util = require("util");
 const fs = require("fs");
 let dt = "";
 let jsdt = {};
+let resarr = [];
+let res=""
+console.log('test node')
 const readFile2 = util.promisify(fs.readFile);
-readFile2("./elements.json", "utf8")
+const writeFile2 = util.promisify(fs.writeFile);
+readFile2("./elements.js", "utf8")
   .then((data) => {
     dt = data.toString();
-    jsdt = JSON.parse(data);
+    // jsdt = JSON.parse(data);
+    let arr = dt.split('[')[1]
+    let objs = arr.split('{')
+    for (let o of objs) {
+    	if (o.length)
+    	  resarr.push('\nmelting: 0, bolling: 0, '+o)
+    }
+    console.log(objs.length)
+     res = 'export default { list: [\n{'+resarr.join('\n{')+'\n]}'
+console.log(res.length)
+	 fs.writeFile('elements-res.js',res,(err) => {
+       if (err) {
+        console.error(err)
+        return
+      }})
     return data.toString();
   })
   .catch((err) => {
     console.log(err);
   });
+
 //create a server object:
-http
+/* http
   .createServer(function (req, res) {
     let c = 0;
 
@@ -62,3 +81,4 @@ http
       res.end(); //end the response
   })
   .listen(3000); //the server object listens on port 3000
+ */

@@ -12,6 +12,8 @@
     <p class="vieweelement__box-mass">{{ select.mass }}</p>
     <p class="vieweelement__box-oxidation">{{ select.oxidation }}</p>
     <p class="vieweelement__box-type">{{ select.type }}</p>
+    <p class="vieweelement__box-melting">t<sub>плавления</sub>: {{ select.melting||'нет данных' }}</p>
+    <p class="vieweelement__box-bolling">t<sub>кипения</sub>: {{ select.bolling||'нет данных' }}</p>
     <button class="vieweelement__box-btn" @click="btnClick">Открыть</button>
     <!-- <p class="vieweelement__box-position">Период: {{ selrow }}</p> -->
   </div>
@@ -38,7 +40,7 @@ export default {
 </script>
 <style  lang="less">
 .vieweelement {
-  height: 120px;
+  height: 250px;
   width: 300px;
   margin: auto 20%;
   @media (max-width: 708px) {
@@ -69,7 +71,7 @@ export default {
     padding: 5px 15px;
     margin: -10px auto 10px auto;
     max-width: 300px;
-    height: 190px;
+    height: 250px;
     background: rgba(0, 200, 200, 0.3);
     @media (max-width: 708px) {
       max-width: 250px;
@@ -177,27 +179,11 @@ export default {
       padding: 0;
       color: black;
     }
-    &-mass {
-      font-size: 16px;
-      line-height: 20px;
-      margin: 0;
-      padding: 0;
-      color: black;
-    }
-    &-oxidation {
-      font-size: 16px;
-      line-height: 20px;
-      margin: 0;
-      padding: 0;
-      color: black;
-    }
-    &-type {
-      font-size: 16px;
-      line-height: 20px;
-      margin: 0;
-      padding: 0;
-      color: black;
-    }
+    &-mass,
+    &-oxidation,
+    &-type,
+    &-melting,
+    &-bolling,
     &-position {
       font-size: 16px;
       line-height: 20px;
