@@ -14,6 +14,7 @@
     <p class="vieweelement__box-type">{{ select.type }}</p>
     <p class="vieweelement__box-melting">t<sub>плавления</sub>: {{ select.melting||'нет данных' }}</p>
     <p class="vieweelement__box-bolling">t<sub>кипения</sub>: {{ select.bolling||'нет данных' }}</p>
+    <p class="vieweelement__box-bolling">{{ phisstatus }}</p>
     <button class="vieweelement__box-btn" @click="btnClick">Открыть</button>
     <!-- <p class="vieweelement__box-position">Период: {{ selrow }}</p> -->
   </div>
@@ -29,7 +30,13 @@ import { mapGetters } from 'vuex'
 
 export default {
   computed: {
-    ...mapGetters(['select', 'fullurl', 'selrow'])
+    ...mapGetters(['select', 'fullurl', 'selrow']),
+    phisstatus () {
+      if (this.select.melting === null || this.select.bolling === null) return 'нет данных'
+      else if (this.select.bolling <= 0) return 'газ'
+      else if (this.select.melting <= 0) return 'жидкость'
+      else return 'твердое тело'
+    }
   },
   methods: {
     btnClick () {
