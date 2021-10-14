@@ -39,8 +39,7 @@ export default {
   },
   methods: {
     btnClick () {
-      const wo = window.open('https://mendel-info.usite.pro/publ/ehlementy/' + this.select.link)
-      console.log(wo.document)
+      window.open('https://mendel-info.usite.pro/publ/ehlementy/' + this.select.link)
     }
   }
 }
