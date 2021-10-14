@@ -2,19 +2,19 @@
 <div class="vieweelement">
   <div class="vieweelement__box" v-if="select">
     <div class="vieweelement__box-header">
-      <h2 class="vieweelement__box-short">{{ select.shortname }}</h2>
+      <h2 class="vieweelement__box-short" title="Символ элемента">{{ select.shortname }}</h2>
       <div class="vieweelement__box-block">
-        <h3 class="vieweelement__box-index">{{ select.index }}</h3>
-        <h4 class="vieweelement__box-rus">{{ select.rusname }} {{ select.lat }}</h4>
+        <h3 class="vieweelement__box-index" title="Атомный номер">{{ select.index }}</h3>
+        <h4 class="vieweelement__box-rus" title="Название элемента">{{ select.rusname }} {{ select.lat }}</h4>
       </div>
     </div>
-    <h4 class="vieweelement__box-pos">{{ select.pos }}</h4>
-    <p class="vieweelement__box-mass">{{ select.mass }}</p>
-    <p class="vieweelement__box-oxidation">{{ select.oxidation }}</p>
-    <p class="vieweelement__box-type">{{ select.type }}</p>
-    <p class="vieweelement__box-melting">t<sub>плавления</sub>: {{ select.melting||'нет данных' }}</p>
-    <p class="vieweelement__box-bolling">t<sub>кипения</sub>: {{ select.bolling||'нет данных' }}</p>
-    <p class="vieweelement__box-bolling">{{ phisstatus }}</p>
+    <h4 class="vieweelement__box-pos" title="Позиция в таблице">{{ select.pos }}</h4>
+    <p class="vieweelement__box-mass" title="Относительная атомная масса">{{ select.mass }}</p>
+    <p class="vieweelement__box-oxidation" title="Степень окисления">{{ select.oxidation }}</p>
+    <p class="vieweelement__box-type" title="Тип элемента">{{ select.type }}</p>
+    <p class="vieweelement__box-melting" title="Температура плавления">t<sub>плавления</sub>: {{ select.melting||'нет данных' }}</p>
+    <p class="vieweelement__box-bolling" title="Температура кипения">t<sub>кипения</sub>: {{ select.bolling||'нет данных' }}</p>
+    <p class="vieweelement__box-bolling" title="Агрегатное состояние">{{ phisstatus }}</p>
     <button class="vieweelement__box-btn" @click="btnClick">Открыть</button>
   </div>
   <div class="vieweelement__box" v-else>
