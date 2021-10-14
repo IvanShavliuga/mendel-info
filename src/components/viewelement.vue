@@ -16,7 +16,6 @@
     <p class="vieweelement__box-bolling">t<sub>кипения</sub>: {{ select.bolling||'нет данных' }}</p>
     <p class="vieweelement__box-bolling">{{ phisstatus }}</p>
     <button class="vieweelement__box-btn" @click="btnClick">Открыть</button>
-    <!-- <p class="vieweelement__box-position">Период: {{ selrow }}</p> -->
   </div>
   <div class="vieweelement__box" v-else>
     <div class="vieweelement__box-info">
@@ -40,7 +39,8 @@ export default {
   },
   methods: {
     btnClick () {
-      window.open('https://mendel-info.usite.pro/publ/ehlementy/' + this.select.link)
+      const wo = window.open('https://mendel-info.usite.pro/publ/ehlementy/' + this.select.link)
+      console.log(wo.document)
     }
   }
 }
