@@ -1696,7 +1696,7 @@ export default {
       index: 100,
       shortname: 'Fm',
       lat: 'fermium',
-      pos: ' 7-7-й период, группа - IIIB(3).',
+      pos: ' 7-й период, группа - IIIB(3).',
       electronegativity: 1.2
     },
     {
@@ -1730,7 +1730,7 @@ export default {
       index: 102,
       shortname: 'No',
       lat: 'nobelium',
-      pos: ' 7-7-й период, группа - IIIB(3).',
+      pos: ' 7-й период, группа - IIIB(3).',
       electronegativity: 1.2
     },
     {
