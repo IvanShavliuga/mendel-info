@@ -15,7 +15,8 @@ export default {
       shortname: 'H',
       lat: 'hydrogenium',
       pos: ' 1-й период, группа - IA (1)',
-      electronegativity: 2.1
+      electronegativity: 2.1,
+      config: '1s<sup>1</sup>'
     },
     {
       // 2: He Гелий
@@ -32,7 +33,8 @@ export default {
       shortname: 'He',
       lat: 'helium',
       pos: ' 1-й период, группа - VIIIA (18)',
-      electronegativity: 5.5
+      electronegativity: 5.5,
+      config: '1s<sup>2</sup>'
     },
     {
       // 3: Li Литий
@@ -49,7 +51,8 @@ export default {
       shortname: 'Li',
       lat: 'lithium',
       pos: ' 2-й период, группа - IA (1)',
-      electronegativity: 2.1
+      electronegativity: 2.1,
+      config: '1s<sup>2</sup>2s<sup>1</sup>'
     },
     {
       // 4: Be Бериллий
@@ -66,7 +69,8 @@ export default {
       shortname: 'Be',
       lat: 'veryllium',
       pos: ' 2-й период, группа - IIA (2)',
-      electronegativity: 1.4
+      electronegativity: 1.4,
+      config: '1s<sup>1</sup>2s<sup>2</sup>'
     },
     {
       // 5: B Бор
@@ -83,7 +87,8 @@ export default {
       shortname: 'B',
       lat: 'borum',
       pos: ' 2-й период, группа - IIIA (13)',
-      electronegativity: 2
+      electronegativity: 2,
+      config: '1s<sup>1</sup>2s<sup>2</sup>2p<sup>1</sup>'
     },
     {
       // 6: C Углерод
@@ -100,7 +105,8 @@ export default {
       shortname: 'C',
       lat: 'carboneum',
       pos: ' 2-й период, группа - IVA (14)',
-      electronegativity: 2.5
+      electronegativity: 2.5,
+      config: '1s<sup>1</sup>2s<sup>2</sup>2p<sup>2</sup>'
     },
     {
       // 7: N  Азот
@@ -117,7 +123,8 @@ export default {
       shortname: 'N',
       lat: 'nitrogenium',
       pos: ' 2-й период, группа - VA (15)',
-      electronegativity: 3
+      electronegativity: 3,
+      config: '1s<sup>1</sup>2s<sup>2</sup>2p<sup>3</sup>'
     },
     {
       // 8: O Кислород
@@ -134,7 +141,8 @@ export default {
       shortname: 'O',
       lat: 'okhygenium',
       pos: ' 2-й период, группа - VIA (16)',
-      electronegativity: 3.5
+      electronegativity: 3.5,
+      config: '1s<sup>1</sup>2s<sup>2</sup>2p<sup>4</sup>'
     },
     {
       // 9: F Фтор
@@ -151,7 +159,8 @@ export default {
       shortname: 'F',
       lat: 'fluorum',
       pos: ' 2-й период, группа - VIIA (1)',
-      electronegativity: 4.1
+      electronegativity: 4.1,
+      config: '1s<sup>1</sup>2s<sup>2</sup>2p<sup>5</sup>'
     },
     {
       // 10: Ne Неон
@@ -168,7 +177,8 @@ export default {
       shortname: 'Ne',
       lat: 'neon',
       pos: ' 1-й период, группа - VIIIA (18)',
-      electronegativity: 4.8
+      electronegativity: 4.8,
+      config: '1s<sup>1</sup>2s<sup>2</sup>2p<sup>6</sup>'
     },
     {
       // 11: Na Натрий
@@ -185,7 +195,8 @@ export default {
       shortname: 'Na',
       lat: 'natrium',
       pos: ' 1-й период, группа - IA (1)',
-      electronegativity: 1
+      electronegativity: 1,
+      config: '[Ne]1s<sup>1</sup>'
     },
     {
       // 12: Mg Магний
@@ -202,7 +213,8 @@ export default {
       shortname: 'Mg',
       lat: 'magnesium',
       pos: ' 3-й период, группа - IIA (2)',
-      electronegativity: 1.2
+      electronegativity: 1.2,
+      config: '[Ne]3s<sup>2</sup>'
     },
     {
       // 13: Al Алюминий
@@ -219,7 +231,8 @@ export default {
       shortname: 'Al',
       lat: 'none',
       pos: ' 3-й период, группа - IIIA (13)',
-      electronegativity: 1.4
+      electronegativity: 1.4,
+      config: ']3s<sup>2</sup>3p<sup>1</sup>'
     },
     {
       // 14: Si Кремний
@@ -253,7 +266,8 @@ export default {
       shortname: 'P',
       lat: 'phosphopus',
       pos: ' 3-й период, группа - VA (2)',
-      electronegativity: 2.1
+      electronegativity: 2.1,
+      config: '[Ne]3s<sup>2</sup>3р<sup>3</sup>.'
     },
     {
       // 16: S Сера
@@ -270,7 +284,8 @@ export default {
       shortname: 'S',
       lat: 'sulfur',
       pos: ' 3-й период, группа - VIA (16)',
-      electronegativity: 2
+      electronegativity: 2,
+      config: '[Ne]3s<sup>2</sup>3p<sup>4</sup>.'
     },
     {
       // 17: Cl Хлор
@@ -287,7 +302,8 @@ export default {
       shortname: 'Cl',
       lat: 'shlorum',
       pos: ' 3-й период, группа - VIIA (17)',
-      electronegativity: 3.16
+      electronegativity: 3.16,
+      config: '[Ne]3s<sup>2</sup>p<sup>5</sup>'
     },
     {
       // 18: Ar Аргон
@@ -304,7 +320,8 @@ export default {
       shortname: 'Ar',
       lat: 'argon',
       pos: ' 3-й период, группа - VIIIA (18)',
-      electronegativity: 3.2
+      electronegativity: 3.2,
+      config: '[Ne]3s<sup>2</sup>3p<sup>6</sup>'
     },
     {
       // 19: K Калий
@@ -321,7 +338,8 @@ export default {
       shortname: 'K',
       lat: 'kalium',
       pos: ' 4-й период, группа - IA (1)',
-      electronegativity: 0.9
+      electronegativity: 0.9,
+      config: '[Ar]4s<sup>1</sup>'
     },
     {
       // 20: Ca Кальций
@@ -338,7 +356,8 @@ export default {
       shortname: 'Ca',
       lat: 'calcium',
       pos: ' 4-й период, группа - IIA (2)',
-      electronegativity: 1.2
+      electronegativity: 1.2,
+      config: '[Ne4s<sup>2</sup>'
     },
     {
       // 21: Sc Скандий
@@ -355,7 +374,8 @@ export default {
       shortname: 'Sc',
       lat: 'scandium',
       pos: ' 4-й период, группа - IIIB (3)',
-      electronegativity: 1.2
+      electronegativity: 1.2,
+      config: '[Ar]3d<sup>1</sup>4s<sup>2</sup>'
     },
     {
       // 22: Ti Титан
@@ -372,7 +392,8 @@ export default {
       shortname: 'Ti',
       lat: 'titanium',
       pos: ' 4-й период, группа - IVB (4)',
-      electronegativity: 1
+      electronegativity: 1,
+      config: '[Ar]3d<sup>2</sup>4s</sup><sup>2</sup>'
     },
     {
       // 23: V Ванадий
@@ -389,7 +410,8 @@ export default {
       shortname: 'V',
       lat: 'vanadium',
       pos: ' 4-й период, группа - VВ (5)',
-      electronegativity: 1.6
+      electronegativity: 1.6,
+      config: '[Ar]3s<sup>2</sup>p<sup>6</sup>d<sup>3</sup>4s<sup>2</sup>.'
     },
     {
       // 24: Cr  Хром
@@ -423,7 +445,8 @@ export default {
       shortname: 'Mn',
       lat: 'manganum',
       pos: ' 4-й период, группа - VIIВ (7)',
-      electronegativity: 1.5
+      electronegativity: 1.5,
+      config: '[Ar]3s</sup><sup>2</sup>p</sup><sup>6</sup>d<sup>5</sup>4s<sup>2</sup>'
     },
     {
       // 26: Fe  Железо
@@ -440,7 +463,8 @@ export default {
       shortname: 'Fe',
       lat: 'ferrum',
       pos: ' 4-й период, группа - VIIIВ (8)',
-      electronegativity: 1.8
+      electronegativity: 1.8,
+      config: '[Ar]3s<sup>2</sup>p<sup>6</sup>d<sup>6</sup>4s<sup>2</sup>.'
     },
     {
       // 27: Co Кобальт
@@ -457,7 +481,8 @@ export default {
       shortname: 'Co',
       lat: 'sobaltum',
       pos: ' 4-й период, группа - VIIIВ (9).',
-      electronegativity: 1.88
+      electronegativity: 1.88,
+      config: '[Ar]3s<sup>2</sup>p<sup>6</sup>d<sup>7</sup>4s<sup>2</sup>.'
     },
     {
       // 28: Ni Никель
@@ -491,7 +516,8 @@ export default {
       shortname: 'Cu',
       lat: 'cuprum',
       pos: ' 4-й период, группа - IВ (11).',
-      electronegativity: 1.9
+      electronegativity: 1.9,
+      config: '[Ar]3s<sup>2</sup>p<sup>6</sup>d<suP>10</sup>4s<sup>1</sup>.'
     },
     {
       // 30: Zn  Цинк
@@ -508,7 +534,8 @@ export default {
       shortname: 'Zn',
       lat: 'zincum',
       pos: ' 5-й период, группа - (4).',
-      electronegativity: 1.66
+      electronegativity: 1.66,
+      config: '[Ar]3s<sup>2</sup>p<sup>6</sup>d<sup>10</sup>4s<sup>2</sup>.'
     },
     {
       // 31: Ga Галлий
@@ -525,7 +552,8 @@ export default {
       shortname: 'Ga',
       lat: 'gallium',
       pos: ' 4-й период, группа - IIIA (13).',
-      electronegativity: 1.6
+      electronegativity: 1.6,
+      config: '[Ar4s<sup>2</sup>p<sup>1</sup>.'
     },
     {
       // 32: Ge Германий
@@ -541,7 +569,8 @@ export default {
       index: 32,
       shortname: 'Ge',
       lat: 'germanium',
-      pos: ' 4-й период, группа - IVA (14).'
+      pos: ' 4-й период, группа - IVA (14).',
+      config: '[Ar]4s<sup>2</sup>p<sup>2</sup>.'
     },
     {
       // 33: As  Мышьяк
@@ -558,7 +587,8 @@ export default {
       shortname: 'As',
       lat: 'arsenicum',
       pos: ' 4-й период, группа - VА (15).',
-      electronegativity: 2.1
+      electronegativity: 2.1,
+      config: '[Ar4s<sup>2</sup>p<sup>3</sup>.'
     },
     {
       // 34: Se  Селен
@@ -575,7 +605,8 @@ export default {
       shortname: 'Se',
       lat: 'selenium',
       pos: ' 4-й период, группа - VIA (16).',
-      electronegativity: 2.4
+      electronegativity: 2.4,
+      config: '[Ar]3d<sup>10</sup>4s<sup>2</sup>p<sup>4</sup>.'
     },
     {
       // 35: Br  Бром
@@ -592,7 +623,8 @@ export default {
       shortname: 'Br',
       lat: 'bromum',
       pos: ' 4-й период, группа - VIIА ().',
-      electronegativity: 2.8
+      electronegativity: 2.8,
+      config: '[Ar4s<sup>2</sup>p<sup>5</sup>.'
     },
     {
       // 36: Kr Криптон
@@ -609,7 +641,8 @@ export default {
       shortname: 'Kr',
       lat: 'krypton',
       pos: ' 4-й период, группа - VIA (16).',
-      electronegativity: 2.94
+      electronegativity: 2.94,
+      config: '[Ar]3d<sup>10</sup>4s<sup>2</sup>p<sup>6</sup>.'
     },
     {
       // 37: Rb Рубидий
@@ -626,7 +659,8 @@ export default {
       shortname: 'Rb',
       lat: 'rubidium',
       pos: ' 5-й период, группа - IA(1).',
-      electronegativity: 0.8
+      electronegativity: 0.8,
+      config: '[Кr]5s<sup>2</sup>.'
     },
     {
       // 38: Sr  Стронций
@@ -643,7 +677,8 @@ export default {
       shortname: 'Sr',
       lat: 'strontium',
       pos: ' 5-й период, группа - IIА (2).',
-      electronegativity: 1
+      electronegativity: 1,
+      config: '[Kr]5s<sup>2</sup>.'
     },
     {
       // 39: Y  Иттрий
@@ -660,7 +695,8 @@ export default {
       shortname: 'Y',
       lat: 'yttrium',
       pos: ' 5-й период, группа -IIIB (3).',
-      electronegativity: 1.11
+      electronegativity: 1.11,
+      config: '[Kr].'
     },
     {
       // 40: Zr  Цирконий
@@ -677,7 +713,8 @@ export default {
       shortname: 'Zr',
       lat: 'zirconium',
       pos: ' 5-й период, группа -IVB (4).',
-      electronegativity: 1.4
+      electronegativity: 1.4,
+      config: '[Kr]4s<sup>2</sup>p<sup>6</sup>d<sup>2</sup>5s<sup>2</sup>.'
     },
     {
       // 41: Nb Ниобий
@@ -711,7 +748,8 @@ export default {
       shortname: 'Mo',
       lat: 'molibdaenum',
       pos: ' 5-й период, группа - (6).',
-      electronegativity: 1.8
+      electronegativity: 1.8,
+      config: '[Kr]4s<sup>2</sup> p<sup>6</sup>d<sup>5</sup>5s<sup>1</sup>.'
     },
     {
       // 43: Tc Технеций
@@ -728,7 +766,8 @@ export default {
       shortname: 'Tc',
       lat: 'technetium',
       pos: ' 5-й период, группа - VIIB (7)',
-      electronegativity: 1.9
+      electronegativity: 1.9,
+      config: '[Kr]4d<sup>5</sup>5s<sup>2</sup>.'
     },
     {
       // 44: Ru  Рутений
@@ -745,7 +784,8 @@ export default {
       shortname: 'Ru',
       lat: 'ruthenium',
       pos: ' 5-й период, группа - VIIIB (8).',
-      electronegativity: 1.42
+      electronegativity: 1.42,
+      config: '[Kr]4s<sup>2</sup>p<sup>6</sup>d<sup>7</sup>5s<sup>1</sup>.'
     },
     {
       // 45: Rh  Родий
@@ -762,7 +802,8 @@ export default {
       shortname: 'Rh',
       lat: 'rhodium',
       pos: ' 5-й период, группа - VIIIВ(9).',
-      electronegativity: 2.28
+      electronegativity: 2.28,
+      config: '[Kr]4s<sup>2</sup>p<sup>6</sup>d<sup>8</sup>5s<sup>1</sup>.'
     },
     {
       // 46: Pd Палладий
@@ -779,7 +820,8 @@ export default {
       shortname: 'Pd',
       lat: 'palladium',
       pos: ' 5-й период, группа - VIIIB(10).',
-      electronegativity: 1.35
+      electronegativity: 1.35,
+      config: '[Kr]4s<sup>2</sup>p<sup>6</sup>d<sup>10</sup>5s<sup>0</sup>.'
     },
     {
       // 47: Ag  Серебро
@@ -796,7 +838,8 @@ export default {
       shortname: 'Ag',
       lat: 'none',
       pos: ' 5-й период, группа - IB(11).',
-      electronegativity: 1.93
+      electronegativity: 1.93,
+      config: '[Kr4s<sup>2</sup>p<sup>6</sup>d<sup>10</sup>5s<sup>1</sup>.'
     },
     {
       // 48: Cd  Кадмий
@@ -813,7 +856,8 @@ export default {
       shortname: 'Cd',
       lat: 'cadmium',
       pos: ' 5-й период, группа - IIВ(12).',
-      electronegativity: 1.69
+      electronegativity: 1.69,
+      config: '[Kr4s<sup>2</sup>p<sup>6</sup>d<sup>10</sup>5s<sup>2</sup>.'
     },
     {
       // 49: In Индий
@@ -830,7 +874,8 @@ export default {
       shortname: 'In',
       lat: 'indium',
       pos: ' 5-й период, группа - IIIA(13).',
-      electronegativity: 1.78
+      electronegativity: 1.78,
+      config: '[Kr]5s<sup>2</sup>5p<sup>1</sup>.'
     },
     {
       // 50: Sn  Олово
@@ -847,7 +892,8 @@ export default {
       shortname: 'Sn',
       lat: 'stannum',
       pos: ' 5-й период, группа - IVА(14).',
-      electronegativity: 1.96
+      electronegativity: 1.96,
+      config: '[Kr5s<sup>2</sup>5p<sup>2</sup>.'
     },
     {
       // 51: Sb  Сурьма
@@ -864,7 +910,8 @@ export default {
       shortname: 'Sb',
       lat: 'stibium',
       pos: ' 5-й период, группа - VА(15).',
-      electronegativity: 1.9
+      electronegativity: 1.9,
+      config: '[Kr]5s<sup>2</sup>p<sup>3</sup>.'
     },
     {
       // 52: Te Теллур
@@ -932,7 +979,8 @@ export default {
       shortname: 'Cs',
       lat: 'francium',
       pos: ' 6-й период, группа - IA (1).',
-      electronegativity: 0.7
+      electronegativity: 0.7,
+      config: '6 <i>s</i><sup>1</sup>.'
     },
     {
       // 56: Ba  Барий
@@ -949,7 +997,8 @@ export default {
       shortname: 'Ba',
       lat: 'baryum',
       pos: ' 6-й период, группа - IIA(1).',
-      electronegativity: 0.9
+      electronegativity: 0.9,
+      config: '[Xe6s<sup>2</sup>.'
     },
     {
       // 57: La  Лантан
@@ -966,7 +1015,8 @@ export default {
       shortname: 'La',
       lat: 'lanthanum',
       pos: ' 6-й период, группа - IIIВ(3).',
-      electronegativity: 1.1
+      electronegativity: 1.1,
+      config: '[Xe5s<sup>2</sup>p<sup>6</sup>d<sup>1</sup>6s<sup>2</sup>.'
     },
     {
       // 58: Ce  Церий
@@ -1374,7 +1424,8 @@ export default {
       shortname: 'Tl',
       lat: 'tallium',
       pos: ' 6-й период, группа - IIIA(13).',
-      electronegativity: 1.8
+      electronegativity: 1.8,
+      config: '[Xe]1s<sup>2</sup>.'
     },
     {
       // 82: Pb Свинец
@@ -1391,7 +1442,8 @@ export default {
       shortname: 'Pb',
       lat: 'plumbum',
       pos: ' 6-й период, группа - IVA(14).',
-      electronegativity: 1.55
+      electronegativity: 1.55,
+      config: '[Xe]6s<sup>2</sup>p<sup>2</sup>.'
     },
     {
       // 83: Bi Висмут
@@ -1408,7 +1460,8 @@ export default {
       shortname: 'Bi',
       lat: 'bismuthum',
       pos: ' 6-й период, группа - VA(15).',
-      electronegativity: 1.9
+      electronegativity: 1.9,
+      config: '[Xe6s<sup>2</sup>p<sup>3</sup>.'
     },
     {
       // 84: Po  Полоний
@@ -1425,7 +1478,8 @@ export default {
       shortname: 'Po',
       lat: 'polonium',
       pos: ' 6-й период, группа - VIA(16).',
-      electronegativity: 1.76
+      electronegativity: 1.76,
+      config: '[Xe]6s<sup>2</sup>p<sup>4</sup>.'
     },
     {
       // 85: At  Астат
@@ -1459,7 +1513,8 @@ export default {
       shortname: 'Rn',
       lat: 'radon',
       pos: ' 6-й период, группа - VIIIA(18).',
-      electronegativity: 2.06
+      electronegativity: 2.06,
+      config: '[Xe]6s<sup>2</sup>р<sup>6</sup>.'
     },
     {
       // 87: Fr  Франций
@@ -1476,7 +1531,8 @@ export default {
       shortname: 'Fr',
       lat: 'francium',
       pos: ' 7-й период, группа - IА(1).',
-      electronegativity: 0.86
+      electronegativity: 0.86,
+      config: '[Rn]7s<sup>1</sup>.'
     },
     {
       // 88: Ra  Радий
@@ -1493,7 +1549,8 @@ export default {
       shortname: 'Ra',
       lat: 'radium',
       pos: ' 7-й период, группа -IIA (2).',
-      electronegativity: 0.97
+      electronegativity: 0.97,
+      config: '[Rd]7s<sup>2</sup>.'
     },
     {
       // 89: Ac  Актиний
@@ -1510,7 +1567,8 @@ export default {
       shortname: 'Ac',
       lat: 'none',
       pos: ' 7-й период, группа - IIIB (3)',
-      electronegativity: 1
+      electronegativity: 1,
+      config: '[Rn]6d<sup>1</sup>7s<sup>2</sup>'
     },
     {
       // 90: Th  Торий
@@ -1544,7 +1602,8 @@ export default {
       shortname: 'Pa',
       lat: 'protactinium',
       pos: ' 7-й период, группа - IIIB(3).',
-      electronegativity: 1.14
+      electronegativity: 1.14,
+      config: '[Rn]5f<sup>2</sup>6d<sup>1</sup>7s<sup>2</sup>.'
     },
     {
       // 92: U Уран
@@ -1764,7 +1823,8 @@ export default {
       index: 104,
       shortname: 'Rf',
       lat: 'rutherfordium',
-      pos: ' 7-й период, группа - IVB (4)'
+      pos: ' 7-й период, группа - IVB (4)',
+      config: '[Rn]5f<sup>14</sup>6d<sup>2</sup>7s<sup>2</sup>'
     },
     {
       // 105: Db Дубний
@@ -1780,7 +1840,8 @@ export default {
       index: 105,
       shortname: 'Db',
       lat: 'none',
-      pos: ' 7-й период, группа - VB (5)'
+      pos: ' 7-й период, группа - VB (5)',
+      config: '[Rn]5f<sup>14</sup>6d<sup>3</sup>7s<sup>2</sup>'
     },
     {
       // 106: Sg Сиборгий
@@ -1796,7 +1857,8 @@ export default {
       index: 106,
       shortname: 'Sg',
       lat: 'siborgium',
-      pos: ' 7-й период, группа - VIB (6)'
+      pos: ' 7-й период, группа - VIB (6)',
+      config: '[Rn]5f<sup>14</sup>6d<sup>4</sup>7s<sup>2</sup>'
     },
     {
       // 107: Bh  Борий
@@ -1812,7 +1874,8 @@ export default {
       index: 107,
       shortname: 'Bh',
       lat: 'bohrium',
-      pos: ' 7-й период, группа - VIIB (7)'
+      pos: ' 7-й период, группа - VIIB (7)',
+      config: '[Rn]5f<sup>14</sup>6d<sup>5</sup>7s<sup>2</sup>'
     },
     {
       // 108: Hs Хассий
@@ -1828,7 +1891,8 @@ export default {
       index: 108,
       shortname: 'Hs',
       lat: 'hassium',
-      pos: ' 7-й период, группа - VIIIB (8)'
+      pos: ' 7-й период, группа - VIIIB (8)',
+      config: '[Rn]5f<sup>14</sup>6d<sup>6</sup>7s<sup>2</sup>'
     },
     {
       // 109: Mt Мейтнерий
@@ -1844,7 +1908,8 @@ export default {
       index: 109,
       shortname: 'Mt',
       lat: 'meitnerium',
-      pos: ' 7-й период, группа - VIIIB (9)'
+      pos: ' 7-й период, группа - VIIIB (9)',
+      config: '[Rn]5f<sup>14</sup>6d<sup>7</sup>7s<sup>2</sup>'
     },
     {
       // 110: Ds Дармштадтий
@@ -1860,7 +1925,8 @@ export default {
       index: 110,
       shortname: 'Ds',
       lat: 'darmstadtium',
-      pos: ' 7-й период, группа - VIIIB (10)'
+      pos: ' 7-й период, группа - VIIIB (10)',
+      config: '[Rn] 5f<sup>14</sup>6d<sup>9</sup>7s<sup>1</sup>'
     },
     {
       // 111: Rg Рентгений
@@ -1876,7 +1942,8 @@ export default {
       index: 111,
       shortname: 'Rg',
       lat: 'roentgenium',
-      pos: ' 7-й период, группа - IB (11)'
+      pos: ' 7-й период, группа - IB (11)',
+      config: '[Rn] 5f<sup>14</sup>6d<sup>10</sup>7s<sup>1</sup>'
     },
     {
       // 112: Cn Коперниций
@@ -1892,7 +1959,8 @@ export default {
       index: 112,
       shortname: 'Cn',
       lat: 'copernicium',
-      pos: ' 7-й период, группа - IIB (12)'
+      pos: ' 7-й период, группа - IIB (12)',
+      config: '[Rn] 5f<sup>14</sup>6d<sup>10</sup>7s<sup>2</sup>'
     },
     {
       // 113: Nh Нихоний
@@ -1908,7 +1976,8 @@ export default {
       index: 113,
       shortname: 'Nh',
       lat: 'nihonium',
-      pos: ' 7-й период, группа - IIIA (13)'
+      pos: ' 7-й период, группа - IIIA (13)',
+      config: '[Rn] 5f<sup>14</sup>6d<sup>10</sup>7s<sup>2</sup>7p<sup>1</sup>'
     },
     {
       // 114: Fl Флеровий
@@ -1924,7 +1993,8 @@ export default {
       index: 114,
       shortname: 'Fl',
       lat: 'flerovium',
-      pos: ' 7-й период, группа - IVA (14)'
+      pos: ' 7-й период, группа - IVA (14)',
+      config: '[Rn] 5f<sup>14</sup>6d<sup>10</sup>7s<sup>2</sup>7p<sup>2</sup>'
     },
     {
       // 115: Mc Московий
@@ -1956,7 +2026,8 @@ export default {
       index: 116,
       shortname: 'Lv',
       lat: 'livermorium',
-      pos: ' 7-й период, группа - VA (15)'
+      pos: ' 7-й период, группа - VA (15)',
+      config: '[Rn] 5f<sup>14</sup>6d<sup>10</sup>7s<sup>2</sup>7p<sup>4</sup>'
     },
     {
       // 117: Ts Теннессин
@@ -1988,7 +2059,8 @@ export default {
       index: 118,
       shortname: 'Og',
       lat: 'oganesson',
-      pos: ' 7-й период, группа - VIIIA (15)'
+      pos: ' 7-й период, группа - VIIIA (15)',
+      config: '[Rn] 5f<sup>14</sup>6d<sup>10</sup>7s<sup>2</sup>7p<sup>6</sup>'
     }
   ]
 }
