@@ -1,5 +1,12 @@
-export default {
-  list: [
+var gulp = require('gulp')
+var replace = require('gulp-replace')
+var concat = require('gulp-concat');
+const fs = require("fs");
+var rename = require("gulp-rename");
+var convertEncoding = require('gulp-convert-encoding');
+
+
+const list = [
     {
       // 1: H Водород
       melting: -259.14,
@@ -15,8 +22,7 @@ export default {
       shortname: 'H',
       lat: 'hydrogenium',
       pos: ' 1-й период, группа - IA (1)',
-      electronegativity: 2.1,
-      config: '1s<sup>1</sup>'
+      electronegativity: 2.1
     },
     {
       // 2: He Гелий
@@ -33,8 +39,7 @@ export default {
       shortname: 'He',
       lat: 'helium',
       pos: ' 1-й период, группа - VIIIA (18)',
-      electronegativity: 5.5,
-      config: '1s<sup>2</sup>'
+      electronegativity: 5.5
     },
     {
       // 3: Li Литий
@@ -51,8 +56,7 @@ export default {
       shortname: 'Li',
       lat: 'lithium',
       pos: ' 2-й период, группа - IA (1)',
-      electronegativity: 2.1,
-      config: '1s<sup>2</sup>2s<sup>1</sup>'
+      electronegativity: 2.1
     },
     {
       // 4: Be Бериллий
@@ -69,8 +73,7 @@ export default {
       shortname: 'Be',
       lat: 'veryllium',
       pos: ' 2-й период, группа - IIA (2)',
-      electronegativity: 1.4,
-      config: '1s<sup>1</sup>2s<sup>2</sup>'
+      electronegativity: 1.4
     },
     {
       // 5: B Бор
@@ -87,8 +90,7 @@ export default {
       shortname: 'B',
       lat: 'borum',
       pos: ' 2-й период, группа - IIIA (13)',
-      electronegativity: 2,
-      config: '1s<sup>1</sup>2s<sup>2</sup>2p<sup>1</sup>'
+      electronegativity: 2
     },
     {
       // 6: C Углерод
@@ -105,8 +107,7 @@ export default {
       shortname: 'C',
       lat: 'carboneum',
       pos: ' 2-й период, группа - IVA (14)',
-      electronegativity: 2.5,
-      config: '1s<sup>1</sup>2s<sup>2</sup>2p<sup>2</sup>'
+      electronegativity: 2.5
     },
     {
       // 7: N  Азот
@@ -123,8 +124,7 @@ export default {
       shortname: 'N',
       lat: 'nitrogenium',
       pos: ' 2-й период, группа - VA (15)',
-      electronegativity: 3,
-      config: '1s<sup>1</sup>2s<sup>2</sup>2p<sup>3</sup>'
+      electronegativity: 3
     },
     {
       // 8: O Кислород
@@ -141,8 +141,7 @@ export default {
       shortname: 'O',
       lat: 'okhygenium',
       pos: ' 2-й период, группа - VIA (16)',
-      electronegativity: 3.5,
-      config: '1s<sup>1</sup>2s<sup>2</sup>2p<sup>4</sup>'
+      electronegativity: 3.5
     },
     {
       // 9: F Фтор
@@ -159,8 +158,7 @@ export default {
       shortname: 'F',
       lat: 'fluorum',
       pos: ' 2-й период, группа - VIIA (1)',
-      electronegativity: 4.1,
-      config: '1s<sup>1</sup>2s<sup>2</sup>2p<sup>5</sup>'
+      electronegativity: 4.1
     },
     {
       // 10: Ne Неон
@@ -177,8 +175,7 @@ export default {
       shortname: 'Ne',
       lat: 'neon',
       pos: ' 1-й период, группа - VIIIA (18)',
-      electronegativity: 4.8,
-      config: '1s<sup>1</sup>2s<sup>2</sup>2p<sup>6</sup>'
+      electronegativity: 4.8
     },
     {
       // 11: Na Натрий
@@ -195,8 +192,7 @@ export default {
       shortname: 'Na',
       lat: 'natrium',
       pos: ' 1-й период, группа - IA (1)',
-      electronegativity: 1,
-      config: '[Ne]1s<sup>1</sup>'
+      electronegativity: 1
     },
     {
       // 12: Mg Магний
@@ -213,8 +209,7 @@ export default {
       shortname: 'Mg',
       lat: 'magnesium',
       pos: ' 3-й период, группа - IIA (2)',
-      electronegativity: 1.2,
-      config: '[Ne]3s<sup>2</sup>'
+      electronegativity: 1.2
     },
     {
       // 13: Al Алюминий
@@ -231,8 +226,7 @@ export default {
       shortname: 'Al',
       lat: 'none',
       pos: ' 3-й период, группа - IIIA (13)',
-      electronegativity: 1.4,
-      config: ']3s<sup>2</sup>3p<sup>1</sup>'
+      electronegativity: 1.4
     },
     {
       // 14: Si Кремний
@@ -266,8 +260,7 @@ export default {
       shortname: 'P',
       lat: 'phosphopus',
       pos: ' 3-й период, группа - VA (2)',
-      electronegativity: 2.1,
-      config: '[Ne]3s<sup>2</sup>3р<sup>3</sup>.'
+      electronegativity: 2.1
     },
     {
       // 16: S Сера
@@ -284,8 +277,7 @@ export default {
       shortname: 'S',
       lat: 'sulfur',
       pos: ' 3-й период, группа - VIA (16)',
-      electronegativity: 2,
-      config: '[Ne]3s<sup>2</sup>3p<sup>4</sup>.'
+      electronegativity: 2
     },
     {
       // 17: Cl Хлор
@@ -302,8 +294,7 @@ export default {
       shortname: 'Cl',
       lat: 'shlorum',
       pos: ' 3-й период, группа - VIIA (17)',
-      electronegativity: 3.16,
-      config: '[Ne]3s<sup>2</sup>p<sup>5</sup>'
+      electronegativity: 3.16
     },
     {
       // 18: Ar Аргон
@@ -320,8 +311,7 @@ export default {
       shortname: 'Ar',
       lat: 'argon',
       pos: ' 3-й период, группа - VIIIA (18)',
-      electronegativity: 3.2,
-      config: '[Ne]3s<sup>2</sup>3p<sup>6</sup>'
+      electronegativity: 3.2
     },
     {
       // 19: K Калий
@@ -338,8 +328,7 @@ export default {
       shortname: 'K',
       lat: 'kalium',
       pos: ' 4-й период, группа - IA (1)',
-      electronegativity: 0.9,
-      config: '[Ar]4s<sup>1</sup>'
+      electronegativity: 0.9
     },
     {
       // 20: Ca Кальций
@@ -356,8 +345,7 @@ export default {
       shortname: 'Ca',
       lat: 'calcium',
       pos: ' 4-й период, группа - IIA (2)',
-      electronegativity: 1.2,
-      config: '[Ne4s<sup>2</sup>'
+      electronegativity: 1.2
     },
     {
       // 21: Sc Скандий
@@ -374,8 +362,7 @@ export default {
       shortname: 'Sc',
       lat: 'scandium',
       pos: ' 4-й период, группа - IIIB (3)',
-      electronegativity: 1.2,
-      config: '[Ar]3d<sup>1</sup>4s<sup>2</sup>'
+      electronegativity: 1.2
     },
     {
       // 22: Ti Титан
@@ -392,8 +379,7 @@ export default {
       shortname: 'Ti',
       lat: 'titanium',
       pos: ' 4-й период, группа - IVB (4)',
-      electronegativity: 1,
-      config: '[Ar]3d<sup>2</sup>4s</sup><sup>2</sup>'
+      electronegativity: 1
     },
     {
       // 23: V Ванадий
@@ -410,8 +396,7 @@ export default {
       shortname: 'V',
       lat: 'vanadium',
       pos: ' 4-й период, группа - VВ (5)',
-      electronegativity: 1.6,
-      config: '[Ar]3s<sup>2</sup>p<sup>6</sup>d<sup>3</sup>4s<sup>2</sup>.'
+      electronegativity: 1.6
     },
     {
       // 24: Cr  Хром
@@ -445,8 +430,7 @@ export default {
       shortname: 'Mn',
       lat: 'manganum',
       pos: ' 4-й период, группа - VIIВ (7)',
-      electronegativity: 1.5,
-      config: '[Ar]3s</sup><sup>2</sup>p</sup><sup>6</sup>d<sup>5</sup>4s<sup>2</sup>'
+      electronegativity: 1.5
     },
     {
       // 26: Fe  Железо
@@ -463,8 +447,7 @@ export default {
       shortname: 'Fe',
       lat: 'ferrum',
       pos: ' 4-й период, группа - VIIIВ (8)',
-      electronegativity: 1.8,
-      config: '[Ar]3s<sup>2</sup>p<sup>6</sup>d<sup>6</sup>4s<sup>2</sup>.'
+      electronegativity: 1.8
     },
     {
       // 27: Co Кобальт
@@ -481,8 +464,7 @@ export default {
       shortname: 'Co',
       lat: 'sobaltum',
       pos: ' 4-й период, группа - VIIIВ (9).',
-      electronegativity: 1.88,
-      config: '[Ar]3s<sup>2</sup>p<sup>6</sup>d<sup>7</sup>4s<sup>2</sup>.'
+      electronegativity: 1.88
     },
     {
       // 28: Ni Никель
@@ -516,8 +498,7 @@ export default {
       shortname: 'Cu',
       lat: 'cuprum',
       pos: ' 4-й период, группа - IВ (11).',
-      electronegativity: 1.9,
-      config: '[Ar]3s<sup>2</sup>p<sup>6</sup>d<suP>10</sup>4s<sup>1</sup>.'
+      electronegativity: 1.9
     },
     {
       // 30: Zn  Цинк
@@ -534,8 +515,7 @@ export default {
       shortname: 'Zn',
       lat: 'zincum',
       pos: ' 5-й период, группа - (4).',
-      electronegativity: 1.66,
-      config: '[Ar]3s<sup>2</sup>p<sup>6</sup>d<sup>10</sup>4s<sup>2</sup>.'
+      electronegativity: 1.66
     },
     {
       // 31: Ga Галлий
@@ -552,8 +532,7 @@ export default {
       shortname: 'Ga',
       lat: 'gallium',
       pos: ' 4-й период, группа - IIIA (13).',
-      electronegativity: 1.6,
-      config: '[Ar4s<sup>2</sup>p<sup>1</sup>.'
+      electronegativity: 1.6
     },
     {
       // 32: Ge Германий
@@ -569,8 +548,7 @@ export default {
       index: 32,
       shortname: 'Ge',
       lat: 'germanium',
-      pos: ' 4-й период, группа - IVA (14).',
-      config: '[Ar]4s<sup>2</sup>p<sup>2</sup>.'
+      pos: ' 4-й период, группа - IVA (14).'
     },
     {
       // 33: As  Мышьяк
@@ -587,8 +565,7 @@ export default {
       shortname: 'As',
       lat: 'arsenicum',
       pos: ' 4-й период, группа - VА (15).',
-      electronegativity: 2.1,
-      config: '[Ar4s<sup>2</sup>p<sup>3</sup>.'
+      electronegativity: 2.1
     },
     {
       // 34: Se  Селен
@@ -605,8 +582,7 @@ export default {
       shortname: 'Se',
       lat: 'selenium',
       pos: ' 4-й период, группа - VIA (16).',
-      electronegativity: 2.4,
-      config: '[Ar]3d<sup>10</sup>4s<sup>2</sup>p<sup>4</sup>.'
+      electronegativity: 2.4
     },
     {
       // 35: Br  Бром
@@ -623,8 +599,7 @@ export default {
       shortname: 'Br',
       lat: 'bromum',
       pos: ' 4-й период, группа - VIIА ().',
-      electronegativity: 2.8,
-      config: '[Ar4s<sup>2</sup>p<sup>5</sup>.'
+      electronegativity: 2.8
     },
     {
       // 36: Kr Криптон
@@ -641,8 +616,7 @@ export default {
       shortname: 'Kr',
       lat: 'krypton',
       pos: ' 4-й период, группа - VIA (16).',
-      electronegativity: 2.94,
-      config: '[Ar]3d<sup>10</sup>4s<sup>2</sup>p<sup>6</sup>.'
+      electronegativity: 2.94
     },
     {
       // 37: Rb Рубидий
@@ -659,8 +633,7 @@ export default {
       shortname: 'Rb',
       lat: 'rubidium',
       pos: ' 5-й период, группа - IA(1).',
-      electronegativity: 0.8,
-      config: '[Кr]5s<sup>2</sup>.'
+      electronegativity: 0.8
     },
     {
       // 38: Sr  Стронций
@@ -677,8 +650,7 @@ export default {
       shortname: 'Sr',
       lat: 'strontium',
       pos: ' 5-й период, группа - IIА (2).',
-      electronegativity: 1,
-      config: '[Kr]5s<sup>2</sup>.'
+      electronegativity: 1
     },
     {
       // 39: Y  Иттрий
@@ -695,8 +667,7 @@ export default {
       shortname: 'Y',
       lat: 'yttrium',
       pos: ' 5-й период, группа -IIIB (3).',
-      electronegativity: 1.11,
-      config: '[Kr].'
+      electronegativity: 1.11
     },
     {
       // 40: Zr  Цирконий
@@ -713,8 +684,7 @@ export default {
       shortname: 'Zr',
       lat: 'zirconium',
       pos: ' 5-й период, группа -IVB (4).',
-      electronegativity: 1.4,
-      config: '[Kr]4s<sup>2</sup>p<sup>6</sup>d<sup>2</sup>5s<sup>2</sup>.'
+      electronegativity: 1.4
     },
     {
       // 41: Nb Ниобий
@@ -748,8 +718,7 @@ export default {
       shortname: 'Mo',
       lat: 'molibdaenum',
       pos: ' 5-й период, группа - (6).',
-      electronegativity: 1.8,
-      config: '[Kr]4s<sup>2</sup> p<sup>6</sup>d<sup>5</sup>5s<sup>1</sup>.'
+      electronegativity: 1.8
     },
     {
       // 43: Tc Технеций
@@ -766,8 +735,7 @@ export default {
       shortname: 'Tc',
       lat: 'technetium',
       pos: ' 5-й период, группа - VIIB (7)',
-      electronegativity: 1.9,
-      config: '[Kr]4d<sup>5</sup>5s<sup>2</sup>.'
+      electronegativity: 1.9
     },
     {
       // 44: Ru  Рутений
@@ -784,8 +752,7 @@ export default {
       shortname: 'Ru',
       lat: 'ruthenium',
       pos: ' 5-й период, группа - VIIIB (8).',
-      electronegativity: 1.42,
-      config: '[Kr]4s<sup>2</sup>p<sup>6</sup>d<sup>7</sup>5s<sup>1</sup>.'
+      electronegativity: 1.42
     },
     {
       // 45: Rh  Родий
@@ -802,8 +769,7 @@ export default {
       shortname: 'Rh',
       lat: 'rhodium',
       pos: ' 5-й период, группа - VIIIВ(9).',
-      electronegativity: 2.28,
-      config: '[Kr]4s<sup>2</sup>p<sup>6</sup>d<sup>8</sup>5s<sup>1</sup>.'
+      electronegativity: 2.28
     },
     {
       // 46: Pd Палладий
@@ -820,8 +786,7 @@ export default {
       shortname: 'Pd',
       lat: 'palladium',
       pos: ' 5-й период, группа - VIIIB(10).',
-      electronegativity: 1.35,
-      config: '[Kr]4s<sup>2</sup>p<sup>6</sup>d<sup>10</sup>5s<sup>0</sup>.'
+      electronegativity: 1.35
     },
     {
       // 47: Ag  Серебро
@@ -838,8 +803,7 @@ export default {
       shortname: 'Ag',
       lat: 'none',
       pos: ' 5-й период, группа - IB(11).',
-      electronegativity: 1.93,
-      config: '[Kr4s<sup>2</sup>p<sup>6</sup>d<sup>10</sup>5s<sup>1</sup>.'
+      electronegativity: 1.93
     },
     {
       // 48: Cd  Кадмий
@@ -856,8 +820,7 @@ export default {
       shortname: 'Cd',
       lat: 'cadmium',
       pos: ' 5-й период, группа - IIВ(12).',
-      electronegativity: 1.69,
-      config: '[Kr4s<sup>2</sup>p<sup>6</sup>d<sup>10</sup>5s<sup>2</sup>.'
+      electronegativity: 1.69
     },
     {
       // 49: In Индий
@@ -874,8 +837,7 @@ export default {
       shortname: 'In',
       lat: 'indium',
       pos: ' 5-й период, группа - IIIA(13).',
-      electronegativity: 1.78,
-      config: '[Kr]5s<sup>2</sup>5p<sup>1</sup>.'
+      electronegativity: 1.78
     },
     {
       // 50: Sn  Олово
@@ -892,8 +854,7 @@ export default {
       shortname: 'Sn',
       lat: 'stannum',
       pos: ' 5-й период, группа - IVА(14).',
-      electronegativity: 1.96,
-      config: '[Kr5s<sup>2</sup>5p<sup>2</sup>.'
+      electronegativity: 1.96
     },
     {
       // 51: Sb  Сурьма
@@ -910,8 +871,7 @@ export default {
       shortname: 'Sb',
       lat: 'stibium',
       pos: ' 5-й период, группа - VА(15).',
-      electronegativity: 1.9,
-      config: '[Kr]5s<sup>2</sup>p<sup>3</sup>.'
+      electronegativity: 1.9
     },
     {
       // 52: Te Теллур
@@ -979,8 +939,7 @@ export default {
       shortname: 'Cs',
       lat: 'francium',
       pos: ' 6-й период, группа - IA (1).',
-      electronegativity: 0.7,
-      config: '6 <i>s</i><sup>1</sup>.'
+      electronegativity: 0.7
     },
     {
       // 56: Ba  Барий
@@ -997,8 +956,7 @@ export default {
       shortname: 'Ba',
       lat: 'baryum',
       pos: ' 6-й период, группа - IIA(1).',
-      electronegativity: 0.9,
-      config: '[Xe6s<sup>2</sup>.'
+      electronegativity: 0.9
     },
     {
       // 57: La  Лантан
@@ -1015,8 +973,7 @@ export default {
       shortname: 'La',
       lat: 'lanthanum',
       pos: ' 6-й период, группа - IIIВ(3).',
-      electronegativity: 1.1,
-      config: '[Xe5s<sup>2</sup>p<sup>6</sup>d<sup>1</sup>6s<sup>2</sup>.'
+      electronegativity: 1.1
     },
     {
       // 58: Ce  Церий
@@ -1424,8 +1381,7 @@ export default {
       shortname: 'Tl',
       lat: 'tallium',
       pos: ' 6-й период, группа - IIIA(13).',
-      electronegativity: 1.8,
-      config: '[Xe]1s<sup>2</sup>.'
+      electronegativity: 1.8
     },
     {
       // 82: Pb Свинец
@@ -1442,8 +1398,7 @@ export default {
       shortname: 'Pb',
       lat: 'plumbum',
       pos: ' 6-й период, группа - IVA(14).',
-      electronegativity: 1.55,
-      config: '[Xe]6s<sup>2</sup>p<sup>2</sup>.'
+      electronegativity: 1.55
     },
     {
       // 83: Bi Висмут
@@ -1460,8 +1415,7 @@ export default {
       shortname: 'Bi',
       lat: 'bismuthum',
       pos: ' 6-й период, группа - VA(15).',
-      electronegativity: 1.9,
-      config: '[Xe6s<sup>2</sup>p<sup>3</sup>.'
+      electronegativity: 1.9
     },
     {
       // 84: Po  Полоний
@@ -1478,8 +1432,7 @@ export default {
       shortname: 'Po',
       lat: 'polonium',
       pos: ' 6-й период, группа - VIA(16).',
-      electronegativity: 1.76,
-      config: '[Xe]6s<sup>2</sup>p<sup>4</sup>.'
+      electronegativity: 1.76
     },
     {
       // 85: At  Астат
@@ -1513,8 +1466,7 @@ export default {
       shortname: 'Rn',
       lat: 'radon',
       pos: ' 6-й период, группа - VIIIA(18).',
-      electronegativity: 2.06,
-      config: '[Xe]6s<sup>2</sup>р<sup>6</sup>.'
+      electronegativity: 2.06
     },
     {
       // 87: Fr  Франций
@@ -1531,8 +1483,7 @@ export default {
       shortname: 'Fr',
       lat: 'francium',
       pos: ' 7-й период, группа - IА(1).',
-      electronegativity: 0.86,
-      config: '[Rn]7s<sup>1</sup>.'
+      electronegativity: 0.86
     },
     {
       // 88: Ra  Радий
@@ -1549,8 +1500,7 @@ export default {
       shortname: 'Ra',
       lat: 'radium',
       pos: ' 7-й период, группа -IIA (2).',
-      electronegativity: 0.97,
-      config: '[Rd]7s<sup>2</sup>.'
+      electronegativity: 0.97
     },
     {
       // 89: Ac  Актиний
@@ -1567,8 +1517,7 @@ export default {
       shortname: 'Ac',
       lat: 'none',
       pos: ' 7-й период, группа - IIIB (3)',
-      electronegativity: 1,
-      config: '[Rn]6d<sup>1</sup>7s<sup>2</sup>'
+      electronegativity: 1
     },
     {
       // 90: Th  Торий
@@ -1602,8 +1551,7 @@ export default {
       shortname: 'Pa',
       lat: 'protactinium',
       pos: ' 7-й период, группа - IIIB(3).',
-      electronegativity: 1.14,
-      config: '[Rn]5f<sup>2</sup>6d<sup>1</sup>7s<sup>2</sup>.'
+      electronegativity: 1.14
     },
     {
       // 92: U Уран
@@ -1755,7 +1703,7 @@ export default {
       index: 100,
       shortname: 'Fm',
       lat: 'fermium',
-      pos: ' 7-й период, группа - IIIB(3).',
+      pos: ' 7-7-й период, группа - IIIB(3).',
       electronegativity: 1.2
     },
     {
@@ -1789,7 +1737,7 @@ export default {
       index: 102,
       shortname: 'No',
       lat: 'nobelium',
-      pos: ' 7-й период, группа - IIIB(3).',
+      pos: ' 7-7-й период, группа - IIIB(3).',
       electronegativity: 1.2
     },
     {
@@ -1823,8 +1771,7 @@ export default {
       index: 104,
       shortname: 'Rf',
       lat: 'rutherfordium',
-      pos: ' 7-й период, группа - IVB (4)',
-      config: '[Rn]5f<sup>14</sup>6d<sup>2</sup>7s<sup>2</sup>'
+      pos: ' 7-й период, группа - IVB (4)'
     },
     {
       // 105: Db Дубний
@@ -1840,8 +1787,7 @@ export default {
       index: 105,
       shortname: 'Db',
       lat: 'none',
-      pos: ' 7-й период, группа - VB (5)',
-      config: '[Rn]5f<sup>14</sup>6d<sup>3</sup>7s<sup>2</sup>'
+      pos: ' 7-й период, группа - VB (5)'
     },
     {
       // 106: Sg Сиборгий
@@ -1857,8 +1803,7 @@ export default {
       index: 106,
       shortname: 'Sg',
       lat: 'siborgium',
-      pos: ' 7-й период, группа - VIB (6)',
-      config: '[Rn]5f<sup>14</sup>6d<sup>4</sup>7s<sup>2</sup>'
+      pos: ' 7-й период, группа - VIB (6)'
     },
     {
       // 107: Bh  Борий
@@ -1874,8 +1819,7 @@ export default {
       index: 107,
       shortname: 'Bh',
       lat: 'bohrium',
-      pos: ' 7-й период, группа - VIIB (7)',
-      config: '[Rn]5f<sup>14</sup>6d<sup>5</sup>7s<sup>2</sup>'
+      pos: ' 7-й период, группа - VIIB (7)'
     },
     {
       // 108: Hs Хассий
@@ -1891,8 +1835,7 @@ export default {
       index: 108,
       shortname: 'Hs',
       lat: 'hassium',
-      pos: ' 7-й период, группа - VIIIB (8)',
-      config: '[Rn]5f<sup>14</sup>6d<sup>6</sup>7s<sup>2</sup>'
+      pos: ' 7-й период, группа - VIIIB (8)'
     },
     {
       // 109: Mt Мейтнерий
@@ -1908,8 +1851,7 @@ export default {
       index: 109,
       shortname: 'Mt',
       lat: 'meitnerium',
-      pos: ' 7-й период, группа - VIIIB (9)',
-      config: '[Rn]5f<sup>14</sup>6d<sup>7</sup>7s<sup>2</sup>'
+      pos: ' 7-й период, группа - VIIIB (9)'
     },
     {
       // 110: Ds Дармштадтий
@@ -1925,8 +1867,7 @@ export default {
       index: 110,
       shortname: 'Ds',
       lat: 'darmstadtium',
-      pos: ' 7-й период, группа - VIIIB (10)',
-      config: '[Rn] 5f<sup>14</sup>6d<sup>9</sup>7s<sup>1</sup>'
+      pos: ' 7-й период, группа - VIIIB (10)'
     },
     {
       // 111: Rg Рентгений
@@ -1942,8 +1883,7 @@ export default {
       index: 111,
       shortname: 'Rg',
       lat: 'roentgenium',
-      pos: ' 7-й период, группа - IB (11)',
-      config: '[Rn] 5f<sup>14</sup>6d<sup>10</sup>7s<sup>1</sup>'
+      pos: ' 7-й период, группа - IB (11)'
     },
     {
       // 112: Cn Коперниций
@@ -1959,8 +1899,7 @@ export default {
       index: 112,
       shortname: 'Cn',
       lat: 'copernicium',
-      pos: ' 7-й период, группа - IIB (12)',
-      config: '[Rn] 5f<sup>14</sup>6d<sup>10</sup>7s<sup>2</sup>'
+      pos: ' 7-й период, группа - IIB (12)'
     },
     {
       // 113: Nh Нихоний
@@ -1976,8 +1915,7 @@ export default {
       index: 113,
       shortname: 'Nh',
       lat: 'nihonium',
-      pos: ' 7-й период, группа - IIIA (13)',
-      config: '[Rn] 5f<sup>14</sup>6d<sup>10</sup>7s<sup>2</sup>7p<sup>1</sup>'
+      pos: ' 7-й период, группа - IIIA (13)'
     },
     {
       // 114: Fl Флеровий
@@ -1993,8 +1931,7 @@ export default {
       index: 114,
       shortname: 'Fl',
       lat: 'flerovium',
-      pos: ' 7-й период, группа - IVA (14)',
-      config: '[Rn] 5f<sup>14</sup>6d<sup>10</sup>7s<sup>2</sup>7p<sup>2</sup>'
+      pos: ' 7-й период, группа - IVA (14)'
     },
     {
       // 115: Mc Московий
@@ -2026,8 +1963,7 @@ export default {
       index: 116,
       shortname: 'Lv',
       lat: 'livermorium',
-      pos: ' 7-й период, группа - VA (15)',
-      config: '[Rn] 5f<sup>14</sup>6d<sup>10</sup>7s<sup>2</sup>7p<sup>4</sup>'
+      pos: ' 7-й период, группа - VA (15)'
     },
     {
       // 117: Ts Теннессин
@@ -2059,8 +1995,400 @@ export default {
       index: 118,
       shortname: 'Og',
       lat: 'oganesson',
-      pos: ' 7-й период, группа - VIIIA (15)',
-      config: '[Rn] 5f<sup>14</sup>6d<sup>10</sup>7s<sup>2</sup>7p<sup>6</sup>'
+      pos: ' 7-й период, группа - VIIIA (15)'
     }
   ]
-}
+
+
+
+/* var files = ['in/SVG-emojis/001-grinning.svg',
+'in/SVG-emojis/002-smiling.svg',
+'in/SVG-emojis/003-tongue.svg',
+'in/SVG-emojis/004-unamused.svg',
+'in/SVG-emojis/005-nerd.svg',
+'in/SVG-emojis/006-drooling.svg',
+'in/SVG-emojis/007-kiss.svg',
+'in/SVG-emojis/008-mouthless.svg',
+'in/SVG-emojis/009-joy.svg',
+'in/SVG-emojis/010-halo.svg',
+'in/SVG-emojis/011-winking.svg',
+'in/SVG-emojis/012-smirking.svg',
+'in/SVG-emojis/013-sleeping.svg',
+'in/SVG-emojis/014-woozy.svg',
+'in/SVG-emojis/015-astonished.svg',
+'in/SVG-emojis/016-upside down.svg',
+'in/SVG-emojis/017-horns.svg',
+'in/SVG-emojis/018-vomiting.svg',
+'in/SVG-emojis/019-grinning.svg',
+'in/SVG-emojis/020-winking.svg',
+'in/SVG-emojis/021-kissing.svg',
+'in/SVG-emojis/022-rolling.svg',
+'in/SVG-emojis/023-no expression.svg',
+'in/SVG-emojis/024-flushed.svg',
+'in/SVG-emojis/025-emojis.svg',
+'in/SVG-emojis/026-angry.svg',
+'in/SVG-emojis/027-grimacing.svg',
+'in/SVG-emojis/028-sleepy.svg',
+'in/SVG-emojis/029-squit.svg',
+'in/SVG-emojis/030-hearts.svg',
+'in/SVG-emojis/031-worry.svg',
+'in/SVG-emojis/032-in love.svg',
+'in/SVG-emojis/033-moustache.svg',
+'in/SVG-emojis/034-crying.svg',
+'in/SVG-emojis/035-sad.svg',
+'in/SVG-emojis/036-pirate.svg',
+'in/SVG-emojis/037-sad.svg',
+'in/SVG-emojis/038-cowardly.svg',
+'in/SVG-emojis/039-monocle.svg',
+'in/SVG-emojis/040-smile.svg',
+'in/SVG-emojis/041-angry.svg',
+'in/SVG-emojis/042-muted.svg',
+'in/SVG-emojis/043-pensive.svg',
+'in/SVG-emojis/044-displeased.svg',
+'in/SVG-emojis/045-party.svg',
+'in/SVG-emojis/046-neutral.svg',
+'in/SVG-emojis/047-stars.svg',
+'in/SVG-emojis/048-nausea.svg',
+'in/SVG-emojis/049-dead.svg',
+'in/SVG-emojis/050-tired.svg',]
+let flist=[];
+gulp.task('filelist', function () {
+	let flist=[]
+	gulp.src("in/files.txt")
+	  .pipe(replace(/(.*?).svg/g,function(match) {
+	  	 let arr = match.split('/');
+	  	 flist.push(arr[4]+"/"+arr[5]+"/"+arr[6]);
+	  	 return "'"+arr[4]+"/"+arr[5]+"/"+arr[6]+"'," 
+	  }))
+	  .pipe(gulp.dest('out/source-list/'));
+})
+
+gulp.task('repsvgvue', function () {
+  gulp.src(files)
+    .pipe(replace(/<!--(.*?)-->/, '<!--success replace-->'))
+    .pipe(replace(/<?xml(.*?)?>/, '<!--vue component-->'))
+    .pipe(replace(/<!DOCTYPE(.*?)>/, '<!--icons-->'))
+    .pipe(replace(/version=(.*?) id=(.*?) xmlns=(.*?) xmlns:xlink=(.*?) x=(.*?) y=(.*?)/, ''))
+    .pipe(replace(/<!DOCTYPE(.*?)>/, '<!--icons-->'))
+    .pipe(replace('xml:space="preserve"', ''))
+    .pipe(replace('"0px"', ''))
+    .pipe(replace('enable-background', 'data-background'))
+    .pipe(replace(/viewBox=(.*?)/, function (m) {
+      let arr =  m.split("=");
+      return 'data-'+arr[0]+'='+arr[1];    
+    }))
+    .pipe(replace('svg', 'template'))
+    .pipe(rename(function (path) {
+      let arr = path.basename.split('-');
+      path.dirname += "/vue";
+      path.basename = "Icon-"+arr[1];
+      path.extname = ".vue";
+    }))
+    .pipe(gulp.dest('out/'))
+})
+gulp.task("rensvgvue", function () {
+  let out=[];
+  for(let i=0; i<files.length; i++) {
+    let arr = files[i].split('in/');
+    let res = 'out/'+arr[1];
+    out.push(res);   
+  }
+  gulp.src(out)
+    .pipe(rename(function (path) {
+    path.dirname += "/vue";
+    path.basename = "Icon"+path.basename;
+    path.extname = ".vue";
+  }))
+  .pipe(gulp.dest("out"))
+})
+gulp.task('componentlist', function () {
+  gulp.src('in/component/componentList.txt')
+    .pipe(replace(/(.*?).vue/g, function (match) {
+      console.log("enter")
+      console.log(match)
+      const arr = match.split('/')
+      const fname = arr[2].split('.')
+      const res = 'import ' + fname[0] + " from 'vue/Icon-'"+ arr[2] + "'"
+      return res
+    }))
+    .pipe(rename(function (path) {
+      path.basename = "component-import";
+      path.extname = ".txt";
+    }))
+    .pipe(gulp.dest('out/component/'))
+  gulp.src('in/component/componentList.txt')
+    .pipe(replace(/(.*?).vue/g, function (match) {
+      console.log(match)
+      const arr = match.split('/')
+      const fname = arr[2].split('.')
+      const res =  fname[0] + ','
+      return res
+    }))
+    .pipe(rename(function (path) {
+      path.basename = "component-list";
+      path.extname = ".txt";
+    }))
+    .pipe(gulp.dest('out/component/'))
+  gulp.src('in/component/componentList.txt')
+    .pipe(replace(/(.*?).vue/g, function (match) {
+      console.log(match)
+      const arr = match.split('/')
+      const fname = arr[2].split('.')
+      const res = '<icon-base class="icons__image" icon-name="' + fname[0] + '" width="64" height="64" icon-color="#5434ad"><' + fname[0] + '/></icon-base>"'
+      return res
+    }))
+    .pipe(rename(function (path) {
+      path.basename = "component-template";
+      path.extname = ".txt";
+    }))
+    .pipe(gulp.dest('out/component/'))
+})
+gulp.task("componentconcat", function(){
+  gulp.src(['in/component/starthtml.txt',
+            'out/component/component-template.txt',
+            'in/component/endhtml.txt',
+            'in/component/startjs.txt',
+            'out/component/component-import.txt',
+            'in/component/compstart.txt',
+            'out/component/component-list.txt',
+            'in/component/compend.txt',
+            'in/component/endjs.txt'
+          ])
+    .pipe(concat('IconList.vue'))
+    .pipe(gulp.dest('out/result/'));
+})
+
+gulp.task("encoding", function() {
+  gulp.src('in/mendel/*.html",') 
+        .pipe(convertEncoding({from:"windows-1251",to: 'utf-8'}))
+        .pipe(replace('<META content=Иванов И.С. name=author>', '<META content="Иванов (Шавлюга) И.С. iv2" name=author><META charset=UTF-8>'))
+        .pipe(gulp.dest('in/mendel/encoding/'));
+});
+*/
+
+const files = [
+"in/short/Ac.html",
+"in/short/Ag.html",
+"in/short/Al.html",
+"in/short/Am.html",
+"in/short/Ar.html",
+"in/short/As.html",
+"in/short/At.html",
+"in/short/Au.html",
+"in/short/B.html",
+"in/short/Ba.html",
+"in/short/Be.html",
+"in/short/Bh.html",
+"in/short/Bi.html",
+"in/short/Bk.html",
+"in/short/Br.html",
+"in/short/C.html",
+"in/short/Ca.html",
+"in/short/Cd.html",
+"in/short/Ce.html",
+"in/short/Cf.html",
+"in/short/Cl.html",
+"in/short/Cm.html",
+"in/short/Cn.html",
+"in/short/Co.html",
+"in/short/Cr.html",
+"in/short/Cs.html",
+"in/short/Cu.html",
+"in/short/Db.html",
+"in/short/Ds.html",
+"in/short/Dy.html",
+"in/short/Er.html",
+"in/short/Es.html",
+"in/short/Eu.html",
+"in/short/F.html",
+"in/short/Fe.html",
+"in/short/Fl.html",
+"in/short/Fm.html",
+"in/short/Fr.html",
+"in/short/Ga.html",
+"in/short/Gd.html",
+"in/short/Ge.html",
+"in/short/H.html",
+"in/short/He.html",
+"in/short/Hf.html",
+"in/short/Hg.html",
+"in/short/Ho.html",
+"in/short/Hs.html",
+"in/short/I.html",
+"in/short/In.html",
+"in/short/Ir.html",
+"in/short/K.html",
+"in/short/Kr.html",
+"in/short/La.html",
+"in/short/Li.html",
+"in/short/Lr.html",
+"in/short/Lu.html",
+"in/short/Lv.html",
+"in/short/Mc.html",
+"in/short/Md.html",
+"in/short/Mg.html",
+"in/short/Mn.html",
+"in/short/Mo.html",
+"in/short/Mt.html",
+"in/short/N.html",
+"in/short/Na.html",
+"in/short/Nb.html",
+"in/short/Nd.html",
+"in/short/Ne.html",
+"in/short/Nh.html",
+"in/short/Ni.html",
+"in/short/No.html",
+"in/short/Np.html",
+"in/short/O.html",
+"in/short/Og.html",
+"in/short/Os.html",
+"in/short/P.html",
+"in/short/Pa.html",
+"in/short/Pb.html",
+"in/short/Pd.html",
+"in/short/Pm.html",
+"in/short/Po.html",
+"in/short/Pr.html",
+"in/short/Pt.html",
+"in/short/Pu.html",
+"in/short/Ra.html",
+"in/short/Rb.html",
+"in/short/Re.html",
+"in/short/Rf.html",
+"in/short/Rg.html",
+"in/short/Rh.html",
+"in/short/Rn.html",
+"in/short/Ru.html",
+"in/short/S.html",
+"in/short/Sb.html",
+"in/short/Sc.html",
+"in/short/Se.html",
+"in/short/Sg.html",
+"in/short/Si.html",
+"in/short/Sm.html",
+"in/short/Sn.html",
+"in/short/Sr.html",
+"in/short/Ta.html",
+"in/short/Tb.html",
+"in/short/Tc.html",
+"in/short/Te.html",
+"in/short/Th.html",
+"in/short/Ti.html",
+"in/short/Tl.html",
+"in/short/Tm.html",
+"in/short/Ts.html",
+"in/short/U.html",
+"in/short/V.html",
+"in/short/W.html",
+"in/short/Xe.html",
+"in/short/Y.html",
+"in/short/Yb.html",
+"in/short/Zn.html",
+"in/short/Zr.html",
+]
+gulp.task("getelect", function () {
+  let out=[];
+  for(let i=0; i<files.length; i++) {
+    let arr = files[i].split('in/');
+    let res = 'out/'+arr[1];
+    gulp.src(files[i])
+      .pipe(replace(/Электроотрицательность(.*?)<br>/g, function (match) {
+        const postag = match.indexOf('Электроотрицательность')
+        const posstartval = match.indexOf(':',postag)  
+        const posendtag = match.indexOf('<br>',postag)  
+        let val = match.slice(posstartval+1, posendtag-1).trim()
+        if(val.indexOf('</I>',0)>-1||val.indexOf('</i>',0)>-1) val = val.slice(4,8).trim()
+        if(val[1] === ',') val = val.split(',').join('.')
+        let shortname = files[i].slice(9,11)
+        if(shortname[1] === '.') shortname = shortname.split('.').join('')
+        const idelem = list.findIndex((el)=>el.shortname === shortname)
+        list[idelem].electronegativity = +val
+        console.log(match)
+let txt = 'export default {\nlist:[\n'
+    for(el of list) {
+      txt+='{\n'
+      txt+='// '+el.index+': '+el.shortname+' '+el.rusname+'\n'
+      for(prop in el) {
+         if(typeof el[prop] === 'string') txt +=''+prop+':"'+el[prop]+'",\n'
+         else txt +=''+prop+':'+el[prop]+',\n'
+      }
+      txt+='},\n'
+    }
+    txt+=']\n}'
+    fs.writeFile('elements-res.js',txt,(err) => {
+       if (err) {
+        console.error(err)
+        return
+      }})
+      }))
+    .pipe(gulp.dest("out/short/"))
+    
+  }
+})
+
+gulp.task("getconfig", function () {
+  let out=[];
+  for(let i=0; i<files.length; i++) {
+    let arr = files[i].split('in/');
+    let res = 'out/'+arr[1];
+    gulp.src(files[i])
+      .pipe(replace(/Электронная конфигурация(.*?)<br>/g, function (match) {
+        const postag = match.indexOf('Электронная конфигурация')
+        const posstartval = match.indexOf(':',postag)  
+        const posendtag = match.indexOf('<br>',postag)  
+        let val = match.slice(posstartval+1, posendtag).trim()
+        let shortname = files[i].slice(9,11)
+        if(shortname[1] === '.') shortname = shortname.split('.').join('')
+        const idelem = list.findIndex((el)=>el.shortname === shortname)
+        if(val.indexOf('</I>',0)>-1||val.indexOf('</i>',0)>-1) val = val.slice(4)
+        let tempconf = val.split('\n').join('').trim()
+        let stlink = val.indexOf('[',0) 
+        let endlink = val.indexOf(']',0)
+        let link=val.slice(stlink, endlink+1)
+        if(link.length > 4) {
+          let cut = link.slice(val.indexOf('">',0), val.indexOf('</',0))
+          if(cut[0] === '"' || cut[1] === '"') cut = cut.split('"').join('')
+          if(cut[0] === '>' || cut[1] === '>') cut = cut.split('>').join('[')
+          if(cut[cut.length-1] === '<') cut = cut.split('<').join(']')
+          if(cut[cut.length-1] !== ']') cut = cut.trim() + ']'
+          console.log(cut)
+          const rep = val.indexOf(']',0)
+          if (rep>-1) {
+             tempconf = cut +  tempconf.slice(rep)
+          }
+        }else {
+           console.log(link)
+        }
+        console.log('tempconf: '+tempconf)
+        list[idelem].config = tempconf
+let txt = 'export default {\nlist:[\n'
+    for(el of list) {
+      txt+='{\n'
+      txt+='// '+el.index+': '+el.shortname+' '+el.rusname+'\n'
+      for(prop in el) {
+         if(typeof el[prop] === 'string') txt +=''+prop+':"'+el[prop]+'",\n'
+         else txt +=''+prop+':'+el[prop]+',\n'
+      }
+      txt+='},\n'
+    }
+    txt+=']\n}'
+    fs.writeFile('elements-res.js',txt,(err) => {
+       if (err) {
+        console.error(err)
+        return
+      }})
+      }))
+    .pipe(gulp.dest("out/short/"))
+    
+  }
+})
+gulp.task("concat", function(){
+  gulp.src(files)
+    .pipe(concat('out/full-elements.html'))
+    .pipe(gulp.dest('out/result/'));
+})
+gulp.task('reptest', function () {
+  gulp.src('in/full-elements.html')
+    .pipe(replace('H1 align=center>', '<h1>'))
+    .pipe(gulp.dest('out/'))
+})
