@@ -11,7 +11,7 @@
     <h4 class="vieweelement__box-pos" title="Позиция в таблице">{{ select.pos }}</h4>
     <p class="vieweelement__box-mass" title="Относительная атомная масса">атомная масса {{ select.mass }}</p>
     <p class="vieweelement__box-config" title="Электронная конфигурация"><span v-html="select.config||'нет данных'"></span></p>
-    <p class="vieweelement__box-elnegative" title="Электроотрицательность">Электроотрицательность {{ select.electronegativity||'нет данных' }}</p>
+    <p class="vieweelement__box-elnegative" title="Электроотрицательность">Электроотрицательность {{ select.electronegativity||'нет' }}</p>
     <p class="vieweelement__box-oxidation" title="Степень окисления">Степень окисления {{ select.oxidation }}</p>
     <p class="vieweelement__box-type" title="Тип элемента">{{ select.type }}</p>
     <p class="vieweelement__box-melting" title="Температура плавления">t<sub>плавления</sub>: {{ select.melting||'нет данных' }}</p>
@@ -22,6 +22,7 @@
   <div class="vieweelement__box" v-else>
     <div class="vieweelement__box-info">
        Свойства атомов химических элементов, а также состав и свойства образуемых ими веществ находятся в периодической зависимости от зарядов атомных ядер. (<b>периодический закон Д.И. Менделеева</b>)
+       <img width="185" align="center" height="180" src="../assets/mendel.jpg" style="border: 1px solid black; padding: 2px; margin: 20px 35px; opacity: 0.85; background-color: #bbb"/>
     </div>
   </div>
 </div>
@@ -48,7 +49,7 @@ export default {
 </script>
 <style  lang="less">
 .vieweelement {
-  height: 350px;
+  height: 300px;
   width: 300px;
   margin: auto 20%;
   @media (max-width: 708px) {
@@ -79,8 +80,8 @@ export default {
     padding: 5px 15px;
     margin: -10px auto 10px auto;
     max-width: 300px;
-    height: 350px;
-    background: rgba(0, 200, 200, 0.3);
+    height: 300px;
+    background: rgba(0, 210, 210, 0.2);
     @media (max-width: 708px) {
       max-width: 250px;
       padding: 5px 15px;
@@ -195,7 +196,7 @@ export default {
     &-melting,
     &-bolling,
     &-position {
-      font-size: 16px;
+      font-size: 14px;
       line-height: 20px;
       margin: 0;
       padding: 0;
