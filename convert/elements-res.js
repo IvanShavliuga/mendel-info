@@ -17,7 +17,6 @@ lat:"hydrogenium",
 pos:" 1-й период, группа - IA (1)",
 electronegativity:2.1,
 config:"1s<sup>1</sup>",
-},
 {
 // 2: He Гелий
 melting:-272.2,
@@ -35,7 +34,6 @@ lat:"helium",
 pos:" 1-й период, группа - VIIIA (18)",
 electronegativity:5.5,
 config:"1s<sup>2</sup>",
-},
 {
 // 3: Li Литий
 melting:180.54,
@@ -53,7 +51,6 @@ lat:"lithium",
 pos:" 2-й период, группа - IA (1)",
 electronegativity:2.1,
 config:"1s<sup>2</sup>2s<sup>1</sup>",
-},
 {
 // 4: Be Бериллий
 melting:1278,
@@ -71,7 +68,6 @@ lat:"veryllium",
 pos:" 2-й период, группа - IIA (2)",
 electronegativity:1.4,
 config:"1s<sup>1</sup>2s<sup>2</sup>",
-},
 {
 // 5: B Бор
 melting:2210,
@@ -89,7 +85,6 @@ lat:"borum",
 pos:" 2-й период, группа - IIIA (13)",
 electronegativity:2,
 config:"1s<sup>1</sup>2s<sup>2</sup>2p<sup>1</sup>",
-},
 {
 // 6: C Углерод
 melting:3550,
@@ -107,7 +102,6 @@ lat:"carboneum",
 pos:" 2-й период, группа - IVA (14)",
 electronegativity:2.5,
 config:"1s<sup>1</sup>2s<sup>2</sup>2p<sup>2</sup>",
-},
 {
 // 7: N  Азот
 melting:-209.86,
@@ -125,7 +119,6 @@ lat:"nitrogenium",
 pos:" 2-й период, группа - VA (15)",
 electronegativity:3,
 config:"1s<sup>1</sup>2s<sup>2</sup>2p<sup>3</sup>",
-},
 {
 // 8: O Кислород
 melting:-218.4,
@@ -143,7 +136,6 @@ lat:"okhygenium",
 pos:" 2-й период, группа - VIA (16)",
 electronegativity:3.5,
 config:"1s<sup>1</sup>2s<sup>2</sup>2p<sup>4</sup>",
-},
 {
 // 9: F Фтор
 melting:-216.62,
@@ -161,7 +153,6 @@ lat:"fluorum",
 pos:" 2-й период, группа - VIIA (1)",
 electronegativity:4.1,
 config:"1s<sup>1</sup>2s<sup>2</sup>2p<sup>5</sup>",
-},
 {
 // 10: Ne Неон
 melting:-248.7,
@@ -179,7 +170,6 @@ lat:"neon",
 pos:" 1-й период, группа - VIIIA (18)",
 electronegativity:4.8,
 config:"1s<sup>1</sup>2s<sup>2</sup>2p<sup>6</sup>",
-},
 {
 // 11: Na Натрий
 melting:97.86,
@@ -197,7 +187,6 @@ lat:"natrium",
 pos:" 1-й период, группа - IA (1)",
 electronegativity:1,
 config:"[Ne]1s<sup>1</sup>",
-},
 {
 // 12: Mg Магний
 melting:648.8,
@@ -215,7 +204,6 @@ lat:"magnesium",
 pos:" 3-й период, группа - IIA (2)",
 electronegativity:1.2,
 config:"[Ne]3s<sup>2</sup>",
-},
 {
 // 13: Al Алюминий
 melting:660.37,
@@ -232,8 +220,7 @@ shortname:"Al",
 lat:"none",
 pos:" 3-й период, группа - IIIA (13)",
 electronegativity:1.4,
-config:"]3s<sup>2</sup>3p<sup>1</sup>",
-},
+config:"[Ne]3s<sup>2</sup>3p<sup>1</sup>",
 {
 // 14: Si Кремний
 melting:1412,
@@ -250,7 +237,6 @@ shortname:"Si",
 lat:"silicium",
 pos:" 3-й период, группа - IVA (14)",
 electronegativity:1.7,
-},
 {
 // 15: P Фосфор
 melting:44.14,
@@ -268,7 +254,6 @@ lat:"phosphopus",
 pos:" 3-й период, группа - VA (2)",
 electronegativity:2.1,
 config:"[Ne]3s<sup>2</sup>3р<sup>3</sup>.",
-},
 {
 // 16: S Сера
 melting:112.8,
@@ -285,8 +270,7 @@ shortname:"S",
 lat:"sulfur",
 pos:" 3-й период, группа - VIA (16)",
 electronegativity:2,
-config:"[<a href="Ne.html">Ne</a>3s<sup>2</sup>3p<sup>4</sup>.",
-},
+config:"[Ne]3s<sup>2</sup>3p<sup>4</sup>.",
 {
 // 17: Cl Хлор
 melting:-100.98,
@@ -304,7 +288,6 @@ lat:"shlorum",
 pos:" 3-й период, группа - VIIA (17)",
 electronegativity:3.16,
 config:"[Ne]3s<sup>2</sup>p<sup>5</sup>",
-},
 {
 // 18: Ar Аргон
 melting:-189.2,
@@ -322,7 +305,6 @@ lat:"argon",
 pos:" 3-й период, группа - VIIIA (18)",
 electronegativity:3.2,
 config:"[Ne]3s<sup>2</sup>3p<sup>6</sup>",
-},
 {
 // 19: K Калий
 melting:63.65,
@@ -340,7 +322,6 @@ lat:"kalium",
 pos:" 4-й период, группа - IA (1)",
 electronegativity:0.9,
 config:"[Ar]4s<sup>1</sup>",
-},
 {
 // 20: Ca Кальций
 melting:839,
@@ -357,8 +338,7 @@ shortname:"Ca",
 lat:"calcium",
 pos:" 4-й период, группа - IIA (2)",
 electronegativity:1.2,
-config:"[Ne]]4s<sup>2</sup>",
-},
+config:"[Ar]4s<sup>2</sup>",
 {
 // 21: Sc Скандий
 melting:1541,
@@ -376,7 +356,6 @@ lat:"scandium",
 pos:" 4-й период, группа - IIIB (3)",
 electronegativity:1.2,
 config:"[Ar]3d<sup>1</sup>4s<sup>2</sup>",
-},
 {
 // 22: Ti Титан
 melting:1670,
@@ -394,7 +373,6 @@ lat:"titanium",
 pos:" 4-й период, группа - IVB (4)",
 electronegativity:1,
 config:"[Ar]3d<sup>2</sup>4s</sup><sup>2</sup>",
-},
 {
 // 23: V Ванадий
 melting:1890,
@@ -412,7 +390,6 @@ lat:"vanadium",
 pos:" 4-й период, группа - VВ (5)",
 electronegativity:1.6,
 config:"[Ar]3s<sup>2</sup>p<sup>6</sup>d<sup>3</sup>4s<sup>2</sup>.",
-},
 {
 // 24: Cr  Хром
 melting:1857,
@@ -429,7 +406,6 @@ shortname:"Cr",
 lat:"chromium",
 pos:" 4-й период, группа - VIB (6)",
 electronegativity:1.66,
-},
 {
 // 25: Mn Марганец
 melting:1244,
@@ -447,7 +423,6 @@ lat:"manganum",
 pos:" 4-й период, группа - VIIВ (7)",
 electronegativity:1.5,
 config:"[Ar]3s</sup><sup>2</sup>p</sup><sup>6</sup>d<sup>5</sup>4s<sup>2</sup>",
-},
 {
 // 26: Fe  Железо
 melting:1535,
@@ -465,7 +440,6 @@ lat:"ferrum",
 pos:" 4-й период, группа - VIIIВ (8)",
 electronegativity:1.8,
 config:"[Ar]3s<sup>2</sup>p<sup>6</sup>d<sup>6</sup>4s<sup>2</sup>.",
-},
 {
 // 27: Co Кобальт
 melting:1495,
@@ -483,7 +457,6 @@ lat:"sobaltum",
 pos:" 4-й период, группа - VIIIВ (9).",
 electronegativity:1.88,
 config:"[Ar]3s<sup>2</sup>p<sup>6</sup>d<sup>7</sup>4s<sup>2</sup>.",
-},
 {
 // 28: Ni Никель
 melting:1453,
@@ -500,7 +473,6 @@ shortname:"Ni",
 lat:"nissolum",
 pos:" 4-й период, группа - VIIIВ (10).",
 electronegativity:0,
-},
 {
 // 29: Cu  Медь
 melting:1083.4,
@@ -518,7 +490,6 @@ lat:"cuprum",
 pos:" 4-й период, группа - IВ (11).",
 electronegativity:1.9,
 config:"[Ar]3s<sup>2</sup>p<sup>6</sup>d<suP>10</sup>4s<sup>1</sup>.",
-},
 {
 // 30: Zn  Цинк
 melting:419.88,
@@ -536,7 +507,6 @@ lat:"zincum",
 pos:" 5-й период, группа - (4).",
 electronegativity:1.66,
 config:"[Ar]3s<sup>2</sup>p<sup>6</sup>d<sup>10</sup>4s<sup>2</sup>.",
-},
 {
 // 31: Ga Галлий
 melting:29.78,
@@ -553,8 +523,7 @@ shortname:"Ga",
 lat:"gallium",
 pos:" 4-й период, группа - IIIA (13).",
 electronegativity:1.6,
-config:"[Ar]]4s<sup>2</sup>p<sup>1</sup>.",
-},
+config:"[Ar4s<sup>2</sup>p<sup>1</sup>.",
 {
 // 32: Ge Германий
 melting:937.4,
@@ -571,7 +540,6 @@ shortname:"Ge",
 lat:"germanium",
 pos:" 4-й период, группа - IVA (14).",
 config:"[Ar]4s<sup>2</sup>p<sup>2</sup>.",
-},
 {
 // 33: As  Мышьяк
 melting:817,
@@ -588,8 +556,7 @@ shortname:"As",
 lat:"arsenicum",
 pos:" 4-й период, группа - VА (15).",
 electronegativity:2.1,
-config:"[Ar]]4s<sup>2</sup>p<sup>3</sup>.",
-},
+config:"[Ar4s<sup>2</sup>p<sup>3</sup>.",
 {
 // 34: Se  Селен
 melting:217,
@@ -607,7 +574,6 @@ lat:"selenium",
 pos:" 4-й период, группа - VIA (16).",
 electronegativity:2.4,
 config:"[Ar]3d<sup>10</sup>4s<sup>2</sup>p<sup>4</sup>.",
-},
 {
 // 35: Br  Бром
 melting:-7.25,
@@ -624,8 +590,7 @@ shortname:"Br",
 lat:"bromum",
 pos:" 4-й период, группа - VIIА ().",
 electronegativity:2.8,
-config:"[Ar]]4s<sup>2</sup>p<sup>5</sup>.",
-},
+config:"[Ar4s<sup>2</sup>p<sup>5</sup>.",
 {
 // 36: Kr Криптон
 melting:-156.6,
@@ -643,7 +608,6 @@ lat:"krypton",
 pos:" 4-й период, группа - VIA (16).",
 electronegativity:2.94,
 config:"[Ar]3d<sup>10</sup>4s<sup>2</sup>p<sup>6</sup>.",
-},
 {
 // 37: Rb Рубидий
 melting:38.89,
@@ -661,7 +625,6 @@ lat:"rubidium",
 pos:" 5-й период, группа - IA(1).",
 electronegativity:0.8,
 config:"[Кr]5s<sup>2</sup>.",
-},
 {
 // 38: Sr  Стронций
 melting:769,
@@ -679,7 +642,6 @@ lat:"strontium",
 pos:" 5-й период, группа - IIА (2).",
 electronegativity:1,
 config:"[Kr]5s<sup>2</sup>.",
-},
 {
 // 39: Y  Иттрий
 melting:1522,
@@ -697,7 +659,6 @@ lat:"yttrium",
 pos:" 5-й период, группа -IIIB (3).",
 electronegativity:1.11,
 config:"[Kr].",
-},
 {
 // 40: Zr  Цирконий
 melting:1852,
@@ -715,7 +676,6 @@ lat:"zirconium",
 pos:" 5-й период, группа -IVB (4).",
 electronegativity:1.4,
 config:"[Kr]4s<sup>2</sup>p<sup>6</sup>d<sup>2</sup>5s<sup>2</sup>.",
-},
 {
 // 41: Nb Ниобий
 melting:2468,
@@ -732,7 +692,6 @@ shortname:"Nb",
 lat:"niobium",
 pos:" 5-й период, группа - VВ(5).",
 electronegativity:1.6,
-},
 {
 // 42: Mo Молибден
 melting:2617,
@@ -750,7 +709,6 @@ lat:"molibdaenum",
 pos:" 5-й период, группа - (6).",
 electronegativity:1.8,
 config:"[Kr]4s<sup>2</sup> p<sup>6</sup>d<sup>5</sup>5s<sup>1</sup>.",
-},
 {
 // 43: Tc Технеций
 melting:2172,
@@ -768,7 +726,6 @@ lat:"technetium",
 pos:" 5-й период, группа - VIIB (7)",
 electronegativity:1.9,
 config:"[Kr]4d<sup>5</sup>5s<sup>2</sup>.",
-},
 {
 // 44: Ru  Рутений
 melting:2310,
@@ -786,7 +743,6 @@ lat:"ruthenium",
 pos:" 5-й период, группа - VIIIB (8).",
 electronegativity:1.42,
 config:"[Kr]4s<sup>2</sup>p<sup>6</sup>d<sup>7</sup>5s<sup>1</sup>.",
-},
 {
 // 45: Rh  Родий
 melting:1966,
@@ -804,7 +760,6 @@ lat:"rhodium",
 pos:" 5-й период, группа - VIIIВ(9).",
 electronegativity:2.28,
 config:"[Kr]4s<sup>2</sup>p<sup>6</sup>d<sup>8</sup>5s<sup>1</sup>.",
-},
 {
 // 46: Pd Палладий
 melting:1552,
@@ -822,7 +777,6 @@ lat:"palladium",
 pos:" 5-й период, группа - VIIIB(10).",
 electronegativity:1.35,
 config:"[Kr]4s<sup>2</sup>p<sup>6</sup>d<sup>10</sup>5s<sup>0</sup>.",
-},
 {
 // 47: Ag  Серебро
 melting:961.93,
@@ -839,8 +793,7 @@ shortname:"Ag",
 lat:"none",
 pos:" 5-й период, группа - IB(11).",
 electronegativity:1.93,
-config:"[Kr]]4s<sup>2</sup>p<sup>6</sup>d<sup>10</sup>5s<sup>1</sup>.",
-},
+config:"[Kr4s<sup>2</sup>p<sup>6</sup>d<sup>10</sup>5s<sup>1</sup>.",
 {
 // 48: Cd  Кадмий
 melting:320.9,
@@ -857,8 +810,7 @@ shortname:"Cd",
 lat:"cadmium",
 pos:" 5-й период, группа - IIВ(12).",
 electronegativity:1.69,
-config:"[Kr]]4s<sup>2</sup>p<sup>6</sup>d<sup>10</sup>5s<sup>2</sup>.",
-},
+config:"[Kr4s<sup>2</sup>p<sup>6</sup>d<sup>10</sup>5s<sup>2</sup>.",
 {
 // 49: In Индий
 melting:156.78,
@@ -876,7 +828,6 @@ lat:"indium",
 pos:" 5-й период, группа - IIIA(13).",
 electronegativity:1.78,
 config:"[Kr]5s<sup>2</sup>5p<sup>1</sup>.",
-},
 {
 // 50: Sn  Олово
 melting:231.88,
@@ -893,8 +844,7 @@ shortname:"Sn",
 lat:"stannum",
 pos:" 5-й период, группа - IVА(14).",
 electronegativity:1.96,
-config:"[Kr]]5s<sup>2</sup>5p<sup>2</sup>.",
-},
+config:"[Kr5s<sup>2</sup>5p<sup>2</sup>.",
 {
 // 51: Sb  Сурьма
 melting:630.5,
@@ -912,7 +862,6 @@ lat:"stibium",
 pos:" 5-й период, группа - VА(15).",
 electronegativity:1.9,
 config:"[Kr]5s<sup>2</sup>p<sup>3</sup>.",
-},
 {
 // 52: Te Теллур
 melting:449.5,
@@ -929,7 +878,6 @@ shortname:"Te",
 lat:"tellurium",
 pos:" 5-й период, группа - VIA(16).",
 electronegativity:2.1,
-},
 {
 // 53: I  Иод
 melting:113.5,
@@ -946,7 +894,6 @@ shortname:"I",
 lat:"iodum",
 pos:" 5-й период, группа - VIIА(17).",
 electronegativity:2.66,
-},
 {
 // 54: Xe  Ксенон
 melting:-111.9,
@@ -963,7 +910,6 @@ shortname:"Xe",
 lat:"xeno",
 pos:" 5-й период, группа - VIIIA(18).",
 electronegativity:2.6,
-},
 {
 // 55: Cs  Цезий
 melting:28.5,
@@ -981,7 +927,6 @@ lat:"francium",
 pos:" 6-й период, группа - IA (1).",
 electronegativity:0.7,
 config:"6 <i>s</i><sup>1</sup>.",
-},
 {
 // 56: Ba  Барий
 melting:725,
@@ -998,8 +943,7 @@ shortname:"Ba",
 lat:"baryum",
 pos:" 6-й период, группа - IIA(1).",
 electronegativity:0.9,
-config:"[Xe]]6s<sup>2</sup>.",
-},
+config:"[Xe6s<sup>2</sup>.",
 {
 // 57: La  Лантан
 melting:920,
@@ -1016,8 +960,7 @@ shortname:"La",
 lat:"lanthanum",
 pos:" 6-й период, группа - IIIВ(3).",
 electronegativity:1.1,
-config:"[Xe]]5s<sup>2</sup>p<sup>6</sup>d<sup>1</sup>6s<sup>2</sup>.",
-},
+config:"[Xe5s<sup>2</sup>p<sup>6</sup>d<sup>1</sup>6s<sup>2</sup>.",
 {
 // 58: Ce  Церий
 melting:798,
@@ -1034,7 +977,6 @@ shortname:"Ce",
 lat:"cerium",
 pos:" 6-й период, группа - IIIB(3).",
 electronegativity:1.12,
-},
 {
 // 59: Pr Празеодим
 melting:931,
@@ -1051,7 +993,6 @@ shortname:"Pr",
 lat:"praseodimium",
 pos:" 6-й период, группа - IIIB(3).",
 electronegativity:1.07,
-},
 {
 // 60: Nd  Неодим
 melting:1021,
@@ -1068,7 +1009,6 @@ shortname:"Nd",
 lat:"neodimium",
 pos:" 6-й период, группа - IIIB(3).",
 electronegativity:1.07,
-},
 {
 // 61: Pm Прометий
 melting:1168,
@@ -1085,7 +1025,6 @@ shortname:"Pm",
 lat:"prometium",
 pos:" 6-й период, группа - IIIB(3).",
 electronegativity:1.07,
-},
 {
 // 62: Sm  Самарий
 melting:1077,
@@ -1102,7 +1041,6 @@ shortname:"Sm",
 lat:"samarium",
 pos:" 6-й период, группа - IIIB(3).",
 electronegativity:1.07,
-},
 {
 // 63: Eu  Европий
 melting:822,
@@ -1119,7 +1057,6 @@ shortname:"Eu",
 lat:"europium",
 pos:" 6-й период, группа - IIIB(3).",
 electronegativity:1,
-},
 {
 // 64: Gd  Гадолиний
 melting:1312,
@@ -1136,7 +1073,6 @@ shortname:"Gd",
 lat:"gadolinium",
 pos:" 6-й период, группа - IIIB(3).",
 electronegativity:1.1,
-},
 {
 // 65: Tb  Тербий
 melting:1356,
@@ -1153,7 +1089,6 @@ shortname:"Tb",
 lat:"terbium",
 pos:" 6-й период, группа - IIIB(3).",
 electronegativity:1.1,
-},
 {
 // 66: Dy  Диспрозий
 melting:1409,
@@ -1170,7 +1105,6 @@ shortname:"Dy",
 lat:"dysprosium",
 pos:" 6-й период, группа - IIIB(3).",
 electronegativity:1.1,
-},
 {
 // 67: Ho Гольмий
 melting:1474,
@@ -1187,7 +1121,6 @@ shortname:"Ho",
 lat:"holmium",
 pos:" 6-й период, группа - IIIB(3).",
 electronegativity:1.1,
-},
 {
 // 68: Er  Эрбий
 melting:1529,
@@ -1204,7 +1137,6 @@ shortname:"Er",
 lat:"erbium",
 pos:" 6-й период, группа - IIIB(3).",
 electronegativity:1.11,
-},
 {
 // 69: Tm  Тулий
 melting:1545,
@@ -1221,7 +1153,6 @@ shortname:"Tm",
 lat:"thulium",
 pos:" 6-й период, группа - IIIB(3).",
 electronegativity:1.1,
-},
 {
 // 70: Yb  Иттербий
 melting:819,
@@ -1238,7 +1169,6 @@ shortname:"Yb",
 lat:"ytterbium",
 pos:" 6-й период, группа - IIIB(3).",
 electronegativity:1.06,
-},
 {
 // 71: Lu  Лютеций
 melting:1663,
@@ -1255,7 +1185,6 @@ shortname:"Lu",
 lat:"lutetium",
 pos:" 6-й период, группа - IIIB(3).",
 electronegativity:1.14,
-},
 {
 // 72: Hf  Гафний
 melting:2227,
@@ -1272,7 +1201,6 @@ shortname:"Hf",
 lat:"hafnium",
 pos:" 6-й период, группа - IVB(4).",
 electronegativity:1.6,
-},
 {
 // 73: Ta  Тантал
 melting:2996,
@@ -1289,7 +1217,6 @@ shortname:"Ta",
 lat:"tantalum",
 pos:" 6-й период, группа - (5).",
 electronegativity:1.5,
-},
 {
 // 74: W Вольфрам
 melting:3410,
@@ -1306,7 +1233,6 @@ shortname:"W",
 lat:"none",
 pos:" 6-й период, группа - VIВ (6).",
 electronegativity:1.7,
-},
 {
 // 75: Re Рений
 melting:3180,
@@ -1323,7 +1249,6 @@ shortname:"Re",
 lat:"rhenium",
 pos:" 6-й период, группа - VIIB(7).",
 electronegativity:1.9,
-},
 {
 // 76: Os Осмий
 melting:3045,
@@ -1340,7 +1265,6 @@ shortname:"Os",
 lat:"osmium",
 pos:" 6-й период, группа - VIIIB(8).",
 electronegativity:2.1,
-},
 {
 // 77: Ir  Иридий
 melting:2410,
@@ -1357,7 +1281,6 @@ shortname:"Ir",
 lat:"iridium",
 pos:" 6-й период, группа - VIIIB(9).",
 electronegativity:2.2,
-},
 {
 // 78: Pt  Платина
 melting:1773.5,
@@ -1374,7 +1297,6 @@ shortname:"Pt",
 lat:"platinum",
 pos:" 6-й период, группа - VIIIB(10).",
 electronegativity:2.2,
-},
 {
 // 79: Au  Золото
 melting:1064.43,
@@ -1391,7 +1313,6 @@ shortname:"Au",
 lat:"aurum",
 pos:" 6-й период, группа - IВ(11).",
 electronegativity:2.4,
-},
 {
 // 80: Hg  Ртуть
 melting:-38.86,
@@ -1408,7 +1329,6 @@ shortname:"Hg",
 lat:"hydrargyrum",
 pos:" 6-й период, группа - IIВ(12).",
 electronegativity:1.9,
-},
 {
 // 81: Tl  Таллий
 melting:303.5,
@@ -1426,7 +1346,6 @@ lat:"tallium",
 pos:" 6-й период, группа - IIIA(13).",
 electronegativity:1.8,
 config:"[Xe]1s<sup>2</sup>.",
-},
 {
 // 82: Pb Свинец
 melting:327.5,
@@ -1444,7 +1363,6 @@ lat:"plumbum",
 pos:" 6-й период, группа - IVA(14).",
 electronegativity:1.55,
 config:"[Xe]6s<sup>2</sup>p<sup>2</sup>.",
-},
 {
 // 83: Bi Висмут
 melting:271.3,
@@ -1461,8 +1379,7 @@ shortname:"Bi",
 lat:"bismuthum",
 pos:" 6-й период, группа - VA(15).",
 electronegativity:1.9,
-config:"[Xe]]6s<sup>2</sup>p<sup>3</sup>.",
-},
+config:"[Xe6s<sup>2</sup>p<sup>3</sup>.",
 {
 // 84: Po  Полоний
 melting:254,
@@ -1480,7 +1397,6 @@ lat:"polonium",
 pos:" 6-й период, группа - VIA(16).",
 electronegativity:1.76,
 config:"[Xe]6s<sup>2</sup>p<sup>4</sup>.",
-},
 {
 // 85: At  Астат
 melting:302,
@@ -1497,7 +1413,6 @@ shortname:"At",
 lat:"astatium",
 pos:" 6-й период, группа - VIIА(17).",
 electronegativity:2.1,
-},
 {
 // 86: Rn  Радон
 melting:-71,
@@ -1515,7 +1430,6 @@ lat:"radon",
 pos:" 6-й период, группа - VIIIA(18).",
 electronegativity:2.06,
 config:"[Xe]6s<sup>2</sup>р<sup>6</sup>.",
-},
 {
 // 87: Fr  Франций
 melting:27,
@@ -1533,7 +1447,6 @@ lat:"francium",
 pos:" 7-й период, группа - IА(1).",
 electronegativity:0.86,
 config:"[Rn]7s<sup>1</sup>.",
-},
 {
 // 88: Ra  Радий
 melting:970,
@@ -1551,7 +1464,6 @@ lat:"radium",
 pos:" 7-й период, группа -IIA (2).",
 electronegativity:0.97,
 config:"[Rd]7s<sup>2</sup>.",
-},
 {
 // 89: Ac  Актиний
 melting:1050,
@@ -1569,7 +1481,6 @@ lat:"none",
 pos:" 7-й период, группа - IIIB (3)",
 electronegativity:1,
 config:"[Rn]6d<sup>1</sup>7s<sup>2</sup>",
-},
 {
 // 90: Th  Торий
 melting:1750,
@@ -1586,7 +1497,6 @@ shortname:"Th",
 lat:"thorium",
 pos:" 7-й период, группа - IIIB(3).",
 electronegativity:1.15,
-},
 {
 // 91: Pa  Протактиний
 melting:1572,
@@ -1604,7 +1514,6 @@ lat:"protactinium",
 pos:" 7-й период, группа - IIIB(3).",
 electronegativity:1.14,
 config:"[Rn]5f<sup>2</sup>6d<sup>1</sup>7s<sup>2</sup>.",
-},
 {
 // 92: U Уран
 melting:1132,
@@ -1621,7 +1530,6 @@ shortname:"U",
 lat:"uranium",
 pos:" 7-й период, группа -IIIB (3).",
 electronegativity:1.22,
-},
 {
 // 93: Np Нептуний
 melting:639,
@@ -1638,7 +1546,6 @@ shortname:"Np",
 lat:"neptunium",
 pos:" 7-й период, группа - IIIB(3).",
 electronegativity:1.22,
-},
 {
 // 94: Pu Плутоний
 melting:641,
@@ -1655,7 +1562,6 @@ shortname:"Pu",
 lat:"plutonium",
 pos:" 7-й период, группа - IIIB(3).",
 electronegativity:1.22,
-},
 {
 // 95: Am  Америций
 melting:996,
@@ -1672,7 +1578,6 @@ shortname:"Am",
 lat:"americium",
 pos:" 7-й период, группа - IIIB(3).",
 electronegativity:1.2,
-},
 {
 // 96: Cm  Кюрий
 melting:1340,
@@ -1689,7 +1594,6 @@ shortname:"Cm",
 lat:"curium",
 pos:" 7-й период, группа - IIIB(3).",
 electronegativity:1.2,
-},
 {
 // 97: Bk Берклий
 melting:1050,
@@ -1706,7 +1610,6 @@ shortname:"Bk",
 lat:"berkelium",
 pos:" 7-й период, группа - IIIB(3).",
 electronegativity:1.2,
-},
 {
 // 98: Cf  Калифорний
 melting:900,
@@ -1723,7 +1626,6 @@ shortname:"Cf",
 lat:"californium",
 pos:" 7-й период, группа - IIIB(3).",
 electronegativity:1.11,
-},
 {
 // 99: Es  Эйнштейний
 melting:860,
@@ -1740,7 +1642,6 @@ shortname:"Es",
 lat:"einsteium",
 pos:" 7-й период,группа - IIIB(3).",
 electronegativity:1.2,
-},
 {
 // 100: Fm  Фермий
 melting:null,
@@ -1755,9 +1656,8 @@ oxidation:" +2,+3",
 index:100,
 shortname:"Fm",
 lat:"fermium",
-pos:" 7-7-й период, группа - IIIB(3).",
+pos:" 7-й период, группа - IIIB(3).",
 electronegativity:1.2,
-},
 {
 // 101: Md Менелевий
 melting:null,
@@ -1774,7 +1674,6 @@ shortname:"Md",
 lat:"mendelevium",
 pos:" 7-й период, группа - IIIB(3).",
 electronegativity:1.2,
-},
 {
 // 102: No  Нобелий
 melting:null,
@@ -1789,9 +1688,8 @@ oxidation:" +2,+3",
 index:102,
 shortname:"No",
 lat:"nobelium",
-pos:" 7-7-й период, группа - IIIB(3).",
+pos:" 7-й период, группа - IIIB(3).",
 electronegativity:1.2,
-},
 {
 // 103: Lr  Лоуренций
 melting:null,
@@ -1808,7 +1706,6 @@ shortname:"Lr",
 lat:"lowrencium",
 pos:" 7-й период, группа - IIIB(3).",
 electronegativity:1.2,
-},
 {
 // 104: Rf Резерфордий
 melting:null,
@@ -1825,7 +1722,6 @@ shortname:"Rf",
 lat:"rutherfordium",
 pos:" 7-й период, группа - IVB (4)",
 config:"[Rn]5f<sup>14</sup>6d<sup>2</sup>7s<sup>2</sup>",
-},
 {
 // 105: Db Дубний
 melting:null,
@@ -1842,7 +1738,6 @@ shortname:"Db",
 lat:"none",
 pos:" 7-й период, группа - VB (5)",
 config:"[Rn]5f<sup>14</sup>6d<sup>3</sup>7s<sup>2</sup>",
-},
 {
 // 106: Sg Сиборгий
 melting:null,
@@ -1859,7 +1754,6 @@ shortname:"Sg",
 lat:"siborgium",
 pos:" 7-й период, группа - VIB (6)",
 config:"[Rn]5f<sup>14</sup>6d<sup>4</sup>7s<sup>2</sup>",
-},
 {
 // 107: Bh  Борий
 melting:null,
@@ -1876,7 +1770,6 @@ shortname:"Bh",
 lat:"bohrium",
 pos:" 7-й период, группа - VIIB (7)",
 config:"[Rn]5f<sup>14</sup>6d<sup>5</sup>7s<sup>2</sup>",
-},
 {
 // 108: Hs Хассий
 melting:null,
@@ -1893,7 +1786,6 @@ shortname:"Hs",
 lat:"hassium",
 pos:" 7-й период, группа - VIIIB (8)",
 config:"[Rn]5f<sup>14</sup>6d<sup>6</sup>7s<sup>2</sup>",
-},
 {
 // 109: Mt Мейтнерий
 melting:null,
@@ -1910,7 +1802,6 @@ shortname:"Mt",
 lat:"meitnerium",
 pos:" 7-й период, группа - VIIIB (9)",
 config:"[Rn]5f<sup>14</sup>6d<sup>7</sup>7s<sup>2</sup>",
-},
 {
 // 110: Ds Дармштадтий
 melting:null,
@@ -1927,7 +1818,6 @@ shortname:"Ds",
 lat:"darmstadtium",
 pos:" 7-й период, группа - VIIIB (10)",
 config:"[Rn] 5f<sup>14</sup>6d<sup>9</sup>7s<sup>1</sup>",
-},
 {
 // 111: Rg Рентгений
 melting:null,
@@ -1944,7 +1834,6 @@ shortname:"Rg",
 lat:"roentgenium",
 pos:" 7-й период, группа - IB (11)",
 config:"[Rn] 5f<sup>14</sup>6d<sup>10</sup>7s<sup>1</sup>",
-},
 {
 // 112: Cn Коперниций
 melting:null,
@@ -1961,7 +1850,6 @@ shortname:"Cn",
 lat:"copernicium",
 pos:" 7-й период, группа - IIB (12)",
 config:"[Rn] 5f<sup>14</sup>6d<sup>10</sup>7s<sup>2</sup>",
-},
 {
 // 113: Nh Нихоний
 melting:null,
@@ -1978,7 +1866,6 @@ shortname:"Nh",
 lat:"nihonium",
 pos:" 7-й период, группа - IIIA (13)",
 config:"[Rn] 5f<sup>14</sup>6d<sup>10</sup>7s<sup>2</sup>7p<sup>1</sup>",
-},
 {
 // 114: Fl Флеровий
 melting:null,
@@ -1995,7 +1882,6 @@ shortname:"Fl",
 lat:"flerovium",
 pos:" 7-й период, группа - IVA (14)",
 config:"[Rn] 5f<sup>14</sup>6d<sup>10</sup>7s<sup>2</sup>7p<sup>2</sup>",
-},
 {
 // 115: Mc Московий
 melting:null,
@@ -2011,7 +1897,6 @@ index:115,
 shortname:"Mc",
 lat:"moscovium",
 pos:" 7-й период, группа - VA (15)",
-},
 {
 // 116: Lv Ливерморий
 melting:null,
@@ -2028,7 +1913,6 @@ shortname:"Lv",
 lat:"livermorium",
 pos:" 7-й период, группа - VA (15)",
 config:"[Rn] 5f<sup>14</sup>6d<sup>10</sup>7s<sup>2</sup>7p<sup>4</sup>",
-},
 {
 // 117: Ts Теннессин 
 melting:null,
@@ -2044,7 +1928,6 @@ index:117,
 shortname:"Ts",
 lat:"tennessine",
 pos:" 7-й период, группа - VIIA (17)",
-},
 {
 // 118: Og Оганесон
 melting:null,

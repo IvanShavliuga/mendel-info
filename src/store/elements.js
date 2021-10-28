@@ -17,8 +17,7 @@ export default {
       pos: ' 1-й период, группа - IA (1)',
       electronegativity: 2.1,
       config: '1s<sup>1</sup>'
-    },
-    {
+    }, {
       // 2: He Гелий
       melting: -272.2,
       bolling: -268.93,
@@ -35,8 +34,7 @@ export default {
       pos: ' 1-й период, группа - VIIIA (18)',
       electronegativity: 5.5,
       config: '1s<sup>2</sup>'
-    },
-    {
+    }, {
       // 3: Li Литий
       melting: 180.54,
       bolling: 1347,
@@ -53,8 +51,7 @@ export default {
       pos: ' 2-й период, группа - IA (1)',
       electronegativity: 2.1,
       config: '1s<sup>2</sup>2s<sup>1</sup>'
-    },
-    {
+    }, {
       // 4: Be Бериллий
       melting: 1278,
       bolling: 2970,
@@ -71,8 +68,7 @@ export default {
       pos: ' 2-й период, группа - IIA (2)',
       electronegativity: 1.4,
       config: '1s<sup>1</sup>2s<sup>2</sup>'
-    },
-    {
+    }, {
       // 5: B Бор
       melting: 2210,
       bolling: 2600,
@@ -89,8 +85,7 @@ export default {
       pos: ' 2-й период, группа - IIIA (13)',
       electronegativity: 2,
       config: '1s<sup>1</sup>2s<sup>2</sup>2p<sup>1</sup>'
-    },
-    {
+    }, {
       // 6: C Углерод
       melting: 3550,
       bolling: 4827,
@@ -107,8 +102,7 @@ export default {
       pos: ' 2-й период, группа - IVA (14)',
       electronegativity: 2.5,
       config: '1s<sup>1</sup>2s<sup>2</sup>2p<sup>2</sup>'
-    },
-    {
+    }, {
       // 7: N  Азот
       melting: -209.86,
       bolling: -195.8,
@@ -125,8 +119,7 @@ export default {
       pos: ' 2-й период, группа - VA (15)',
       electronegativity: 3,
       config: '1s<sup>1</sup>2s<sup>2</sup>2p<sup>3</sup>'
-    },
-    {
+    }, {
       // 8: O Кислород
       melting: -218.4,
       bolling: -182.96,
@@ -143,8 +136,7 @@ export default {
       pos: ' 2-й период, группа - VIA (16)',
       electronegativity: 3.5,
       config: '1s<sup>1</sup>2s<sup>2</sup>2p<sup>4</sup>'
-    },
-    {
+    }, {
       // 9: F Фтор
       melting: -216.62,
       bolling: -188.11,
@@ -161,8 +153,7 @@ export default {
       pos: ' 2-й период, группа - VIIA (1)',
       electronegativity: 4.1,
       config: '1s<sup>1</sup>2s<sup>2</sup>2p<sup>5</sup>'
-    },
-    {
+    }, {
       // 10: Ne Неон
       melting: -248.7,
       bolling: -246.05,
@@ -179,8 +170,7 @@ export default {
       pos: ' 1-й период, группа - VIIIA (18)',
       electronegativity: 4.8,
       config: '1s<sup>1</sup>2s<sup>2</sup>2p<sup>6</sup>'
-    },
-    {
+    }, {
       // 11: Na Натрий
       melting: 97.86,
       bolling: 883.15,
@@ -197,8 +187,7 @@ export default {
       pos: ' 1-й период, группа - IA (1)',
       electronegativity: 1,
       config: '[Ne]1s<sup>1</sup>'
-    },
-    {
+    }, {
       // 12: Mg Магний
       melting: 648.8,
       bolling: 1107,
@@ -215,8 +204,7 @@ export default {
       pos: ' 3-й период, группа - IIA (2)',
       electronegativity: 1.2,
       config: '[Ne]3s<sup>2</sup>'
-    },
-    {
+    }, {
       // 13: Al Алюминий
       melting: 660.37,
       bolling: 2467,
@@ -232,9 +220,8 @@ export default {
       lat: 'none',
       pos: ' 3-й период, группа - IIIA (13)',
       electronegativity: 1.4,
-      config: ']3s<sup>2</sup>3p<sup>1</sup>'
-    },
-    {
+      config: '[Ne]3s<sup>2</sup>3p<sup>1</sup>'
+    }, {
       // 14: Si Кремний
       melting: 1412,
       bolling: 2355,
@@ -250,8 +237,7 @@ export default {
       lat: 'silicium',
       pos: ' 3-й период, группа - IVA (14)',
       electronegativity: 1.7
-    },
-    {
+    }, {
       // 15: P Фосфор
       melting: 44.14,
       bolling: 280,
@@ -268,8 +254,7 @@ export default {
       pos: ' 3-й период, группа - VA (2)',
       electronegativity: 2.1,
       config: '[Ne]3s<sup>2</sup>3р<sup>3</sup>.'
-    },
-    {
+    }, {
       // 16: S Сера
       melting: 112.8,
       bolling: 444.674,
@@ -286,8 +271,7 @@ export default {
       pos: ' 3-й период, группа - VIA (16)',
       electronegativity: 2,
       config: '[Ne]3s<sup>2</sup>3p<sup>4</sup>.'
-    },
-    {
+    }, {
       // 17: Cl Хлор
       melting: -100.98,
       bolling: -34.6,
@@ -304,8 +288,7 @@ export default {
       pos: ' 3-й период, группа - VIIA (17)',
       electronegativity: 3.16,
       config: '[Ne]3s<sup>2</sup>p<sup>5</sup>'
-    },
-    {
+    }, {
       // 18: Ar Аргон
       melting: -189.2,
       bolling: -185.7,
@@ -322,8 +305,7 @@ export default {
       pos: ' 3-й период, группа - VIIIA (18)',
       electronegativity: 3.2,
       config: '[Ne]3s<sup>2</sup>3p<sup>6</sup>'
-    },
-    {
+    }, {
       // 19: K Калий
       melting: 63.65,
       bolling: 774,
@@ -340,8 +322,7 @@ export default {
       pos: ' 4-й период, группа - IA (1)',
       electronegativity: 0.9,
       config: '[Ar]4s<sup>1</sup>'
-    },
-    {
+    }, {
       // 20: Ca Кальций
       melting: 839,
       bolling: 1487,
@@ -358,8 +339,7 @@ export default {
       pos: ' 4-й период, группа - IIA (2)',
       electronegativity: 1.2,
       config: '[Ar]4s<sup>2</sup>'
-    },
-    {
+    }, {
       // 21: Sc Скандий
       melting: 1541,
       bolling: 2831,
@@ -376,8 +356,7 @@ export default {
       pos: ' 4-й период, группа - IIIB (3)',
       electronegativity: 1.2,
       config: '[Ar]3d<sup>1</sup>4s<sup>2</sup>'
-    },
-    {
+    }, {
       // 22: Ti Титан
       melting: 1670,
       bolling: 3287,
@@ -394,8 +373,7 @@ export default {
       pos: ' 4-й период, группа - IVB (4)',
       electronegativity: 1,
       config: '[Ar]3d<sup>2</sup>4s</sup><sup>2</sup>'
-    },
-    {
+    }, {
       // 23: V Ванадий
       melting: 1890,
       bolling: 3380,
@@ -412,8 +390,7 @@ export default {
       pos: ' 4-й период, группа - VВ (5)',
       electronegativity: 1.6,
       config: '[Ar]3s<sup>2</sup>p<sup>6</sup>d<sup>3</sup>4s<sup>2</sup>.'
-    },
-    {
+    }, {
       // 24: Cr  Хром
       melting: 1857,
       bolling: 2672,
@@ -429,8 +406,7 @@ export default {
       lat: 'chromium',
       pos: ' 4-й период, группа - VIB (6)',
       electronegativity: 1.66
-    },
-    {
+    }, {
       // 25: Mn Марганец
       melting: 1244,
       bolling: 1962,
@@ -447,8 +423,7 @@ export default {
       pos: ' 4-й период, группа - VIIВ (7)',
       electronegativity: 1.5,
       config: '[Ar]3s</sup><sup>2</sup>p</sup><sup>6</sup>d<sup>5</sup>4s<sup>2</sup>'
-    },
-    {
+    }, {
       // 26: Fe  Железо
       melting: 1535,
       bolling: 2750,
@@ -465,8 +440,7 @@ export default {
       pos: ' 4-й период, группа - VIIIВ (8)',
       electronegativity: 1.8,
       config: '[Ar]3s<sup>2</sup>p<sup>6</sup>d<sup>6</sup>4s<sup>2</sup>.'
-    },
-    {
+    }, {
       // 27: Co Кобальт
       melting: 1495,
       bolling: 2870,
@@ -483,8 +457,7 @@ export default {
       pos: ' 4-й период, группа - VIIIВ (9).',
       electronegativity: 1.88,
       config: '[Ar]3s<sup>2</sup>p<sup>6</sup>d<sup>7</sup>4s<sup>2</sup>.'
-    },
-    {
+    }, {
       // 28: Ni Никель
       melting: 1453,
       bolling: 2732,
@@ -500,8 +473,7 @@ export default {
       lat: 'nissolum',
       pos: ' 4-й период, группа - VIIIВ (10).',
       electronegativity: 0
-    },
-    {
+    }, {
       // 29: Cu  Медь
       melting: 1083.4,
       bolling: 2567,
@@ -518,8 +490,7 @@ export default {
       pos: ' 4-й период, группа - IВ (11).',
       electronegativity: 1.9,
       config: '[Ar]3s<sup>2</sup>p<sup>6</sup>d<suP>10</sup>4s<sup>1</sup>.'
-    },
-    {
+    }, {
       // 30: Zn  Цинк
       melting: 419.88,
       bolling: 907,
@@ -536,8 +507,7 @@ export default {
       pos: ' 5-й период, группа - (4).',
       electronegativity: 1.66,
       config: '[Ar]3s<sup>2</sup>p<sup>6</sup>d<sup>10</sup>4s<sup>2</sup>.'
-    },
-    {
+    }, {
       // 31: Ga Галлий
       melting: 29.78,
       bolling: 2403,
@@ -554,8 +524,7 @@ export default {
       pos: ' 4-й период, группа - IIIA (13).',
       electronegativity: 1.6,
       config: '[Ar4s<sup>2</sup>p<sup>1</sup>.'
-    },
-    {
+    }, {
       // 32: Ge Германий
       melting: 937.4,
       bolling: 2830,
@@ -571,8 +540,7 @@ export default {
       lat: 'germanium',
       pos: ' 4-й период, группа - IVA (14).',
       config: '[Ar]4s<sup>2</sup>p<sup>2</sup>.'
-    },
-    {
+    }, {
       // 33: As  Мышьяк
       melting: 817,
       bolling: 615,
@@ -589,8 +557,7 @@ export default {
       pos: ' 4-й период, группа - VА (15).',
       electronegativity: 2.1,
       config: '[Ar4s<sup>2</sup>p<sup>3</sup>.'
-    },
-    {
+    }, {
       // 34: Se  Селен
       melting: 217,
       bolling: 684.9,
@@ -607,8 +574,7 @@ export default {
       pos: ' 4-й период, группа - VIA (16).',
       electronegativity: 2.4,
       config: '[Ar]3d<sup>10</sup>4s<sup>2</sup>p<sup>4</sup>.'
-    },
-    {
+    }, {
       // 35: Br  Бром
       melting: -7.25,
       bolling: 58.78,
@@ -625,8 +591,7 @@ export default {
       pos: ' 4-й период, группа - VIIА ().',
       electronegativity: 2.8,
       config: '[Ar4s<sup>2</sup>p<sup>5</sup>.'
-    },
-    {
+    }, {
       // 36: Kr Криптон
       melting: -156.6,
       bolling: -152.3,
@@ -643,8 +608,7 @@ export default {
       pos: ' 4-й период, группа - VIA (16).',
       electronegativity: 2.94,
       config: '[Ar]3d<sup>10</sup>4s<sup>2</sup>p<sup>6</sup>.'
-    },
-    {
+    }, {
       // 37: Rb Рубидий
       melting: 38.89,
       bolling: 687.2,
@@ -661,8 +625,7 @@ export default {
       pos: ' 5-й период, группа - IA(1).',
       electronegativity: 0.8,
       config: '[Кr]5s<sup>2</sup>.'
-    },
-    {
+    }, {
       // 38: Sr  Стронций
       melting: 769,
       bolling: 1384,
@@ -679,8 +642,7 @@ export default {
       pos: ' 5-й период, группа - IIА (2).',
       electronegativity: 1,
       config: '[Kr]5s<sup>2</sup>.'
-    },
-    {
+    }, {
       // 39: Y  Иттрий
       melting: 1522,
       bolling: 3337,
@@ -697,8 +659,7 @@ export default {
       pos: ' 5-й период, группа -IIIB (3).',
       electronegativity: 1.11,
       config: '[Kr].'
-    },
-    {
+    }, {
       // 40: Zr  Цирконий
       melting: 1852,
       bolling: 4377,
@@ -715,8 +676,7 @@ export default {
       pos: ' 5-й период, группа -IVB (4).',
       electronegativity: 1.4,
       config: '[Kr]4s<sup>2</sup>p<sup>6</sup>d<sup>2</sup>5s<sup>2</sup>.'
-    },
-    {
+    }, {
       // 41: Nb Ниобий
       melting: 2468,
       bolling: 4742,
@@ -732,8 +692,7 @@ export default {
       lat: 'niobium',
       pos: ' 5-й период, группа - VВ(5).',
       electronegativity: 1.6
-    },
-    {
+    }, {
       // 42: Mo Молибден
       melting: 2617,
       bolling: 4612,
@@ -750,8 +709,7 @@ export default {
       pos: ' 5-й период, группа - (6).',
       electronegativity: 1.8,
       config: '[Kr]4s<sup>2</sup> p<sup>6</sup>d<sup>5</sup>5s<sup>1</sup>.'
-    },
-    {
+    }, {
       // 43: Tc Технеций
       melting: 2172,
       bolling: 4877,
@@ -768,8 +726,7 @@ export default {
       pos: ' 5-й период, группа - VIIB (7)',
       electronegativity: 1.9,
       config: '[Kr]4d<sup>5</sup>5s<sup>2</sup>.'
-    },
-    {
+    }, {
       // 44: Ru  Рутений
       melting: 2310,
       bolling: 3900,
@@ -786,8 +743,7 @@ export default {
       pos: ' 5-й период, группа - VIIIB (8).',
       electronegativity: 1.42,
       config: '[Kr]4s<sup>2</sup>p<sup>6</sup>d<sup>7</sup>5s<sup>1</sup>.'
-    },
-    {
+    }, {
       // 45: Rh  Родий
       melting: 1966,
       bolling: 3727,
@@ -804,8 +760,7 @@ export default {
       pos: ' 5-й период, группа - VIIIВ(9).',
       electronegativity: 2.28,
       config: '[Kr]4s<sup>2</sup>p<sup>6</sup>d<sup>8</sup>5s<sup>1</sup>.'
-    },
-    {
+    }, {
       // 46: Pd Палладий
       melting: 1552,
       bolling: 3140,
@@ -822,8 +777,7 @@ export default {
       pos: ' 5-й период, группа - VIIIB(10).',
       electronegativity: 1.35,
       config: '[Kr]4s<sup>2</sup>p<sup>6</sup>d<sup>10</sup>5s<sup>0</sup>.'
-    },
-    {
+    }, {
       // 47: Ag  Серебро
       melting: 961.93,
       bolling: 2212,
@@ -840,8 +794,7 @@ export default {
       pos: ' 5-й период, группа - IB(11).',
       electronegativity: 1.93,
       config: '[Kr4s<sup>2</sup>p<sup>6</sup>d<sup>10</sup>5s<sup>1</sup>.'
-    },
-    {
+    }, {
       // 48: Cd  Кадмий
       melting: 320.9,
       bolling: 765,
@@ -858,8 +811,7 @@ export default {
       pos: ' 5-й период, группа - IIВ(12).',
       electronegativity: 1.69,
       config: '[Kr4s<sup>2</sup>p<sup>6</sup>d<sup>10</sup>5s<sup>2</sup>.'
-    },
-    {
+    }, {
       // 49: In Индий
       melting: 156.78,
       bolling: 2080,
@@ -876,8 +828,7 @@ export default {
       pos: ' 5-й период, группа - IIIA(13).',
       electronegativity: 1.78,
       config: '[Kr]5s<sup>2</sup>5p<sup>1</sup>.'
-    },
-    {
+    }, {
       // 50: Sn  Олово
       melting: 231.88,
       bolling: 2270,
@@ -894,8 +845,7 @@ export default {
       pos: ' 5-й период, группа - IVА(14).',
       electronegativity: 1.96,
       config: '[Kr5s<sup>2</sup>5p<sup>2</sup>.'
-    },
-    {
+    }, {
       // 51: Sb  Сурьма
       melting: 630.5,
       bolling: 1750,
@@ -912,8 +862,7 @@ export default {
       pos: ' 5-й период, группа - VА(15).',
       electronegativity: 1.9,
       config: '[Kr]5s<sup>2</sup>p<sup>3</sup>.'
-    },
-    {
+    }, {
       // 52: Te Теллур
       melting: 449.5,
       bolling: 989.8,
@@ -929,8 +878,7 @@ export default {
       lat: 'tellurium',
       pos: ' 5-й период, группа - VIA(16).',
       electronegativity: 2.1
-    },
-    {
+    }, {
       // 53: I  Иод
       melting: 113.5,
       bolling: 184.35,
@@ -946,8 +894,7 @@ export default {
       lat: 'iodum',
       pos: ' 5-й период, группа - VIIА(17).',
       electronegativity: 2.66
-    },
-    {
+    }, {
       // 54: Xe  Ксенон
       melting: -111.9,
       bolling: -107.1,
@@ -963,8 +910,7 @@ export default {
       lat: 'xeno',
       pos: ' 5-й период, группа - VIIIA(18).',
       electronegativity: 2.6
-    },
-    {
+    }, {
       // 55: Cs  Цезий
       melting: 28.5,
       bolling: 678.4,
@@ -981,8 +927,7 @@ export default {
       pos: ' 6-й период, группа - IA (1).',
       electronegativity: 0.7,
       config: '6 <i>s</i><sup>1</sup>.'
-    },
-    {
+    }, {
       // 56: Ba  Барий
       melting: 725,
       bolling: 1640,
@@ -999,8 +944,7 @@ export default {
       pos: ' 6-й период, группа - IIA(1).',
       electronegativity: 0.9,
       config: '[Xe6s<sup>2</sup>.'
-    },
-    {
+    }, {
       // 57: La  Лантан
       melting: 920,
       bolling: 3454,
@@ -1017,8 +961,7 @@ export default {
       pos: ' 6-й период, группа - IIIВ(3).',
       electronegativity: 1.1,
       config: '[Xe5s<sup>2</sup>p<sup>6</sup>d<sup>1</sup>6s<sup>2</sup>.'
-    },
-    {
+    }, {
       // 58: Ce  Церий
       melting: 798,
       bolling: 3426,
@@ -1034,8 +977,7 @@ export default {
       lat: 'cerium',
       pos: ' 6-й период, группа - IIIB(3).',
       electronegativity: 1.12
-    },
-    {
+    }, {
       // 59: Pr Празеодим
       melting: 931,
       bolling: 3512,
@@ -1051,8 +993,7 @@ export default {
       lat: 'praseodimium',
       pos: ' 6-й период, группа - IIIB(3).',
       electronegativity: 1.07
-    },
-    {
+    }, {
       // 60: Nd  Неодим
       melting: 1021,
       bolling: 3068,
@@ -1068,8 +1009,7 @@ export default {
       lat: 'neodimium',
       pos: ' 6-й период, группа - IIIB(3).',
       electronegativity: 1.07
-    },
-    {
+    }, {
       // 61: Pm Прометий
       melting: 1168,
       bolling: 2460,
@@ -1085,8 +1025,7 @@ export default {
       lat: 'prometium',
       pos: ' 6-й период, группа - IIIB(3).',
       electronegativity: 1.07
-    },
-    {
+    }, {
       // 62: Sm  Самарий
       melting: 1077,
       bolling: 1791,
@@ -1102,8 +1041,7 @@ export default {
       lat: 'samarium',
       pos: ' 6-й период, группа - IIIB(3).',
       electronegativity: 1.07
-    },
-    {
+    }, {
       // 63: Eu  Европий
       melting: 822,
       bolling: 1597,
@@ -1119,8 +1057,7 @@ export default {
       lat: 'europium',
       pos: ' 6-й период, группа - IIIB(3).',
       electronegativity: 1
-    },
-    {
+    }, {
       // 64: Gd  Гадолиний
       melting: 1312,
       bolling: 3250,
@@ -1136,8 +1073,7 @@ export default {
       lat: 'gadolinium',
       pos: ' 6-й период, группа - IIIB(3).',
       electronegativity: 1.1
-    },
-    {
+    }, {
       // 65: Tb  Тербий
       melting: 1356,
       bolling: 3123,
@@ -1153,8 +1089,7 @@ export default {
       lat: 'terbium',
       pos: ' 6-й период, группа - IIIB(3).',
       electronegativity: 1.1
-    },
-    {
+    }, {
       // 66: Dy  Диспрозий
       melting: 1409,
       bolling: 2562,
@@ -1170,8 +1105,7 @@ export default {
       lat: 'dysprosium',
       pos: ' 6-й период, группа - IIIB(3).',
       electronegativity: 1.1
-    },
-    {
+    }, {
       // 67: Ho Гольмий
       melting: 1474,
       bolling: 2695,
@@ -1187,8 +1121,7 @@ export default {
       lat: 'holmium',
       pos: ' 6-й период, группа - IIIB(3).',
       electronegativity: 1.1
-    },
-    {
+    }, {
       // 68: Er  Эрбий
       melting: 1529,
       bolling: 2863,
@@ -1204,8 +1137,7 @@ export default {
       lat: 'erbium',
       pos: ' 6-й период, группа - IIIB(3).',
       electronegativity: 1.11
-    },
-    {
+    }, {
       // 69: Tm  Тулий
       melting: 1545,
       bolling: 1947,
@@ -1221,8 +1153,7 @@ export default {
       lat: 'thulium',
       pos: ' 6-й период, группа - IIIB(3).',
       electronegativity: 1.1
-    },
-    {
+    }, {
       // 70: Yb  Иттербий
       melting: 819,
       bolling: 1193,
@@ -1238,8 +1169,7 @@ export default {
       lat: 'ytterbium',
       pos: ' 6-й период, группа - IIIB(3).',
       electronegativity: 1.06
-    },
-    {
+    }, {
       // 71: Lu  Лютеций
       melting: 1663,
       bolling: 3302,
@@ -1255,8 +1185,7 @@ export default {
       lat: 'lutetium',
       pos: ' 6-й период, группа - IIIB(3).',
       electronegativity: 1.14
-    },
-    {
+    }, {
       // 72: Hf  Гафний
       melting: 2227,
       bolling: 4602,
@@ -1272,8 +1201,7 @@ export default {
       lat: 'hafnium',
       pos: ' 6-й период, группа - IVB(4).',
       electronegativity: 1.6
-    },
-    {
+    }, {
       // 73: Ta  Тантал
       melting: 2996,
       bolling: 5425,
@@ -1289,8 +1217,7 @@ export default {
       lat: 'tantalum',
       pos: ' 6-й период, группа - (5).',
       electronegativity: 1.5
-    },
-    {
+    }, {
       // 74: W Вольфрам
       melting: 3410,
       bolling: 5660,
@@ -1306,8 +1233,7 @@ export default {
       lat: 'none',
       pos: ' 6-й период, группа - VIВ (6).',
       electronegativity: 1.7
-    },
-    {
+    }, {
       // 75: Re Рений
       melting: 3180,
       bolling: 5627,
@@ -1323,8 +1249,7 @@ export default {
       lat: 'rhenium',
       pos: ' 6-й период, группа - VIIB(7).',
       electronegativity: 1.9
-    },
-    {
+    }, {
       // 76: Os Осмий
       melting: 3045,
       bolling: 5027,
@@ -1340,8 +1265,7 @@ export default {
       lat: 'osmium',
       pos: ' 6-й период, группа - VIIIB(8).',
       electronegativity: 2.1
-    },
-    {
+    }, {
       // 77: Ir  Иридий
       melting: 2410,
       bolling: 4130,
@@ -1357,8 +1281,7 @@ export default {
       lat: 'iridium',
       pos: ' 6-й период, группа - VIIIB(9).',
       electronegativity: 2.2
-    },
-    {
+    }, {
       // 78: Pt  Платина
       melting: 1773.5,
       bolling: 3830,
@@ -1374,8 +1297,7 @@ export default {
       lat: 'platinum',
       pos: ' 6-й период, группа - VIIIB(10).',
       electronegativity: 2.2
-    },
-    {
+    }, {
       // 79: Au  Золото
       melting: 1064.43,
       bolling: 2807,
@@ -1391,8 +1313,7 @@ export default {
       lat: 'aurum',
       pos: ' 6-й период, группа - IВ(11).',
       electronegativity: 2.4
-    },
-    {
+    }, {
       // 80: Hg  Ртуть
       melting: -38.86,
       bolling: 356.6,
@@ -1408,8 +1329,7 @@ export default {
       lat: 'hydrargyrum',
       pos: ' 6-й период, группа - IIВ(12).',
       electronegativity: 1.9
-    },
-    {
+    }, {
       // 81: Tl  Таллий
       melting: 303.5,
       bolling: 1457,
@@ -1426,8 +1346,7 @@ export default {
       pos: ' 6-й период, группа - IIIA(13).',
       electronegativity: 1.8,
       config: '[Xe]1s<sup>2</sup>.'
-    },
-    {
+    }, {
       // 82: Pb Свинец
       melting: 327.5,
       bolling: 1740,
@@ -1444,8 +1363,7 @@ export default {
       pos: ' 6-й период, группа - IVA(14).',
       electronegativity: 1.55,
       config: '[Xe]6s<sup>2</sup>p<sup>2</sup>.'
-    },
-    {
+    }, {
       // 83: Bi Висмут
       melting: 271.3,
       bolling: 1563,
@@ -1462,8 +1380,7 @@ export default {
       pos: ' 6-й период, группа - VA(15).',
       electronegativity: 1.9,
       config: '[Xe6s<sup>2</sup>p<sup>3</sup>.'
-    },
-    {
+    }, {
       // 84: Po  Полоний
       melting: 254,
       bolling: 962,
@@ -1480,8 +1397,7 @@ export default {
       pos: ' 6-й период, группа - VIA(16).',
       electronegativity: 1.76,
       config: '[Xe]6s<sup>2</sup>p<sup>4</sup>.'
-    },
-    {
+    }, {
       // 85: At  Астат
       melting: 302,
       bolling: 337,
@@ -1497,8 +1413,7 @@ export default {
       lat: 'astatium',
       pos: ' 6-й период, группа - VIIА(17).',
       electronegativity: 2.1
-    },
-    {
+    }, {
       // 86: Rn  Радон
       melting: -71,
       bolling: -61.8,
@@ -1515,8 +1430,7 @@ export default {
       pos: ' 6-й период, группа - VIIIA(18).',
       electronegativity: 2.06,
       config: '[Xe]6s<sup>2</sup>р<sup>6</sup>.'
-    },
-    {
+    }, {
       // 87: Fr  Франций
       melting: 27,
       bolling: 677,
@@ -1533,8 +1447,7 @@ export default {
       pos: ' 7-й период, группа - IА(1).',
       electronegativity: 0.86,
       config: '[Rn]7s<sup>1</sup>.'
-    },
-    {
+    }, {
       // 88: Ra  Радий
       melting: 970,
       bolling: 1140,
@@ -1551,8 +1464,7 @@ export default {
       pos: ' 7-й период, группа -IIA (2).',
       electronegativity: 0.97,
       config: '[Rd]7s<sup>2</sup>.'
-    },
-    {
+    }, {
       // 89: Ac  Актиний
       melting: 1050,
       bolling: 3250,
@@ -1569,8 +1481,7 @@ export default {
       pos: ' 7-й период, группа - IIIB (3)',
       electronegativity: 1,
       config: '[Rn]6d<sup>1</sup>7s<sup>2</sup>'
-    },
-    {
+    }, {
       // 90: Th  Торий
       melting: 1750,
       bolling: 3800,
@@ -1586,8 +1497,7 @@ export default {
       lat: 'thorium',
       pos: ' 7-й период, группа - IIIB(3).',
       electronegativity: 1.15
-    },
-    {
+    }, {
       // 91: Pa  Протактиний
       melting: 1572,
       bolling: 4230,
@@ -1604,8 +1514,7 @@ export default {
       pos: ' 7-й период, группа - IIIB(3).',
       electronegativity: 1.14,
       config: '[Rn]5f<sup>2</sup>6d<sup>1</sup>7s<sup>2</sup>.'
-    },
-    {
+    }, {
       // 92: U Уран
       melting: 1132,
       bolling: 3818,
@@ -1621,8 +1530,7 @@ export default {
       lat: 'uranium',
       pos: ' 7-й период, группа -IIIB (3).',
       electronegativity: 1.22
-    },
-    {
+    }, {
       // 93: Np Нептуний
       melting: 639,
       bolling: 3902,
@@ -1638,8 +1546,7 @@ export default {
       lat: 'neptunium',
       pos: ' 7-й период, группа - IIIB(3).',
       electronegativity: 1.22
-    },
-    {
+    }, {
       // 94: Pu Плутоний
       melting: 641,
       bolling: 3340,
@@ -1655,8 +1562,7 @@ export default {
       lat: 'plutonium',
       pos: ' 7-й период, группа - IIIB(3).',
       electronegativity: 1.22
-    },
-    {
+    }, {
       // 95: Am  Америций
       melting: 996,
       bolling: 2607,
@@ -1672,8 +1578,7 @@ export default {
       lat: 'americium',
       pos: ' 7-й период, группа - IIIB(3).',
       electronegativity: 1.2
-    },
-    {
+    }, {
       // 96: Cm  Кюрий
       melting: 1340,
       bolling: 3110,
@@ -1689,8 +1594,7 @@ export default {
       lat: 'curium',
       pos: ' 7-й период, группа - IIIB(3).',
       electronegativity: 1.2
-    },
-    {
+    }, {
       // 97: Bk Берклий
       melting: 1050,
       bolling: 2630,
@@ -1706,8 +1610,7 @@ export default {
       lat: 'berkelium',
       pos: ' 7-й период, группа - IIIB(3).',
       electronegativity: 1.2
-    },
-    {
+    }, {
       // 98: Cf  Калифорний
       melting: 900,
       bolling: 1227,
@@ -1723,8 +1626,7 @@ export default {
       lat: 'californium',
       pos: ' 7-й период, группа - IIIB(3).',
       electronegativity: 1.11
-    },
-    {
+    }, {
       // 99: Es  Эйнштейний
       melting: 860,
       bolling: null,
@@ -1740,8 +1642,7 @@ export default {
       lat: 'einsteium',
       pos: ' 7-й период,группа - IIIB(3).',
       electronegativity: 1.2
-    },
-    {
+    }, {
       // 100: Fm  Фермий
       melting: null,
       bolling: null,
@@ -1757,8 +1658,7 @@ export default {
       lat: 'fermium',
       pos: ' 7-й период, группа - IIIB(3).',
       electronegativity: 1.2
-    },
-    {
+    }, {
       // 101: Md Менелевий
       melting: null,
       bolling: null,
@@ -1774,8 +1674,7 @@ export default {
       lat: 'mendelevium',
       pos: ' 7-й период, группа - IIIB(3).',
       electronegativity: 1.2
-    },
-    {
+    }, {
       // 102: No  Нобелий
       melting: null,
       bolling: null,
@@ -1791,8 +1690,7 @@ export default {
       lat: 'nobelium',
       pos: ' 7-й период, группа - IIIB(3).',
       electronegativity: 1.2
-    },
-    {
+    }, {
       // 103: Lr  Лоуренций
       melting: null,
       bolling: null,
@@ -1808,8 +1706,7 @@ export default {
       lat: 'lowrencium',
       pos: ' 7-й период, группа - IIIB(3).',
       electronegativity: 1.2
-    },
-    {
+    }, {
       // 104: Rf Резерфордий
       melting: null,
       bolling: null,
@@ -1825,8 +1722,7 @@ export default {
       lat: 'rutherfordium',
       pos: ' 7-й период, группа - IVB (4)',
       config: '[Rn]5f<sup>14</sup>6d<sup>2</sup>7s<sup>2</sup>'
-    },
-    {
+    }, {
       // 105: Db Дубний
       melting: null,
       bolling: null,
@@ -1842,8 +1738,7 @@ export default {
       lat: 'none',
       pos: ' 7-й период, группа - VB (5)',
       config: '[Rn]5f<sup>14</sup>6d<sup>3</sup>7s<sup>2</sup>'
-    },
-    {
+    }, {
       // 106: Sg Сиборгий
       melting: null,
       bolling: null,
@@ -1859,8 +1754,7 @@ export default {
       lat: 'siborgium',
       pos: ' 7-й период, группа - VIB (6)',
       config: '[Rn]5f<sup>14</sup>6d<sup>4</sup>7s<sup>2</sup>'
-    },
-    {
+    }, {
       // 107: Bh  Борий
       melting: null,
       bolling: null,
@@ -1876,8 +1770,7 @@ export default {
       lat: 'bohrium',
       pos: ' 7-й период, группа - VIIB (7)',
       config: '[Rn]5f<sup>14</sup>6d<sup>5</sup>7s<sup>2</sup>'
-    },
-    {
+    }, {
       // 108: Hs Хассий
       melting: null,
       bolling: null,
@@ -1893,8 +1786,7 @@ export default {
       lat: 'hassium',
       pos: ' 7-й период, группа - VIIIB (8)',
       config: '[Rn]5f<sup>14</sup>6d<sup>6</sup>7s<sup>2</sup>'
-    },
-    {
+    }, {
       // 109: Mt Мейтнерий
       melting: null,
       bolling: null,
@@ -1910,8 +1802,7 @@ export default {
       lat: 'meitnerium',
       pos: ' 7-й период, группа - VIIIB (9)',
       config: '[Rn]5f<sup>14</sup>6d<sup>7</sup>7s<sup>2</sup>'
-    },
-    {
+    }, {
       // 110: Ds Дармштадтий
       melting: null,
       bolling: null,
@@ -1927,8 +1818,7 @@ export default {
       lat: 'darmstadtium',
       pos: ' 7-й период, группа - VIIIB (10)',
       config: '[Rn] 5f<sup>14</sup>6d<sup>9</sup>7s<sup>1</sup>'
-    },
-    {
+    }, {
       // 111: Rg Рентгений
       melting: null,
       bolling: null,
@@ -1944,8 +1834,7 @@ export default {
       lat: 'roentgenium',
       pos: ' 7-й период, группа - IB (11)',
       config: '[Rn] 5f<sup>14</sup>6d<sup>10</sup>7s<sup>1</sup>'
-    },
-    {
+    }, {
       // 112: Cn Коперниций
       melting: null,
       bolling: null,
@@ -1961,8 +1850,7 @@ export default {
       lat: 'copernicium',
       pos: ' 7-й период, группа - IIB (12)',
       config: '[Rn] 5f<sup>14</sup>6d<sup>10</sup>7s<sup>2</sup>'
-    },
-    {
+    }, {
       // 113: Nh Нихоний
       melting: null,
       bolling: null,
@@ -1978,8 +1866,7 @@ export default {
       lat: 'nihonium',
       pos: ' 7-й период, группа - IIIA (13)',
       config: '[Rn] 5f<sup>14</sup>6d<sup>10</sup>7s<sup>2</sup>7p<sup>1</sup>'
-    },
-    {
+    }, {
       // 114: Fl Флеровий
       melting: null,
       bolling: null,
@@ -1995,8 +1882,7 @@ export default {
       lat: 'flerovium',
       pos: ' 7-й период, группа - IVA (14)',
       config: '[Rn] 5f<sup>14</sup>6d<sup>10</sup>7s<sup>2</sup>7p<sup>2</sup>'
-    },
-    {
+    }, {
       // 115: Mc Московий
       melting: null,
       bolling: null,
@@ -2011,8 +1897,7 @@ export default {
       shortname: 'Mc',
       lat: 'moscovium',
       pos: ' 7-й период, группа - VA (15)'
-    },
-    {
+    }, {
       // 116: Lv Ливерморий
       melting: null,
       bolling: null,
@@ -2028,8 +1913,7 @@ export default {
       lat: 'livermorium',
       pos: ' 7-й период, группа - VA (15)',
       config: '[Rn] 5f<sup>14</sup>6d<sup>10</sup>7s<sup>2</sup>7p<sup>4</sup>'
-    },
-    {
+    }, {
       // 117: Ts Теннессин
       melting: null,
       bolling: null,
@@ -2044,8 +1928,7 @@ export default {
       shortname: 'Ts',
       lat: 'tennessine',
       pos: ' 7-й период, группа - VIIA (17)'
-    },
-    {
+    }, {
       // 118: Og Оганесон
       melting: null,
       bolling: null,

@@ -48,7 +48,7 @@ export default {
 </script>
 <style  lang="less">
 .vieweelement {
-  height: 300px;
+  height: 350px;
   width: 300px;
   margin: auto 20%;
   @media (max-width: 708px) {
@@ -79,7 +79,7 @@ export default {
     padding: 5px 15px;
     margin: -10px auto 10px auto;
     max-width: 300px;
-    height: 300px;
+    height: 350px;
     background: rgba(0, 200, 200, 0.3);
     @media (max-width: 708px) {
       max-width: 250px;
