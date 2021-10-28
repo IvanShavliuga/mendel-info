@@ -9,8 +9,10 @@
       </div>
     </div>
     <h4 class="vieweelement__box-pos" title="Позиция в таблице">{{ select.pos }}</h4>
-    <p class="vieweelement__box-mass" title="Относительная атомная масса">{{ select.mass }}</p>
-    <p class="vieweelement__box-oxidation" title="Степень окисления">{{ select.oxidation }}</p>
+    <p class="vieweelement__box-mass" title="Относительная атомная масса">атомная масса {{ select.mass }}</p>
+    <p class="vieweelement__box-config" title="Электронная конфигурация"><span v-html="select.config||'нет данных'"></span></p>
+    <p class="vieweelement__box-elnegative" title="Электроотрицательность">Электроотрицательность {{ select.electronegativity||'нет данных' }}</p>
+    <p class="vieweelement__box-oxidation" title="Степень окисления">Степень окисления {{ select.oxidation }}</p>
     <p class="vieweelement__box-type" title="Тип элемента">{{ select.type }}</p>
     <p class="vieweelement__box-melting" title="Температура плавления">t<sub>плавления</sub>: {{ select.melting||'нет данных' }}</p>
     <p class="vieweelement__box-bolling" title="Температура кипения">t<sub>кипения</sub>: {{ select.bolling||'нет данных' }}</p>
@@ -46,7 +48,7 @@ export default {
 </script>
 <style  lang="less">
 .vieweelement {
-  height: 250px;
+  height: 300px;
   width: 300px;
   margin: auto 20%;
   @media (max-width: 708px) {
@@ -77,7 +79,7 @@ export default {
     padding: 5px 15px;
     margin: -10px auto 10px auto;
     max-width: 300px;
-    height: 250px;
+    height: 300px;
     background: rgba(0, 200, 200, 0.3);
     @media (max-width: 708px) {
       max-width: 250px;
@@ -186,6 +188,8 @@ export default {
       color: black;
     }
     &-mass,
+    &-config,
+    &-elnegative,
     &-oxidation,
     &-type,
     &-melting,
@@ -196,6 +200,14 @@ export default {
       margin: 0;
       padding: 0;
       color: black;
+    }
+    &-config {
+      &>span {
+        letter-spacing: 2px;
+        &>sup {
+          font-weight: bold;
+        }
+      }
     }
     &-btn {
       padding: 10px 15px;
