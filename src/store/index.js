@@ -43,7 +43,7 @@ export default new Vuex.Store({
           }
         }
         let flt = ''
-        if (obj.type === 'latname') {
+        if (obj.type === 'lat') {
           flt = state.elements[i].lat.toUpperCase()
         }
         if (obj.type === 'runame') {
