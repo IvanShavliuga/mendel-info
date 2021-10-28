@@ -357,7 +357,7 @@ export default {
       lat: 'calcium',
       pos: ' 4-й период, группа - IIA (2)',
       electronegativity: 1.2,
-      config: '[Ne4s<sup>2</sup>'
+      config: '[Ar]4s<sup>2</sup>'
     },
     {
       // 21: Sc Скандий
