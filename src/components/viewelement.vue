@@ -204,6 +204,7 @@ export default {
     &-config {
       &>span {
         letter-spacing: 2px;
+        color: #606;
         &>sup {
           font-weight: bold;
         }
