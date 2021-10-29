@@ -153,13 +153,12 @@ export default {
       font-size: 12px;
     }
     &-block {
-      width: 70%;
-      height: 70px;
-      @media (max-width: 488px) {
-        height: 60px;
-      }
+      width: 75%;
+      padding: 5px;
+      height: 50px;
     }
     &-short {
+      width: 45px;
       font-size: 35px;
       line-height: 35px;
       margin: 0;
@@ -167,14 +166,14 @@ export default {
       color: red;
     }
     &-index {
-      font-size: 16px;
+      font-size: 20px;
       line-height: 20px;
       margin: 0;
       padding: 0;
       color: blue;
     }
     &-rus {
-      font-size: 16px;
+      font-size: 14px;
       line-height: 20px;
       margin: 0;
       padding: 0;
