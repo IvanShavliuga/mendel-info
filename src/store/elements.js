@@ -943,7 +943,7 @@ export default {
       lat: 'baryum',
       pos: ' 6-й период, группа - IIA(1).',
       electronegativity: 0.9,
-      config: '[Xe6s<sup>2</sup>.'
+      config: '[Xe]6s<sup>2</sup>.'
     }, {
       // 57: La  Лантан
       melting: 920,
@@ -960,7 +960,7 @@ export default {
       lat: 'lanthanum',
       pos: ' 6-й период, группа - IIIВ(3).',
       electronegativity: 1.1,
-      config: '[Xe5s<sup>2</sup>p<sup>6</sup>d<sup>1</sup>6s<sup>2</sup>.'
+      config: '[Xe]5s<sup>2</sup>p<sup>6</sup>d<sup>1</sup>6s<sup>2</sup>.'
     }, {
       // 58: Ce  Церий
       melting: 798,
@@ -1379,7 +1379,7 @@ export default {
       lat: 'bismuthum',
       pos: ' 6-й период, группа - VA(15).',
       electronegativity: 1.9,
-      config: '[Xe6s<sup>2</sup>p<sup>3</sup>.'
+      config: '[Xe]6s<sup>2</sup>p<sup>3</sup>.'
     }, {
       // 84: Po  Полоний
       melting: 254,
