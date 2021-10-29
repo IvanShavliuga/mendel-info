@@ -1,31 +1,30 @@
 <template>
 <table v-if="sellist!==null&&(sellist.length>0&&sellist.length<118)" class="results" border="0" cellspacing="1px" width="100%">
-<tr  class="results__row" bgcolor="#dedede"><td class="results__col-header" colspan="12" bgcolor="#dedede">Результаты поиска</td></tr>
-<tr  class="results__row" bgcolor="#dedede"><td class="results__col-header" colspan="12" bgcolor="#dedede">Всего результатов: {{sellist.length}}</td></tr>
+<tr  class="results__row" bgcolor="#dedede"><td class="results__col-header" colspan="14" bgcolor="#dedede">Результаты поиска</td></tr>
+<tr  class="results__row" bgcolor="#dedede"><td class="results__col-header" colspan="14" bgcolor="#dedede">Всего результатов: {{sellist.length}}</td></tr>
 <tr  class="results__row" bgcolor="#dedede">
-<td class="results__col-header" bgcolor="#dedede" colspan="2">Номер</td>
-<td class="results__col-header" bgcolor="#dedede">Символ</td>
-<td class="results__col-header" bgcolor="#dedede" colspan="2">Название</td>
-<td class="results__col-header" bgcolor="#dedede">Тип элемента</td>
-<td class="results__col-header" bgcolor="#dedede">Положение</td>
-<td class="results__col-header" bgcolor="#dedede">Электро-<br>отрицательность</td>
-<td class="results__col-header" bgcolor="#dedede">Атомная масса</td>
-<td class="results__col-header" bgcolor="#dedede">Степени<br>Окисления</td>
-<td class="results__col-header" bgcolor="#dedede">Конфигурация</td></tr>
-<tr v-for="(rs, key) in pagList" :key="key" :bgcolor="typecolor(rs.type)">
-  <td class="results__col-indfind" bgcolor="#dedede">{{startPage*10+key+1}}</td>
-  <td class="results__col">{{rs.index}}</td>
-  <td class="results__col">{{rs.shortname}}</td>
- <td class="results__col"><a :href="fullurl(rs.link)" target="__blank">{{rs.rusname}}</a></td>
-<td class="results__col">{{rs.lat}}</td>
- <td class="results__col">{{rs.type}}</td>
-<td class="results__col">{{rs.pos}}</td>
-<td class="results__col">{{rs.electronegativity}}</td>
-<td class="results__col">{{rs.mass}}</td>
-<td class="results__col">{{rs.oxidation}}</td>
-<td class="results__col"><span v-html="rs.config"></span></td>
+<td class="results__col-header results__col-props index" bgcolor="#dedede"><div>№<br>Символ</div></td>
+<td class="results__col-header results__col-props name" bgcolor="#dedede"><div>Название</div></td>
+<td class="results__col-header results__col-props type" bgcolor="#dedede"><div>Тип<br>элемента</div></td>
+<td class="results__col-header results__col-props pos" bgcolor="#dedede"><div>Положение<br>(Период,<br>группа)</div></td>
+<td class="results__col-header results__col-props negative" bgcolor="#dedede"><div>Электро<br>отрицатель<br>ность</div></td>
+<td class="results__col-header results__col-props mass" bgcolor="#dedede"><div>Атомная<br> масса</div></td>
+<td class="results__col-header results__col-props oxi" bgcolor="#dedede"><div>Степени<br>Окисления</div></td>
+<!-- <td class="results__col-header results__col-props config" bgcolor="#dedede"><div>Конфигурация</div></td> -->
+<td class="results__col-header results__col-props temperature" bgcolor="#dedede"><div>t<sub>плавления</sub><br>t<sub>кипения</sub></div></td>
 </tr>
-<tr  class="results__row" bgcolor="#dedede"><td align="center" class="results__col-header" colspan="12" bgcolor="#dedede">
+<tr v-for="(rs, key) in pagList" :key="key" :bgcolor="typecolor(rs.type)">
+  <td class="results__col valcell index">{{rs.index}}<br>{{rs.shortname}}</td>
+ <td class="results__col valcell name"><a :href="fullurl(rs.link)" target="__blank">{{rs.rusname}}<br>{{rs.lat}}</a></td>
+ <td class="results__col valcell type"><span v-html="displayType(rs.type)"></span></td>
+<td class="results__col valcell pos"><span v-html="displayPos(rs.pos)"></span></td>
+<td class="results__col valcell negative">{{rs.electronegativity}}</td>
+<td class="results__col valcell mass">{{rs.mass.toFixed(3)}}</td>
+<td class="results__col valcell oxi">{{rs.oxidation}}</td>
+<!-- <td class="results__col valcell config"><span v-html="rs.config"></span></td> -->
+<td class="results__col valcell temperature">{{rs.melting}}<br>{{rs.bolling}}</td>
+</tr>
+<tr v-if="endPage>1" class="results__row" bgcolor="#dedede"><td align="center" class="results__col-header" colspan="14" bgcolor="#dedede">
 <span @click="prev">назад</span> | Страница: {{startPage+1}} из {{endPage}} | <span @click="next">вперед</span></td></tr>
 </table>
 </template>
@@ -77,6 +76,12 @@ export default {
     },
     next () {
       if (this.startPage < this.endPage - 1) this.startPage++
+    },
+    displayPos (p) {
+      return p.split('период').join('').trim().split('группа').join('').trim().split('-').join('').trim().split('й').join(' ').trim().split('()').join('').split(' ').join('')
+    },
+    displayType (p) {
+      return p.split(' ').join('<br>')
     }
   }
 }
@@ -86,13 +91,18 @@ export default {
   &__col {
     color: white;
     height: 25px;
+    font-size: 14px;
     &-indfind,
     &-header {
       color: black;
       font-weight: bold;
+      font-size: 14px;
       span {
         cursor: pointer;
         color: blue;
+      }
+      @media (max-width: 560px) {
+        font-size: 10px;
       }
     }
     a {
@@ -101,6 +111,84 @@ export default {
         color: silver;
       }
     }
+    &-props {
+      text-transform: uppercase;
+    }
+    @media (max-width: 1070px) {
+      /* font-size: 12px; */
+      &-header {
+        font-size: 12px;
+        font-weight: normal;
+      }
+    }
+    @media (max-width: 890px) {
+      &-props {
+        word-break: break-all;
+      }
+      word-break: break-all;
+    }
+    @media (max-width: 720px) {
+      &-props {
+        word-break: break-all;
+        font-size: 10px;
+      }
+    }
+    @media (max-width: 450px) {
+      &-props {
+        word-break: break-all;
+        font-size: 10px;
+      }
+    }
+  }
+}
+.index {
+  width: 45px!important;
+}
+.temperature {
+  width: 70px;
+}
+.type {
+  width: 90px;
+  @media (max-width: 700px) {
+    width: 60px;
+  }
+}
+.pos {
+  width: 80px;
+  @media (max-width: 700px) {
+    width: 70px;
+  }
+}
+
+.negative,
+.mass {
+  width: 85px;
+}
+.negative {
+  @media (max-width: 700px) {
+    width: 70px;
+  }
+}
+.mass {
+  @media (max-width: 980px) {
+    width: 70px;
+  }
+  @media (max-width: 700px) {
+    width: 50px;
+  }
+}
+.oxi {
+  width: 80px;
+  @media (max-width: 700px) {
+    width: 70px;
+  }
+}
+.valcell {
+  @media (max-width: 720px) {
+    font-size: 12px;
+  }
+  @media (max-width: 550px) {
+    font-size: 10px;
   }
 }
 </style>

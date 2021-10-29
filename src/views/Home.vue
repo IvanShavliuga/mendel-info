@@ -2,10 +2,7 @@
   <div class="home">
     <app-search/>
     <app-findres/>
-    <div class="home__table">
-      <app-elemtable/>
-      <app-viewelement/>
-    </div>
+    <app-elemtable/>
   </div>
 </template>
 
@@ -13,7 +10,7 @@
 // @ is an alias to /src
 import appFindres from '../components/findres.vue'
 import appElemtable from '../components/elemtable.vue'
-import appViewelement from '../components/viewelement.vue'
+// import appViewelement from '../components/viewelement.vue'
 import appSearch from '../components/search.vue'
 
 export default {
@@ -21,7 +18,7 @@ export default {
   components: {
     appFindres,
     appSearch,
-    appViewelement,
+    // appViewelement,
     appElemtable
   },
   methods: {

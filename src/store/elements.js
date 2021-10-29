@@ -590,7 +590,7 @@ export default {
       lat: 'bromum',
       pos: ' 4-й период, группа - VIIА ().',
       electronegativity: 2.8,
-      config: '[Ar4s<sup>2</sup>p<sup>5</sup>.'
+      config: '[Ar]4s<sup>2</sup>p<sup>5</sup>.'
     }, {
       // 36: Kr Криптон
       melting: -156.6,

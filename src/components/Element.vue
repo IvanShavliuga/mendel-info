@@ -1,6 +1,5 @@
 <template>
   <td
-    @mouseover="selelem"
     @click="selelem"
     :bgcolor="selcolor"
     class="element">

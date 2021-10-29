@@ -27,7 +27,14 @@ export default new Vuex.Store({
   mutations: {
     SEL_ELEMENT (state, obj) {
       state.select = state.elements[obj.index]
+      state.sellist = [state.elements[obj.index]]
       state.selrow = obj.row
+      for (let i = 0; i < state.elements.length; i++) {
+        state.elements[i].select = false
+      }
+      state.elements[obj.index].select = true
+      state.searchcount = 1
+      state.modeview = true
     },
     SEL_ELEMENTS (state, obj) {
       let count = 0
