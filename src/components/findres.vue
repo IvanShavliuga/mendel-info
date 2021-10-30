@@ -11,7 +11,7 @@
 <td class="results__col-header results__col-props mass" bgcolor="#dedede"><div>Атомная<br> масса</div></td>
 <td class="results__col-header results__col-props oxi" bgcolor="#dedede"><div>Степени<br>Окисления</div></td>
 <!-- <td class="results__col-header results__col-props config" bgcolor="#dedede"><div>Конфигурация</div></td> -->
-<td class="results__col-header results__col-props temperature" bgcolor="#dedede"><div>t<sub>плавления</sub><br>t<sub>кипения</sub></div></td>
+<td class="results__col-header results__col-props temperature" bgcolor="#dedede"><div>t<sub>плав</sub><br>t<sub>кип</sub></div></td>
 </tr>
 <tr v-for="(rs, key) in pagList" :key="key" :bgcolor="typecolor(rs.type)">
   <td class="results__col valcell index">{{rs.index}}<br>{{rs.shortname}}</td>
@@ -129,34 +129,54 @@ export default {
     }
     @media (max-width: 720px) {
       &-props {
-        word-break: break-all;
         font-size: 10px;
       }
     }
-    @media (max-width: 450px) {
+    @media (max-width: 400px) {
       &-props {
-        word-break: break-all;
-        font-size: 10px;
+        font-size: 8px;
+        // writing-mode: vertical-rl;
       }
     }
   }
 }
 .index {
-  width: 45px!important;
+  width: 45px;
+  @media (max-width: 540px) {
+    width: 20px;
+  }
 }
 .temperature {
-  width: 70px;
+  width: 60px;
+  @media (max-width: 540px) {
+    width: 40px;
+  }
 }
 .type {
-  width: 90px;
+  width: 300px;
+  @media (max-width: 900px) {
+    width: 150px;
+  }
   @media (max-width: 700px) {
-    width: 60px;
+    width: 100px;
+  }
+  @media (max-width: 580px) {
+    width: 80px;
+  }
+  @media (max-width: 340px) {
+    width: 50px;
   }
 }
 .pos {
   width: 80px;
   @media (max-width: 700px) {
     width: 70px;
+  }
+  @media (max-width: 540px) {
+    width: 50px;
+  }
+  @media (max-width: 340px) {
+    width: 40px;
   }
 }
 
@@ -168,6 +188,15 @@ export default {
   @media (max-width: 700px) {
     width: 70px;
   }
+  @media (max-width: 540px) {
+    width: 50px;
+  }
+  @media (max-width: 430px) {
+    width: 40px;
+  }
+  @media (max-width: 370px) {
+    width: 30px;
+  }
 }
 .mass {
   @media (max-width: 980px) {
@@ -176,11 +205,20 @@ export default {
   @media (max-width: 700px) {
     width: 50px;
   }
+  @media (max-width: 430px) {
+    width: 40px;
+  }
 }
 .oxi {
   width: 80px;
   @media (max-width: 700px) {
     width: 70px;
+  }
+  @media (max-width: 540px) {
+    width: 40px;
+  }
+  @media (max-width: 370px) {
+    width: 30px;
   }
 }
 .valcell {
