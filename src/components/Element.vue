@@ -1,6 +1,5 @@
 <template>
   <td
-    @mouseover="selelem"
     @click="selelem"
     :bgcolor="selcolor"
     class="element">
@@ -56,16 +55,6 @@ export default {
       } else {
         return this.typecolor
       }
-    },
-    getRowInd () {
-      if (this.index <= 2) return 1
-      if (this.index > 2 && this.index <= 10) return 2
-      if (this.index >= 11 && this.index <= 18) return 3
-      if (this.index >= 19 && this.index <= 36) return 4
-      if (this.index >= 37 && this.index <= 54) return 5
-      if (this.index >= 55 && this.index <= 86) return 6
-      if (this.index >= 87 && this.index <= 118) return 7
-      return null
     }
   },
   methods: {
@@ -87,6 +76,7 @@ export default {
   padding: 5px 2px;
   opacity: 0.8;
   font-size: 18px;
+  font-weight: bold;
   color: rgba(255, 255, 255, 0.8);
 }
 a {
@@ -103,6 +93,20 @@ a {
     font-size: 14px;
     border: none;
     border-collapse: collapse;
+  }
+}
+@media (max-width: 400px) {
+  .element {
+    max-width: 14px;
+    font-size: 12px;
+    padding: 0;
+  }
+}
+
+@media (max-width: 330px) {
+  .element {
+    max-width: 12px;
+    font-size: 10px;
   }
 }
 </style>
