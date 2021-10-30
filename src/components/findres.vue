@@ -17,7 +17,7 @@
   <td class="results__col valcell index">{{rs.index}}<br>{{rs.shortname}}</td>
  <td class="results__col valcell name"><a :href="fullurl(rs.link)" target="__blank">{{rs.rusname}}<br>{{rs.lat}}</a></td>
  <td class="results__col valcell type"><span v-html="displayType(rs.type)"></span></td>
-<td class="results__col valcell pos"><span v-html="displayPos(rs.pos)"></span></td>
+<td class="results__col valcell pos">{{rs.pos}}</td>
 <td class="results__col valcell negative">{{rs.electronegativity}}</td>
 <td class="results__col valcell mass">{{rs.mass.toFixed(3)}}</td>
 <td class="results__col valcell oxi">{{rs.oxidation}}</td>
@@ -92,6 +92,7 @@ export default {
     color: white;
     height: 25px;
     font-size: 14px;
+    padding: 3px 1px;
     &-indfind,
     &-header {
       color: black;

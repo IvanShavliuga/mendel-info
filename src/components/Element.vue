@@ -86,6 +86,7 @@ export default {
   padding: 5px 2px;
   opacity: 0.8;
   font-size: 18px;
+  font-weight: bold;
   color: rgba(255, 255, 255, 0.8);
 }
 a {
@@ -102,6 +103,20 @@ a {
     font-size: 14px;
     border: none;
     border-collapse: collapse;
+  }
+}
+@media (max-width: 400px) {
+  .element {
+    max-width: 14px;
+    font-size: 12px;
+    padding: 0;
+  }
+}
+
+@media (max-width: 330px) {
+  .element {
+    max-width: 12px;
+    font-size: 10px;
   }
 }
 </style>

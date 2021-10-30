@@ -10,11 +10,11 @@ export default {
       link: 'nemetally/vodorod_lat_hydrogenium/11-1-0-39',
       rusname: 'Водород',
       mass: 1.00794,
-      oxidation: ' -1, +1',
+      oxidation: ' -1 +1',
       index: 1,
       shortname: 'H',
       lat: 'hydrogenium',
-      pos: ' 1-й период, группа - IA (1)',
+      pos: ' 1-й, IA (1)',
       electronegativity: 2.1,
       config: '1s<sup>1</sup>'
     }, {
@@ -31,7 +31,7 @@ export default {
       index: 2,
       shortname: 'He',
       lat: 'helium',
-      pos: ' 1-й период, группа - VIIIA (18)',
+      pos: ' 1-й, 0(18)',
       electronegativity: 5.5,
       config: '1s<sup>2</sup>'
     }, {
@@ -48,7 +48,7 @@ export default {
       index: 3,
       shortname: 'Li',
       lat: 'lithium',
-      pos: ' 2-й период, группа - IA (1)',
+      pos: ' 2-й, IA(1)',
       electronegativity: 2.1,
       config: '1s<sup>2</sup>2s<sup>1</sup>'
     }, {
@@ -65,7 +65,7 @@ export default {
       index: 4,
       shortname: 'Be',
       lat: 'veryllium',
-      pos: ' 2-й период, группа - IIA (2)',
+      pos: ' 2-й, IIA(2)',
       electronegativity: 1.4,
       config: '1s<sup>1</sup>2s<sup>2</sup>'
     }, {
@@ -78,11 +78,11 @@ export default {
       link: 'polumetally/bor_lat_borum/8-1-0-9',
       rusname: 'Бор',
       mass: 10.811,
-      oxidation: ' -3, +3',
+      oxidation: ' -3 +3',
       index: 5,
       shortname: 'B',
       lat: 'borum',
-      pos: ' 2-й период, группа - IIIA (13)',
+      pos: ' 2-й, IIIA(13)',
       electronegativity: 2,
       config: '1s<sup>1</sup>2s<sup>2</sup>2p<sup>1</sup>'
     }, {
@@ -95,11 +95,11 @@ export default {
       link: 'nemetally/uglerod_lat_carboneum/11-1-0-16',
       rusname: 'Углерод',
       mass: 12.0107,
-      oxidation: ' -4, +2,+4',
+      oxidation: ' -4 +2 +4',
       index: 6,
       shortname: 'C',
       lat: 'carboneum',
-      pos: ' 2-й период, группа - IVA (14)',
+      pos: ' 2-й, IVA(14)',
       electronegativity: 2.5,
       config: '1s<sup>1</sup>2s<sup>2</sup>2p<sup>2</sup>'
     }, {
@@ -112,11 +112,11 @@ export default {
       link: 'nemetally/azot_lat_nitrogenium/11-1-0-59',
       rusname: ' Азот',
       mass: 14.00674,
-      oxidation: ' -3,+1,+2,+3,+4,+5',
+      oxidation: ' -3 +1 +2 +3 +4 +5',
       index: 7,
       shortname: 'N',
       lat: 'nitrogenium',
-      pos: ' 2-й период, группа - VA (15)',
+      pos: ' 2-й, VA (15)',
       electronegativity: 3,
       config: '1s<sup>1</sup>2s<sup>2</sup>2p<sup>3</sup>'
     }, {
@@ -129,11 +129,11 @@ export default {
       link: 'nemetally/kislorod_lat_okhygenium/11-1-0-67',
       rusname: 'Кислород',
       mass: 15.9994,
-      oxidation: ' -2,-1,+2',
+      oxidation: ' -2 -1 +2',
       index: 8,
       shortname: 'O',
       lat: 'okhygenium',
-      pos: ' 2-й период, группа - VIA (16)',
+      pos: ' 2-й, VIA(16)',
       electronegativity: 3.5,
       config: '1s<sup>1</sup>2s<sup>2</sup>2p<sup>4</sup>'
     }, {
@@ -150,7 +150,7 @@ export default {
       index: 9,
       shortname: 'F',
       lat: 'fluorum',
-      pos: ' 2-й период, группа - VIIA (1)',
+      pos: ' 2-й, VIIA(17)',
       electronegativity: 4.1,
       config: '1s<sup>1</sup>2s<sup>2</sup>2p<sup>5</sup>'
     }, {
@@ -167,7 +167,7 @@ export default {
       index: 10,
       shortname: 'Ne',
       lat: 'neon',
-      pos: ' 1-й период, группа - VIIIA (18)',
+      pos: ' 1-й, VIIIA(18)',
       electronegativity: 4.8,
       config: '1s<sup>1</sup>2s<sup>2</sup>2p<sup>6</sup>'
     }, {
@@ -184,7 +184,7 @@ export default {
       index: 11,
       shortname: 'Na',
       lat: 'natrium',
-      pos: ' 1-й период, группа - IA (1)',
+      pos: ' 1-й, IA(1)',
       electronegativity: 1,
       config: '[Ne]1s<sup>1</sup>'
     }, {
@@ -201,7 +201,7 @@ export default {
       index: 12,
       shortname: 'Mg',
       lat: 'magnesium',
-      pos: ' 3-й период, группа - IIA (2)',
+      pos: ' 3-й, IIA(2)',
       electronegativity: 1.2,
       config: '[Ne]3s<sup>2</sup>'
     }, {
@@ -218,7 +218,7 @@ export default {
       index: 13,
       shortname: 'Al',
       lat: 'none',
-      pos: ' 3-й период, группа - IIIA (13)',
+      pos: ' 3-й, IIIA(13)',
       electronegativity: 1.4,
       config: '[Ne]3s<sup>2</sup>3p<sup>1</sup>'
     }, {
@@ -231,12 +231,13 @@ export default {
       link: 'polumetally/kremnij_lat_silicium/8-1-0-90',
       rusname: 'Кремний',
       mass: 28.0855,
-      oxidation: ' -4, +2,+4',
+      oxidation: ' -4 +2 +4',
       index: 14,
       shortname: 'Si',
       lat: 'silicium',
-      pos: ' 3-й период, группа - IVA (14)',
-      electronegativity: 1.7
+      pos: ' 3-й, IVA(14)',
+      electronegativity: 1.7,
+      config: '[Ne]3s<sup>2</sup>3p<sup>2</sup>'
     }, {
       // 15: P Фосфор
       melting: 44.14,
@@ -247,11 +248,11 @@ export default {
       link: 'nemetally/fosfor_lat_phosphopus/11-1-0-69',
       rusname: 'Фосфор',
       mass: 30.973761,
-      oxidation: ' -3,+1,+3,+4,+5',
+      oxidation: ' -3 +1 +3 +4 +5',
       index: 15,
       shortname: 'P',
       lat: 'phosphopus',
-      pos: ' 3-й период, группа - VA (2)',
+      pos: ' 3-й,VA (2)',
       electronegativity: 2.1,
       config: '[Ne]3s<sup>2</sup>3р<sup>3</sup>.'
     }, {
@@ -264,11 +265,11 @@ export default {
       link: 'nemetally/sera_lat_sulfur/11-1-0-85',
       rusname: 'Сера',
       mass: 32.066,
-      oxidation: ' -2,+2,+4,+6',
+      oxidation: ' -2 +2 +4 +6',
       index: 16,
       shortname: 'S',
       lat: 'sulfur',
-      pos: ' 3-й период, группа - VIA (16)',
+      pos: ' 3-й,VIA (16)',
       electronegativity: 2,
       config: '[Ne]3s<sup>2</sup>3p<sup>4</sup>.'
     }, {
@@ -281,11 +282,11 @@ export default {
       link: 'galogeny/khlor_lat_shlorum/9-1-0-21',
       rusname: 'Хлор',
       mass: 35.4527,
-      oxidation: ' -1, +1,+3,+5,+7',
+      oxidation: ' -1 +1 +3 +5 +7',
       index: 17,
       shortname: 'Cl',
       lat: 'shlorum',
-      pos: ' 3-й период, группа - VIIA (17)',
+      pos: ' 3-й,VIIA (17)',
       electronegativity: 3.16,
       config: '[Ne]3s<sup>2</sup>p<sup>5</sup>'
     }, {
@@ -302,7 +303,7 @@ export default {
       index: 18,
       shortname: 'Ar',
       lat: 'argon',
-      pos: ' 3-й период, группа - VIIIA (18)',
+      pos: ' 3-й,VIIIA (18)',
       electronegativity: 3.2,
       config: '[Ne]3s<sup>2</sup>3p<sup>6</sup>'
     }, {
@@ -319,7 +320,7 @@ export default {
       index: 19,
       shortname: 'K',
       lat: 'kalium',
-      pos: ' 4-й период, группа - IA (1)',
+      pos: ' 4-й,IA (1)',
       electronegativity: 0.9,
       config: '[Ar]4s<sup>1</sup>'
     }, {
@@ -336,7 +337,7 @@ export default {
       index: 20,
       shortname: 'Ca',
       lat: 'calcium',
-      pos: ' 4-й период, группа - IIA (2)',
+      pos: ' 4-й,IIA (2)',
       electronegativity: 1.2,
       config: '[Ar]4s<sup>2</sup>'
     }, {
@@ -353,7 +354,7 @@ export default {
       index: 21,
       shortname: 'Sc',
       lat: 'scandium',
-      pos: ' 4-й период, группа - IIIB (3)',
+      pos: ' 4-й,IIIB (3)',
       electronegativity: 1.2,
       config: '[Ar]3d<sup>1</sup>4s<sup>2</sup>'
     }, {
@@ -366,11 +367,11 @@ export default {
       link: 'perekhodnye-metally/titan_lat_titanium/6-1-0-99',
       rusname: 'Титан',
       mass: 47.867,
-      oxidation: ' +3,+4',
+      oxidation: ' +3 +4',
       index: 22,
       shortname: 'Ti',
       lat: 'titanium',
-      pos: ' 4-й период, группа - IVB (4)',
+      pos: ' 4-й,IVB (4)',
       electronegativity: 1,
       config: '[Ar]3d<sup>2</sup>4s</sup><sup>2</sup>'
     }, {
@@ -383,11 +384,11 @@ export default {
       link: 'perekhodnye-metally/vanadij_lat_vanadium/6-1-0-103',
       rusname: 'Ванадий',
       mass: 50.9415,
-      oxidation: ' +2,+3,+4,+5',
+      oxidation: ' +2 +3 +4 +5',
       index: 23,
       shortname: 'V',
       lat: 'vanadium',
-      pos: ' 4-й период, группа - VВ (5)',
+      pos: ' 4-й,VВ (5)',
       electronegativity: 1.6,
       config: '[Ar]3s<sup>2</sup>p<sup>6</sup>d<sup>3</sup>4s<sup>2</sup>.'
     }, {
@@ -400,11 +401,11 @@ export default {
       link: 'perekhodnye-metally/khrom_lat_chromium/6-1-0-24',
       rusname: ' Хром',
       mass: 51.9961,
-      oxidation: ' +2,+3,+4',
+      oxidation: ' +2 +3 +4',
       index: 24,
       shortname: 'Cr',
       lat: 'chromium',
-      pos: ' 4-й период, группа - VIB (6)',
+      pos: ' 4-й,VIB (6)',
       electronegativity: 1.66
     }, {
       // 25: Mn Марганец
@@ -416,11 +417,11 @@ export default {
       link: 'perekhodnye-metally/marganec_lat_manganum/6-1-0-56',
       rusname: 'Марганец',
       mass: 54.93805,
-      oxidation: ' +2,+3,+4,+6,+7',
+      oxidation: ' +2 +3 +4 +6 +7',
       index: 25,
       shortname: 'Mn',
       lat: 'manganum',
-      pos: ' 4-й период, группа - VIIВ (7)',
+      pos: ' 4-й,VIIВ (7)',
       electronegativity: 1.5,
       config: '[Ar]3s</sup><sup>2</sup>p</sup><sup>6</sup>d<sup>5</sup>4s<sup>2</sup>'
     }, {
@@ -433,11 +434,11 @@ export default {
       link: 'perekhodnye-metally/zhelezo_lat_ferrum/6-1-0-33',
       rusname: ' Железо',
       mass: 55.845,
-      oxidation: ' +2,+3,+6',
+      oxidation: ' +2 +3 +6',
       index: 26,
       shortname: 'Fe',
       lat: 'ferrum',
-      pos: ' 4-й период, группа - VIIIВ (8)',
+      pos: ' 4-й,VIIIВ (8)',
       electronegativity: 1.8,
       config: '[Ar]3s<sup>2</sup>p<sup>6</sup>d<sup>6</sup>4s<sup>2</sup>.'
     }, {
@@ -450,11 +451,11 @@ export default {
       link: 'perekhodnye-metally/kobalt_lat_sobaltum/6-1-0-23',
       rusname: 'Кобальт',
       mass: 58.9332,
-      oxidation: ' +2,+3',
+      oxidation: ' +2 +3',
       index: 27,
       shortname: 'Co',
       lat: 'sobaltum',
-      pos: ' 4-й период, группа - VIIIВ (9).',
+      pos: ' 4-й,VIIIВ (9).',
       electronegativity: 1.88,
       config: '[Ar]3s<sup>2</sup>p<sup>6</sup>d<sup>7</sup>4s<sup>2</sup>.'
     }, {
@@ -467,11 +468,11 @@ export default {
       link: 'perekhodnye-metally/nikel_lat_nissolum/6-1-0-64',
       rusname: 'Никель',
       mass: 58.6934,
-      oxidation: '+2,+3',
+      oxidation: '+2 +3',
       index: 28,
       shortname: 'Ni',
       lat: 'nissolum',
-      pos: ' 4-й период, группа - VIIIВ (10).',
+      pos: ' 4-й,VIIIВ (10).',
       electronegativity: 0
     }, {
       // 29: Cu  Медь
@@ -483,11 +484,11 @@ export default {
       link: 'perekhodnye-metally/med_lat_cuprum/6-1-0-26',
       rusname: ' Медь',
       mass: 63.546,
-      oxidation: ' +1,+2,+3',
+      oxidation: ' +1 +2 +3',
       index: 29,
       shortname: 'Cu',
       lat: 'cuprum',
-      pos: ' 4-й период, группа - IВ (11).',
+      pos: ' 4-й,IВ (11).',
       electronegativity: 1.9,
       config: '[Ar]3s<sup>2</sup>p<sup>6</sup>d<suP>10</sup>4s<sup>1</sup>.'
     }, {
@@ -504,7 +505,7 @@ export default {
       index: 30,
       shortname: 'Zn',
       lat: 'zincum',
-      pos: ' 5-й период, группа - (4).',
+      pos: ' 5-й,(4).',
       electronegativity: 1.66,
       config: '[Ar]3s<sup>2</sup>p<sup>6</sup>d<sup>10</sup>4s<sup>2</sup>.'
     }, {
@@ -521,7 +522,7 @@ export default {
       index: 31,
       shortname: 'Ga',
       lat: 'gallium',
-      pos: ' 4-й период, группа - IIIA (13).',
+      pos: ' 4-й,IIIA (13).',
       electronegativity: 1.6,
       config: '[Ar4s<sup>2</sup>p<sup>1</sup>.'
     }, {
@@ -534,11 +535,11 @@ export default {
       link: 'polumetally/germanij_lat_germanium/8-1-0-38',
       rusname: 'Германий',
       mass: 72.61,
-      oxidation: ' +2,+4',
+      oxidation: ' +2 +4',
       index: 32,
       shortname: 'Ge',
       lat: 'germanium',
-      pos: ' 4-й период, группа - IVA (14).',
+      pos: ' 4-й,IVA (14).',
       config: '[Ar]4s<sup>2</sup>p<sup>2</sup>.'
     }, {
       // 33: As  Мышьяк
@@ -550,11 +551,11 @@ export default {
       link: 'polumetally/myshjak_lat_arsenicum/8-1-0-6',
       rusname: ' Мышьяк',
       mass: 74.9216,
-      oxidation: ' -3,+3,+6',
+      oxidation: ' -3 +3 +6',
       index: 33,
       shortname: 'As',
       lat: 'arsenicum',
-      pos: ' 4-й период, группа - VА (15).',
+      pos: ' 4-й,VА (15).',
       electronegativity: 2.1,
       config: '[Ar4s<sup>2</sup>p<sup>3</sup>.'
     }, {
@@ -567,11 +568,11 @@ export default {
       link: 'nemetally/selen_lat_selenium/11-1-0-88',
       rusname: ' Селен',
       mass: 78.96,
-      oxidation: ' -2, +2,+4,+6',
+      oxidation: ' -2 +2 +4 +6',
       index: 34,
       shortname: 'Se',
       lat: 'selenium',
-      pos: ' 4-й период, группа - VIA (16).',
+      pos: ' 4-й,VIA (16).',
       electronegativity: 2.4,
       config: '[Ar]3d<sup>10</sup>4s<sup>2</sup>p<sup>4</sup>.'
     }, {
@@ -584,11 +585,11 @@ export default {
       link: 'galogeny/brom_lat_bromum/9-1-0-15',
       rusname: ' Бром',
       mass: 79.904,
-      oxidation: ' -1,+1,+3,+5,+7',
+      oxidation: ' -1 +1 +3 +5 +7',
       index: 35,
       shortname: 'Br',
       lat: 'bromum',
-      pos: ' 4-й период, группа - VIIА ().',
+      pos: ' 4-й,VIIА ().',
       electronegativity: 2.8,
       config: '[Ar]4s<sup>2</sup>p<sup>5</sup>.'
     }, {
@@ -601,11 +602,11 @@ export default {
       link: 'inertnye-gazy/kripton_lat_krypton/10-1-0-49',
       rusname: 'Криптон',
       mass: 83.8,
-      oxidation: ' +2,+4',
+      oxidation: ' +2 +4',
       index: 36,
       shortname: 'Kr',
       lat: 'krypton',
-      pos: ' 4-й период, группа - VIA (16).',
+      pos: ' 4-й,VIA (16).',
       electronegativity: 2.94,
       config: '[Ar]3d<sup>10</sup>4s<sup>2</sup>p<sup>6</sup>.'
     }, {
@@ -622,7 +623,7 @@ export default {
       index: 37,
       shortname: 'Rb',
       lat: 'rubidium',
-      pos: ' 5-й период, группа - IA(1).',
+      pos: ' 5-й,IA(1).',
       electronegativity: 0.8,
       config: '[Кr]5s<sup>2</sup>.'
     }, {
@@ -639,7 +640,7 @@ export default {
       index: 38,
       shortname: 'Sr',
       lat: 'strontium',
-      pos: ' 5-й период, группа - IIА (2).',
+      pos: ' 5-й,IIА (2).',
       electronegativity: 1,
       config: '[Kr]5s<sup>2</sup>.'
     }, {
@@ -656,7 +657,7 @@ export default {
       index: 39,
       shortname: 'Y',
       lat: 'yttrium',
-      pos: ' 5-й период, группа -IIIB (3).',
+      pos: ' 5-й, группа -IIIB (3).',
       electronegativity: 1.11,
       config: '[Kr].'
     }, {
@@ -673,7 +674,7 @@ export default {
       index: 40,
       shortname: 'Zr',
       lat: 'zirconium',
-      pos: ' 5-й период, группа -IVB (4).',
+      pos: ' 5-й, группа -IVB (4).',
       electronegativity: 1.4,
       config: '[Kr]4s<sup>2</sup>p<sup>6</sup>d<sup>2</sup>5s<sup>2</sup>.'
     }, {
@@ -686,11 +687,11 @@ export default {
       link: 'perekhodnye-metally/niobij_lat_niobium/6-1-0-61',
       rusname: 'Ниобий',
       mass: 92.90638,
-      oxidation: ' +2,+3,+4,+5',
+      oxidation: ' +2 +3 +4 +5',
       index: 41,
       shortname: 'Nb',
       lat: 'niobium',
-      pos: ' 5-й период, группа - VВ(5).',
+      pos: ' 5-й,VВ(5).',
       electronegativity: 1.6
     }, {
       // 42: Mo Молибден
@@ -702,11 +703,11 @@ export default {
       link: 'perekhodnye-metally/molibden_lat_molibdaenum/6-1-0-57',
       rusname: 'Молибден',
       mass: 95.94,
-      oxidation: ' +2,+3,+4,+5,+6,+7',
+      oxidation: ' +2 +3 +4 +5 +6 +7',
       index: 42,
       shortname: 'Mo',
       lat: 'molibdaenum',
-      pos: ' 5-й период, группа - (6).',
+      pos: ' 5-й,(6).',
       electronegativity: 1.8,
       config: '[Kr]4s<sup>2</sup> p<sup>6</sup>d<sup>5</sup>5s<sup>1</sup>.'
     }, {
@@ -719,11 +720,11 @@ export default {
       link: 'perekhodnye-metally/tekhnecij_lat_technetium/6-1-0-96',
       rusname: 'Технеций',
       mass: 97.907,
-      oxidation: ' +2,+4,+6,+7',
+      oxidation: ' +2 +4 +6 +7',
       index: 43,
       shortname: 'Tc',
       lat: 'technetium',
-      pos: ' 5-й период, группа - VIIB (7)',
+      pos: ' 5-й,VIIB (7)',
       electronegativity: 1.9,
       config: '[Kr]4d<sup>5</sup>5s<sup>2</sup>.'
     }, {
@@ -736,11 +737,11 @@ export default {
       link: 'perekhodnye-metally/rutenij_lat_ruthenium/6-1-0-84',
       rusname: ' Рутений',
       mass: 101.07,
-      oxidation: ' +2,+3,+4,+6,+8',
+      oxidation: ' +2 +3 +4 +6 +8',
       index: 44,
       shortname: 'Ru',
       lat: 'ruthenium',
-      pos: ' 5-й период, группа - VIIIB (8).',
+      pos: ' 5-й,VIIIB (8).',
       electronegativity: 1.42,
       config: '[Kr]4s<sup>2</sup>p<sup>6</sup>d<sup>7</sup>5s<sup>1</sup>.'
     }, {
@@ -753,11 +754,11 @@ export default {
       link: 'perekhodnye-metally/rodij_lat_rhodium/6-1-0-82',
       rusname: ' Родий',
       mass: 102.9055,
-      oxidation: ' +2,+3,+4,+6',
+      oxidation: ' +2 +3 +4 +6',
       index: 45,
       shortname: 'Rh',
       lat: 'rhodium',
-      pos: ' 5-й период, группа - VIIIВ(9).',
+      pos: ' 5-й,VIIIВ(9).',
       electronegativity: 2.28,
       config: '[Kr]4s<sup>2</sup>p<sup>6</sup>d<sup>8</sup>5s<sup>1</sup>.'
     }, {
@@ -770,11 +771,11 @@ export default {
       link: 'perekhodnye-metally/palladij_lat_palladium/6-1-0-72',
       rusname: 'Палладий',
       mass: 106.07,
-      oxidation: ' +2,+3,+4,+6',
+      oxidation: ' +2 +3 +4 +6',
       index: 46,
       shortname: 'Pd',
       lat: 'palladium',
-      pos: ' 5-й период, группа - VIIIB(10).',
+      pos: ' 5-й,VIIIB(10).',
       electronegativity: 1.35,
       config: '[Kr]4s<sup>2</sup>p<sup>6</sup>d<sup>10</sup>5s<sup>0</sup>.'
     }, {
@@ -787,11 +788,11 @@ export default {
       link: 'perekhodnye-metally/serebro/6-1-0-2',
       rusname: ' Серебро',
       mass: 107.8682,
-      oxidation: ' +1,+2,+3',
+      oxidation: ' +1 +2 +3',
       index: 47,
       shortname: 'Ag',
       lat: 'none',
-      pos: ' 5-й период, группа - IB(11).',
+      pos: ' 5-й,IB(11).',
       electronegativity: 1.93,
       config: '[Kr4s<sup>2</sup>p<sup>6</sup>d<sup>10</sup>5s<sup>1</sup>.'
     }, {
@@ -808,7 +809,7 @@ export default {
       index: 48,
       shortname: 'Cd',
       lat: 'cadmium',
-      pos: ' 5-й период, группа - IIВ(12).',
+      pos: ' 5-й,IIВ(12).',
       electronegativity: 1.69,
       config: '[Kr4s<sup>2</sup>p<sup>6</sup>d<sup>10</sup>5s<sup>2</sup>.'
     }, {
@@ -825,7 +826,7 @@ export default {
       index: 49,
       shortname: 'In',
       lat: 'indium',
-      pos: ' 5-й период, группа - IIIA(13).',
+      pos: ' 5-й,IIIA(13).',
       electronegativity: 1.78,
       config: '[Kr]5s<sup>2</sup>5p<sup>1</sup>.'
     }, {
@@ -838,11 +839,11 @@ export default {
       link: 'legkie-metally/olovo_lat_stannum/7-1-0-92',
       rusname: ' Олово',
       mass: 118.71,
-      oxidation: ' +2,+4',
+      oxidation: ' +2 +4',
       index: 50,
       shortname: 'Sn',
       lat: 'stannum',
-      pos: ' 5-й период, группа - IVА(14).',
+      pos: ' 5-й,IVА(14).',
       electronegativity: 1.96,
       config: '[Kr5s<sup>2</sup>5p<sup>2</sup>.'
     }, {
@@ -855,11 +856,11 @@ export default {
       link: 'polumetally/surma_lat_stibium/8-1-0-86',
       rusname: ' Сурьма',
       mass: 121.76,
-      oxidation: ' -3,+3,+5',
+      oxidation: ' -3 +3 +5',
       index: 51,
       shortname: 'Sb',
       lat: 'stibium',
-      pos: ' 5-й период, группа - VА(15).',
+      pos: ' 5-й,VА(15).',
       electronegativity: 1.9,
       config: '[Kr]5s<sup>2</sup>p<sup>3</sup>.'
     }, {
@@ -872,11 +873,11 @@ export default {
       link: 'polumetally/tellur_lat_tellurium/8-1-0-97',
       rusname: 'Теллур',
       mass: 127.6,
-      oxidation: ' -2,+2,+4,+6',
+      oxidation: ' -2 +2 +4 +6',
       index: 52,
       shortname: 'Te',
       lat: 'tellurium',
-      pos: ' 5-й период, группа - VIA(16).',
+      pos: ' 5-й,VIA(16).',
       electronegativity: 2.1
     }, {
       // 53: I  Иод
@@ -888,11 +889,11 @@ export default {
       link: 'galogeny/iod_lat_iodum/9-1-0-45',
       rusname: ' Иод',
       mass: 126.90447,
-      oxidation: ' -1, +1,+3,+5,+7',
+      oxidation: ' -1 +1 +3 +5 +7',
       index: 53,
       shortname: 'I',
       lat: 'iodum',
-      pos: ' 5-й период, группа - VIIА(17).',
+      pos: ' 5-й,VIIА(17).',
       electronegativity: 2.66
     }, {
       // 54: Xe  Ксенон
@@ -904,11 +905,11 @@ export default {
       link: 'inertnye-gazy/ksenon_lat_xeno/10-1-0-105',
       rusname: ' Ксенон',
       mass: 131.29,
-      oxidation: ' +2,+4,+6,+8',
+      oxidation: ' +2 +4 +6 +8',
       index: 54,
       shortname: 'Xe',
       lat: 'xeno',
-      pos: ' 5-й период, группа - VIIIA(18).',
+      pos: ' 5-й,VIIIA(18).',
       electronegativity: 2.6
     }, {
       // 55: Cs  Цезий
@@ -924,7 +925,7 @@ export default {
       index: 55,
       shortname: 'Cs',
       lat: 'francium',
-      pos: ' 6-й период, группа - IA (1).',
+      pos: ' 6-й,IA (1).',
       electronegativity: 0.7,
       config: '6 <i>s</i><sup>1</sup>.'
     }, {
@@ -941,7 +942,7 @@ export default {
       index: 56,
       shortname: 'Ba',
       lat: 'baryum',
-      pos: ' 6-й период, группа - IIA(1).',
+      pos: ' 6-й,IIA(1).',
       electronegativity: 0.9,
       config: '[Xe]6s<sup>2</sup>.'
     }, {
@@ -958,7 +959,7 @@ export default {
       index: 57,
       shortname: 'La',
       lat: 'lanthanum',
-      pos: ' 6-й период, группа - IIIВ(3).',
+      pos: ' 6-й,IIIВ(3).',
       electronegativity: 1.1,
       config: '[Xe]5s<sup>2</sup>p<sup>6</sup>d<sup>1</sup>6s<sup>2</sup>.'
     }, {
@@ -971,11 +972,11 @@ export default {
       link: 'lantanoidy/cerij_lat_cerium/13-1-0-19',
       rusname: ' Церий',
       mass: 140.116,
-      oxidation: ' +3,+4',
+      oxidation: ' +3 +4',
       index: 58,
       shortname: 'Ce',
       lat: 'cerium',
-      pos: ' 6-й период, группа - IIIB(3).',
+      pos: ' 6-й,IIIB(3).',
       electronegativity: 1.12
     }, {
       // 59: Pr Празеодим
@@ -987,11 +988,11 @@ export default {
       link: 'lantanoidy/prazeodim_lat_praseodimium/13-1-0-75',
       rusname: 'Празеодим',
       mass: 140.90765,
-      oxidation: '+3,+4',
+      oxidation: '+3 +4',
       index: 59,
       shortname: 'Pr',
       lat: 'praseodimium',
-      pos: ' 6-й период, группа - IIIB(3).',
+      pos: ' 6-й,IIIB(3).',
       electronegativity: 1.07
     }, {
       // 60: Nd  Неодим
@@ -1007,7 +1008,7 @@ export default {
       index: 60,
       shortname: 'Nd',
       lat: 'neodimium',
-      pos: ' 6-й период, группа - IIIB(3).',
+      pos: ' 6-й,IIIB(3).',
       electronegativity: 1.07
     }, {
       // 61: Pm Прометий
@@ -1023,7 +1024,7 @@ export default {
       index: 61,
       shortname: 'Pm',
       lat: 'prometium',
-      pos: ' 6-й период, группа - IIIB(3).',
+      pos: ' 6-й,IIIB(3).',
       electronegativity: 1.07
     }, {
       // 62: Sm  Самарий
@@ -1035,11 +1036,11 @@ export default {
       link: 'lantanoidy/samarij_lat_samarium/13-1-0-91',
       rusname: ' Самарий',
       mass: 150.36,
-      oxidation: ' +2,+3',
+      oxidation: ' +2 +3',
       index: 62,
       shortname: 'Sm',
       lat: 'samarium',
-      pos: ' 6-й период, группа - IIIB(3).',
+      pos: ' 6-й,IIIB(3).',
       electronegativity: 1.07
     }, {
       // 63: Eu  Европий
@@ -1055,7 +1056,7 @@ export default {
       index: 63,
       shortname: 'Eu',
       lat: 'europium',
-      pos: ' 6-й период, группа - IIIB(3).',
+      pos: ' 6-й,IIIB(3).',
       electronegativity: 1
     }, {
       // 64: Gd  Гадолиний
@@ -1071,7 +1072,7 @@ export default {
       index: 64,
       shortname: 'Gd',
       lat: 'gadolinium',
-      pos: ' 6-й период, группа - IIIB(3).',
+      pos: ' 6-й,IIIB(3).',
       electronegativity: 1.1
     }, {
       // 65: Tb  Тербий
@@ -1083,11 +1084,11 @@ export default {
       link: 'lantanoidy/terbij_lat_terbium/13-1-0-95',
       rusname: ' Тербий',
       mass: 144.24,
-      oxidation: ' +3, +4',
+      oxidation: ' +3 +4',
       index: 65,
       shortname: 'Tb',
       lat: 'terbium',
-      pos: ' 6-й период, группа - IIIB(3).',
+      pos: ' 6-й,IIIB(3).',
       electronegativity: 1.1
     }, {
       // 66: Dy  Диспрозий
@@ -1099,11 +1100,11 @@ export default {
       link: 'lantanoidy/disprozij_lat_dysprosium/13-1-0-28',
       rusname: ' Диспрозий',
       mass: 162.5,
-      oxidation: ' +3,+4',
+      oxidation: ' +3 +4',
       index: 66,
       shortname: 'Dy',
       lat: 'dysprosium',
-      pos: ' 6-й период, группа - IIIB(3).',
+      pos: ' 6-й,IIIB(3).',
       electronegativity: 1.1
     }, {
       // 67: Ho Гольмий
@@ -1119,7 +1120,7 @@ export default {
       index: 67,
       shortname: 'Ho',
       lat: 'holmium',
-      pos: ' 6-й период, группа - IIIB(3).',
+      pos: ' 6-й,IIIB(3).',
       electronegativity: 1.1
     }, {
       // 68: Er  Эрбий
@@ -1135,7 +1136,7 @@ export default {
       index: 68,
       shortname: 'Er',
       lat: 'erbium',
-      pos: ' 6-й период, группа - IIIB(3).',
+      pos: ' 6-й,IIIB(3).',
       electronegativity: 1.11
     }, {
       // 69: Tm  Тулий
@@ -1147,11 +1148,11 @@ export default {
       link: 'lantanoidy/tulij_lat_thulium/13-1-0-101',
       rusname: ' Тулий',
       mass: 168.93421,
-      oxidation: ' +2,+3',
+      oxidation: ' +2 +3',
       index: 69,
       shortname: 'Tm',
       lat: 'thulium',
-      pos: ' 6-й период, группа - IIIB(3).',
+      pos: ' 6-й,IIIB(3).',
       electronegativity: 1.1
     }, {
       // 70: Yb  Иттербий
@@ -1163,11 +1164,11 @@ export default {
       link: 'lantanoidy/itterbij_lat_ytterbium/13-1-0-107',
       rusname: ' Иттербий',
       mass: 173.04,
-      oxidation: ' +2,+3',
+      oxidation: ' +2 +3',
       index: 70,
       shortname: 'Yb',
       lat: 'ytterbium',
-      pos: ' 6-й период, группа - IIIB(3).',
+      pos: ' 6-й,IIIB(3).',
       electronegativity: 1.06
     }, {
       // 71: Lu  Лютеций
@@ -1183,7 +1184,7 @@ export default {
       index: 71,
       shortname: 'Lu',
       lat: 'lutetium',
-      pos: ' 6-й период, группа - IIIB(3).',
+      pos: ' 6-й,IIIB(3).',
       electronegativity: 1.14
     }, {
       // 72: Hf  Гафний
@@ -1199,7 +1200,7 @@ export default {
       index: 72,
       shortname: 'Hf',
       lat: 'hafnium',
-      pos: ' 6-й период, группа - IVB(4).',
+      pos: ' 6-й,IVB(4).',
       electronegativity: 1.6
     }, {
       // 73: Ta  Тантал
@@ -1211,11 +1212,11 @@ export default {
       link: 'perekhodnye-metally/tantal_lat_tantalum/6-1-0-94',
       rusname: ' Тантал',
       mass: 180.9479,
-      oxidation: ' +2,+3,+4,+5',
+      oxidation: ' +2 +3 +4 +5',
       index: 73,
       shortname: 'Ta',
       lat: 'tantalum',
-      pos: ' 6-й период, группа - (5).',
+      pos: ' 6-й,(5).',
       electronegativity: 1.5
     }, {
       // 74: W Вольфрам
@@ -1227,11 +1228,11 @@ export default {
       link: 'perekhodnye-metally/volfram_ili_tangsten-tu-lat-wolframium/6-1-0-104',
       rusname: 'Вольфрам',
       mass: 183.84,
-      oxidation: ' -1, +1,+3,+5,+7',
+      oxidation: ' -1 +1 +3 +5 +7',
       index: 74,
       shortname: 'W',
       lat: 'none',
-      pos: ' 6-й период, группа - VIВ (6).',
+      pos: ' 6-й,VIВ (6).',
       electronegativity: 1.7
     }, {
       // 75: Re Рений
@@ -1243,11 +1244,11 @@ export default {
       link: 'perekhodnye-metally/renij_lat_rhenium/6-1-0-80',
       rusname: 'Рений',
       mass: 186.207,
-      oxidation: ' +2,+3,+4,+6,+7',
+      oxidation: ' +2 +3 +4 +6 +7',
       index: 75,
       shortname: 'Re',
       lat: 'rhenium',
-      pos: ' 6-й период, группа - VIIB(7).',
+      pos: ' 6-й,VIIB(7).',
       electronegativity: 1.9
     }, {
       // 76: Os Осмий
@@ -1259,11 +1260,11 @@ export default {
       link: 'perekhodnye-metally/osmij_lat_osmium/6-1-0-68',
       rusname: 'Осмий',
       mass: 190.23,
-      oxidation: ' +3,+4,+6,+8',
+      oxidation: ' +3 +4 +6 +8',
       index: 76,
       shortname: 'Os',
       lat: 'osmium',
-      pos: ' 6-й период, группа - VIIIB(8).',
+      pos: ' 6-й,VIIIB(8).',
       electronegativity: 2.1
     }, {
       // 77: Ir  Иридий
@@ -1275,11 +1276,11 @@ export default {
       link: 'perekhodnye-metally/iridij_lat_iridium/6-1-0-47',
       rusname: ' Иридий',
       mass: 192.217,
-      oxidation: ' +2,+3,+4,+6',
+      oxidation: ' +2 +3 +4 +6',
       index: 77,
       shortname: 'Ir',
       lat: 'iridium',
-      pos: ' 6-й период, группа - VIIIB(9).',
+      pos: ' 6-й,VIIIB(9).',
       electronegativity: 2.2
     }, {
       // 78: Pt  Платина
@@ -1291,11 +1292,11 @@ export default {
       link: 'perekhodnye-metally/platina_lat_platinum/6-1-0-76',
       rusname: ' Платина',
       mass: 195.078,
-      oxidation: ' +2,+4,+6',
+      oxidation: ' +2 +4 +6',
       index: 78,
       shortname: 'Pt',
       lat: 'platinum',
-      pos: ' 6-й период, группа - VIIIB(10).',
+      pos: ' 6-й,VIIIB(10).',
       electronegativity: 2.2
     }, {
       // 79: Au  Золото
@@ -1307,11 +1308,11 @@ export default {
       link: 'perekhodnye-metally/zoloto_lat_aurum/6-1-0-8',
       rusname: ' Золото',
       mass: 196.96655,
-      oxidation: ' +1,+3',
+      oxidation: ' +1 +3',
       index: 79,
       shortname: 'Au',
       lat: 'aurum',
-      pos: ' 6-й период, группа - IВ(11).',
+      pos: ' 6-й,IВ(11).',
       electronegativity: 2.4
     }, {
       // 80: Hg  Ртуть
@@ -1323,11 +1324,11 @@ export default {
       link: 'perekhodnye-metally/rtut_lat_hydrargyrum/6-1-0-42',
       rusname: ' Ртуть',
       mass: 200.59,
-      oxidation: ' +1,+2',
+      oxidation: ' +1 +2',
       index: 80,
       shortname: 'Hg',
       lat: 'hydrargyrum',
-      pos: ' 6-й период, группа - IIВ(12).',
+      pos: ' 6-й,IIВ(12).',
       electronegativity: 1.9
     }, {
       // 81: Tl  Таллий
@@ -1339,11 +1340,11 @@ export default {
       link: 'legkie-metally/tallij_lat_tallium/7-1-0-100',
       rusname: ' Таллий',
       mass: 204.3833,
-      oxidation: ' +1,+3',
+      oxidation: ' +1 +3',
       index: 81,
       shortname: 'Tl',
       lat: 'tallium',
-      pos: ' 6-й период, группа - IIIA(13).',
+      pos: ' 6-й,IIIA(13).',
       electronegativity: 1.8,
       config: '[Xe]1s<sup>2</sup>.'
     }, {
@@ -1356,11 +1357,11 @@ export default {
       link: 'legkie-metally/svinec_lat_plumbum/7-1-0-71',
       rusname: 'Свинец',
       mass: 207.2,
-      oxidation: ' +2,+4',
+      oxidation: ' +2 +4',
       index: 82,
       shortname: 'Pb',
       lat: 'plumbum',
-      pos: ' 6-й период, группа - IVA(14).',
+      pos: ' 6-й,IVA(14).',
       electronegativity: 1.55,
       config: '[Xe]6s<sup>2</sup>p<sup>2</sup>.'
     }, {
@@ -1373,11 +1374,11 @@ export default {
       link: 'legkie-metally/vismut_lat_bismuthum/7-1-0-13',
       rusname: 'Висмут',
       mass: 208.98038,
-      oxidation: ' -3,+3,+5',
+      oxidation: ' -3 +3 +5',
       index: 83,
       shortname: 'Bi',
       lat: 'bismuthum',
-      pos: ' 6-й период, группа - VA(15).',
+      pos: ' 6-й,VA(15).',
       electronegativity: 1.9,
       config: '[Xe]6s<sup>2</sup>p<sup>3</sup>.'
     }, {
@@ -1390,11 +1391,11 @@ export default {
       link: 'polumetally/polonij_lat_polonium/8-1-0-74',
       rusname: ' Полоний',
       mass: 208.982,
-      oxidation: ' –2, +2, +4,+6',
+      oxidation: ' –2 +2 +4 +6',
       index: 84,
       shortname: 'Po',
       lat: 'polonium',
-      pos: ' 6-й период, группа - VIA(16).',
+      pos: ' 6-й,VIA(16).',
       electronegativity: 1.76,
       config: '[Xe]6s<sup>2</sup>p<sup>4</sup>.'
     }, {
@@ -1407,11 +1408,11 @@ export default {
       link: 'galogeny/astat_lat_astatium/9-1-0-7',
       rusname: ' Астат',
       mass: 209.987,
-      oxidation: ' –1, +1, +3,+5,+7',
+      oxidation: ' –1 +1 +3 +5 +7',
       index: 85,
       shortname: 'At',
       lat: 'astatium',
-      pos: ' 6-й период, группа - VIIА(17).',
+      pos: ' 6-й,VIIА(17).',
       electronegativity: 2.1
     }, {
       // 86: Rn  Радон
@@ -1423,11 +1424,11 @@ export default {
       link: 'inertnye-gazy/radon_lat_radon/10-1-0-83',
       rusname: ' Радон',
       mass: 222.017,
-      oxidation: ' +2,+4,+6',
+      oxidation: ' +2 +4 +6',
       index: 86,
       shortname: 'Rn',
       lat: 'radon',
-      pos: ' 6-й период, группа - VIIIA(18).',
+      pos: ' 6-й,VIIIA(18).',
       electronegativity: 2.06,
       config: '[Xe]6s<sup>2</sup>р<sup>6</sup>.'
     }, {
@@ -1444,7 +1445,7 @@ export default {
       index: 87,
       shortname: 'Fr',
       lat: 'francium',
-      pos: ' 7-й период, группа - IА(1).',
+      pos: ' 7-й,IА(1).',
       electronegativity: 0.86,
       config: '[Rn]7s<sup>1</sup>.'
     }, {
@@ -1461,7 +1462,7 @@ export default {
       index: 88,
       shortname: 'Ra',
       lat: 'radium',
-      pos: ' 7-й период, группа -IIA (2).',
+      pos: ' 7-й, группа -IIA (2).',
       electronegativity: 0.97,
       config: '[Rd]7s<sup>2</sup>.'
     }, {
@@ -1478,7 +1479,7 @@ export default {
       index: 89,
       shortname: 'Ac',
       lat: 'none',
-      pos: ' 7-й период, группа - IIIB (3)',
+      pos: ' 7-й,IIIB (3)',
       electronegativity: 1,
       config: '[Rn]6d<sup>1</sup>7s<sup>2</sup>'
     }, {
@@ -1491,11 +1492,11 @@ export default {
       link: 'aktinoidy/torij_lat_thorium/12-1-0-98',
       rusname: ' Торий',
       mass: 232.0381,
-      oxidation: ' +3,+4',
+      oxidation: ' +3 +4',
       index: 90,
       shortname: 'Th',
       lat: 'thorium',
-      pos: ' 7-й период, группа - IIIB(3).',
+      pos: ' 7-й,IIIB(3).',
       electronegativity: 1.15
     }, {
       // 91: Pa  Протактиний
@@ -1507,11 +1508,11 @@ export default {
       link: 'aktinoidy/protaktinij_lat_protactinium/12-1-0-70',
       rusname: ' Протактиний',
       mass: 231.0359,
-      oxidation: '+2,+3,+4,+6',
+      oxidation: '+2 +3 +4 +6',
       index: 91,
       shortname: 'Pa',
       lat: 'protactinium',
-      pos: ' 7-й период, группа - IIIB(3).',
+      pos: ' 7-й,IIIB(3).',
       electronegativity: 1.14,
       config: '[Rn]5f<sup>2</sup>6d<sup>1</sup>7s<sup>2</sup>.'
     }, {
@@ -1524,11 +1525,11 @@ export default {
       link: 'aktinoidy/uran_lat_uranium/12-1-0-102',
       rusname: 'Уран',
       mass: 238.0289,
-      oxidation: ' +3,+4,+5,+6',
+      oxidation: ' +3 +4 +5 +6',
       index: 92,
       shortname: 'U',
       lat: 'uranium',
-      pos: ' 7-й период, группа -IIIB (3).',
+      pos: ' 7-й, группа -IIIB (3).',
       electronegativity: 1.22
     }, {
       // 93: Np Нептуний
@@ -1540,11 +1541,11 @@ export default {
       link: 'aktinoidy/neptunij_lat_neptunium/12-1-0-66',
       rusname: 'Нептуний',
       mass: 237.048,
-      oxidation: ' +3,+4,+5,+6,+7',
+      oxidation: ' +3 +4 +5 +6 +7',
       index: 93,
       shortname: 'Np',
       lat: 'neptunium',
-      pos: ' 7-й период, группа - IIIB(3).',
+      pos: ' 7-й,IIIB(3).',
       electronegativity: 1.22
     }, {
       // 94: Pu Плутоний
@@ -1556,11 +1557,11 @@ export default {
       link: 'aktinoidy/plutonij_lat_plutonium/12-1-0-77',
       rusname: 'Плутоний',
       mass: 244.064,
-      oxidation: ' +3,+4,+5,+6,+7',
+      oxidation: ' +3 +4 +5 +6 +7',
       index: 94,
       shortname: 'Pu',
       lat: 'plutonium',
-      pos: ' 7-й период, группа - IIIB(3).',
+      pos: ' 7-й,IIIB(3).',
       electronegativity: 1.22
     }, {
       // 95: Am  Америций
@@ -1572,11 +1573,11 @@ export default {
       link: 'aktinoidy/americij_lat_americium/12-1-0-4',
       rusname: ' Америций',
       mass: 243.061,
-      oxidation: ' +2,+3,+4,+5,+6',
+      oxidation: ' +2 +3 +4 +5 +6',
       index: 95,
       shortname: 'Am',
       lat: 'americium',
-      pos: ' 7-й период, группа - IIIB(3).',
+      pos: ' 7-й,IIIB(3).',
       electronegativity: 1.2
     }, {
       // 96: Cm  Кюрий
@@ -1588,11 +1589,11 @@ export default {
       link: 'aktinoidy/kjurij_lat_curium/12-1-0-22',
       rusname: ' Кюрий',
       mass: 247.07,
-      oxidation: ' +2,+3,+4,+6',
+      oxidation: ' +2 +3 +4 +6',
       index: 96,
       shortname: 'Cm',
       lat: 'curium',
-      pos: ' 7-й период, группа - IIIB(3).',
+      pos: ' 7-й,IIIB(3).',
       electronegativity: 1.2
     }, {
       // 97: Bk Берклий
@@ -1604,11 +1605,11 @@ export default {
       link: 'aktinoidy/berklij_lat_berkelium/12-1-0-14',
       rusname: 'Берклий',
       mass: 247.07,
-      oxidation: ' +2,+3,+4',
+      oxidation: ' +2 +3 +4',
       index: 97,
       shortname: 'Bk',
       lat: 'berkelium',
-      pos: ' 7-й период, группа - IIIB(3).',
+      pos: ' 7-й,IIIB(3).',
       electronegativity: 1.2
     }, {
       // 98: Cf  Калифорний
@@ -1620,11 +1621,11 @@ export default {
       link: 'aktinoidy/kalifornij_lat_californium/12-1-0-20',
       rusname: ' Калифорний',
       mass: 251.079,
-      oxidation: ' +2,+3,+4',
+      oxidation: ' +2 +3 +4',
       index: 98,
       shortname: 'Cf',
       lat: 'californium',
-      pos: ' 7-й период, группа - IIIB(3).',
+      pos: ' 7-й,IIIB(3).',
       electronegativity: 1.11
     }, {
       // 99: Es  Эйнштейний
@@ -1636,11 +1637,11 @@ export default {
       link: 'aktinoidy/ehjnshtejnij_lat_einsteium/12-1-0-30',
       rusname: ' Эйнштейний',
       mass: 252.082,
-      oxidation: ' +2,+3',
+      oxidation: ' +2 +3',
       index: 99,
       shortname: 'Es',
       lat: 'einsteium',
-      pos: ' 7-й период,группа - IIIB(3).',
+      pos: ' 7-й,группа - IIIB(3).',
       electronegativity: 1.2
     }, {
       // 100: Fm  Фермий
@@ -1652,11 +1653,11 @@ export default {
       link: 'aktinoidy/fermij_lat_fermium/12-1-0-34',
       rusname: ' Фермий',
       mass: 257.095,
-      oxidation: ' +2,+3',
+      oxidation: ' +2 +3',
       index: 100,
       shortname: 'Fm',
       lat: 'fermium',
-      pos: ' 7-й период, группа - IIIB(3).',
+      pos: ' 7-й,IIIB(3).',
       electronegativity: 1.2
     }, {
       // 101: Md Менелевий
@@ -1668,11 +1669,11 @@ export default {
       link: 'aktinoidy/mendelevij_lat_mendelevium/12-1-0-54',
       rusname: 'Менелевий',
       mass: 258.098,
-      oxidation: ' +2,+3',
+      oxidation: ' +2 +3',
       index: 101,
       shortname: 'Md',
       lat: 'mendelevium',
-      pos: ' 7-й период, группа - IIIB(3).',
+      pos: ' 7-й,IIIB(3).',
       electronegativity: 1.2
     }, {
       // 102: No  Нобелий
@@ -1684,11 +1685,11 @@ export default {
       link: 'aktinoidy/nobelij_lat_nobelium/12-1-0-65',
       rusname: ' Нобелий',
       mass: 259.1,
-      oxidation: ' +2,+3',
+      oxidation: ' +2 +3',
       index: 102,
       shortname: 'No',
       lat: 'nobelium',
-      pos: ' 7-й период, группа - IIIB(3).',
+      pos: ' 7-й,IIIB(3).',
       electronegativity: 1.2
     }, {
       // 103: Lr  Лоуренций
@@ -1704,7 +1705,7 @@ export default {
       index: 103,
       shortname: 'Lr',
       lat: 'lowrencium',
-      pos: ' 7-й период, группа - IIIB(3).',
+      pos: ' 7-й,IIIB(3).',
       electronegativity: 1.2
     }, {
       // 104: Rf Резерфордий
@@ -1720,7 +1721,7 @@ export default {
       index: 104,
       shortname: 'Rf',
       lat: 'rutherfordium',
-      pos: ' 7-й период, группа - IVB (4)',
+      pos: ' 7-й,IVB (4)',
       config: '[Rn]5f<sup>14</sup>6d<sup>2</sup>7s<sup>2</sup>'
     }, {
       // 105: Db Дубний
@@ -1736,7 +1737,7 @@ export default {
       index: 105,
       shortname: 'Db',
       lat: 'none',
-      pos: ' 7-й период, группа - VB (5)',
+      pos: ' 7-й,VB (5)',
       config: '[Rn]5f<sup>14</sup>6d<sup>3</sup>7s<sup>2</sup>'
     }, {
       // 106: Sg Сиборгий
@@ -1748,11 +1749,11 @@ export default {
       link: 'perekhodnye-metally/siborgij_lat_siborgium/6-1-0-89',
       rusname: 'Сиборгий',
       mass: 263,
-      oxidation: ' +4,+6',
+      oxidation: ' +4 +6',
       index: 106,
       shortname: 'Sg',
       lat: 'siborgium',
-      pos: ' 7-й период, группа - VIB (6)',
+      pos: ' 7-й,VIB (6)',
       config: '[Rn]5f<sup>14</sup>6d<sup>4</sup>7s<sup>2</sup>'
     }, {
       // 107: Bh  Борий
@@ -1764,11 +1765,11 @@ export default {
       link: 'perekhodnye-metally/borij_lat_bohrium/6-1-0-12',
       rusname: ' Борий',
       mass: 264,
-      oxidation: ' +2,+3,+4,+5,+6,+7',
+      oxidation: ' +2 +3 +4 +5 +6 +7',
       index: 107,
       shortname: 'Bh',
       lat: 'bohrium',
-      pos: ' 7-й период, группа - VIIB (7)',
+      pos: ' 7-й,VIIB (7)',
       config: '[Rn]5f<sup>14</sup>6d<sup>5</sup>7s<sup>2</sup>'
     }, {
       // 108: Hs Хассий
@@ -1780,11 +1781,11 @@ export default {
       link: 'perekhodnye-metally/khassij_lat_hassium/6-1-0-44',
       rusname: 'Хассий',
       mass: 265,
-      oxidation: ' +2,+3,+4,+5,+6,+7,+8',
+      oxidation: ' +2 +3 +4 +5 +6 +7 +8',
       index: 108,
       shortname: 'Hs',
       lat: 'hassium',
-      pos: ' 7-й период, группа - VIIIB (8)',
+      pos: ' 7-й,VIIIB (8)',
       config: '[Rn]5f<sup>14</sup>6d<sup>6</sup>7s<sup>2</sup>'
     }, {
       // 109: Mt Мейтнерий
@@ -1796,11 +1797,11 @@ export default {
       link: 'perekhodnye-metally/mejtnerij_lat_meitnerium/6-1-0-58',
       rusname: 'Мейтнерий',
       mass: 266,
-      oxidation: ' +1,+3,+5',
+      oxidation: ' +1 +3 +5',
       index: 109,
       shortname: 'Mt',
       lat: 'meitnerium',
-      pos: ' 7-й период, группа - VIIIB (9)',
+      pos: ' 7-й,VIIIB (9)',
       config: '[Rn]5f<sup>14</sup>6d<sup>7</sup>7s<sup>2</sup>'
     }, {
       // 110: Ds Дармштадтий
@@ -1816,7 +1817,7 @@ export default {
       index: 110,
       shortname: 'Ds',
       lat: 'darmstadtium',
-      pos: ' 7-й период, группа - VIIIB (10)',
+      pos: ' 7-й,VIIIB (10)',
       config: '[Rn] 5f<sup>14</sup>6d<sup>9</sup>7s<sup>1</sup>'
     }, {
       // 111: Rg Рентгений
@@ -1832,7 +1833,7 @@ export default {
       index: 111,
       shortname: 'Rg',
       lat: 'roentgenium',
-      pos: ' 7-й период, группа - IB (11)',
+      pos: ' 7-й,IB (11)',
       config: '[Rn] 5f<sup>14</sup>6d<sup>10</sup>7s<sup>1</sup>'
     }, {
       // 112: Cn Коперниций
@@ -1848,7 +1849,7 @@ export default {
       index: 112,
       shortname: 'Cn',
       lat: 'copernicium',
-      pos: ' 7-й период, группа - IIB (12)',
+      pos: ' 7-й,IIB (12)',
       config: '[Rn] 5f<sup>14</sup>6d<sup>10</sup>7s<sup>2</sup>'
     }, {
       // 113: Nh Нихоний
@@ -1860,11 +1861,11 @@ export default {
       link: 'legkie-metally/nikhonij_lat_nihonium/7-1-0-120',
       rusname: 'Нихоний',
       mass: 286,
-      oxidation: '−1, +1, +2, +3, +5',
+      oxidation: '−1 +1 +2 +3 +5',
       index: 113,
       shortname: 'Nh',
       lat: 'nihonium',
-      pos: ' 7-й период, группа - IIIA (13)',
+      pos: ' 7-й,IIIA (13)',
       config: '[Rn] 5f<sup>14</sup>6d<sup>10</sup>7s<sup>2</sup>7p<sup>1</sup>'
     }, {
       // 114: Fl Флеровий
@@ -1876,11 +1877,11 @@ export default {
       link: 'legkie-metally/flerovij_lat_flerovium/7-1-0-122',
       rusname: 'Флеровий',
       mass: 289,
-      oxidation: '+2, +4',
+      oxidation: '+2 +4',
       index: 114,
       shortname: 'Fl',
       lat: 'flerovium',
-      pos: ' 7-й период, группа - IVA (14)',
+      pos: ' 7-й,IVA (14)',
       config: '[Rn] 5f<sup>14</sup>6d<sup>10</sup>7s<sup>2</sup>7p<sup>2</sup>'
     }, {
       // 115: Mc Московий
@@ -1892,11 +1893,11 @@ export default {
       link: 'legkie-metally/moskovij_lat_moscovium/7-1-0-123',
       rusname: 'Московий',
       mass: 289,
-      oxidation: '−3, +1, +3, +5 ',
+      oxidation: '−3 +1 +3 +5 ',
       index: 115,
       shortname: 'Mc',
       lat: 'moscovium',
-      pos: ' 7-й период, группа - VA (15)'
+      pos: ' 7-й,VA (15)'
     }, {
       // 116: Lv Ливерморий
       melting: null,
@@ -1907,11 +1908,11 @@ export default {
       link: 'legkie-metally/livermo_rij_lat_livermorium/7-1-0-119',
       rusname: 'Ливерморий',
       mass: 293,
-      oxidation: '−2, +2, +4, +6 ',
+      oxidation: '−2 +2 +4 +6 ',
       index: 116,
       shortname: 'Lv',
       lat: 'livermorium',
-      pos: ' 7-й период, группа - VA (15)',
+      pos: ' 7-й,VA (15)',
       config: '[Rn] 5f<sup>14</sup>6d<sup>10</sup>7s<sup>2</sup>7p<sup>4</sup>'
     }, {
       // 117: Ts Теннессин
@@ -1923,11 +1924,11 @@ export default {
       link: 'galogeny/tennessin_lat_tennessine/9-1-0-121',
       rusname: 'Теннессин ',
       mass: 294,
-      oxidation: ' -1, +1, +3, +5, +7',
+      oxidation: ' -1 +1 +3 +5 +7',
       index: 117,
       shortname: 'Ts',
       lat: 'tennessine',
-      pos: ' 7-й период, группа - VIIA (17)'
+      pos: ' 7-й,VIIA (17)'
     }, {
       // 118: Og Оганесон
       melting: null,
@@ -1938,11 +1939,11 @@ export default {
       link: 'inertnye-gazy/oganeson_lat_oganesson/10-1-0-118',
       rusname: 'Оганесон',
       mass: 294,
-      oxidation: ' -1, 0, +1, +2, +4, +6',
+      oxidation: ' -1, 0 +1 +2 +4 +6',
       index: 118,
       shortname: 'Og',
       lat: 'oganesson',
-      pos: ' 7-й период, группа - VIIIA (15)',
+      pos: ' 7-й,VIIIA (15)',
       config: '[Rn] 5f<sup>14</sup>6d<sup>10</sup>7s<sup>2</sup>7p<sup>6</sup>'
     }
   ]
