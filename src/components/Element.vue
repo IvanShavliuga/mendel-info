@@ -2,6 +2,7 @@
   <td
     @click="selelem"
     :bgcolor="selcolor"
+    :style="'color:'+expcolor"
     class="element">
     {{ shortName }}
   </td>
@@ -34,13 +35,13 @@ export default {
       switch (this.typeElement) {
         case 'неметалл': return '#3473d2'
         case 'инертный газ': return '#239e8e'
-        case 'щелочный металл': return '#d3a223'
+        case 'щелочный металл': return '#ddaf23'
         case 'щелочныйземельный металл': return '#d35223'
-        case 'полуметалл': return '#a1a310'
+        case 'полуметалл': return '#cfc609'
         case 'галоген': return '#914390'
-        case 'легкий металл': return '#bb80a0'
+        case 'легкий металл': return '#bb4069'
         case 'переходной металл': return '#9b9040'
-        case 'лантанид': return '#e455d0'
+        case 'лантанид': return '#a455d0'
         case 'актинид': return '#245870'
       }
       return '#232323'
@@ -50,10 +51,21 @@ export default {
         if (this.selectElement) {
           return this.typecolor
         } else {
-          return '#aaa'
+          return '#c9c9c9'
         }
       } else {
         return this.typecolor
+      }
+    },
+    expcolor () {
+      if (this.modeView) {
+        if (!this.selectElement) {
+          return this.typecolor
+        } else {
+          return '#fff'
+        }
+      } else {
+        return '#fff'
       }
     }
   },
@@ -78,6 +90,8 @@ export default {
   font-size: 18px;
   font-weight: bold;
   color: rgba(255, 255, 255, 0.8);
+  opacity: 0.8;
+  border: none;
 }
 a {
   color: #42b983;
@@ -92,21 +106,22 @@ a {
     max-width: 20px;
     font-size: 14px;
     border: none;
-    border-collapse: collapse;
   }
 }
 @media (max-width: 400px) {
   .element {
     max-width: 14px;
     font-size: 12px;
-    padding: 0;
+    height: 18px;
+    padding: 2px;
   }
 }
 
 @media (max-width: 330px) {
   .element {
-    max-width: 12px;
+    max-width: 10px;
     font-size: 10px;
+    padding: 0;
   }
 }
 </style>
