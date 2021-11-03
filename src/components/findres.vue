@@ -63,14 +63,14 @@ export default {
       switch (typeElement) {
         case 'неметалл': return '#3473d2'
         case 'инертный газ': return '#239e8e'
-        case 'щелочный металл': return '#d3a223'
-        case 'щелочныйземельный металл': return '#d35223'
-        case 'полуметалл': return '#a1a310'
+        case 'щелочный металл': return '#ddaf23'
+        case 'щелочныйземельный металл': return '#bb4069'
+        case 'полуметалл': return '#cfc609'
         case 'галоген': return '#914390'
-        case 'легкий металл': return '#bb80a0'
+        case 'легкий металл': return '#d35223'
         case 'переходной металл': return '#9b9040'
-        case 'лантанид': return '#e455d0'
-        case 'актинид': return '#245870'
+        case 'лантанид': return '#245870'
+        case 'актинид': return '#a455d0'
       }
       return '#232323'
     },
