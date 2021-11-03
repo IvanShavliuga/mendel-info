@@ -85,6 +85,8 @@
     />
   </tr>
   <tr v-if="count === 14">
+    <td colspan="3">
+    </td>
     <app-element
       v-for="ind in 14"
       :index="-1 + elements[start + ind - 1].index"
