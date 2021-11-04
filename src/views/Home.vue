@@ -1,24 +1,24 @@
 <template>
   <div class="home">
     <app-search/>
-    <div class="home__table">
-      <app-elemtable/>
-      <app-viewelement/>
-    </div>
+    <app-findres/>
+    <app-elemtable/>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
+import appFindres from '../components/findres.vue'
 import appElemtable from '../components/elemtable.vue'
-import appViewelement from '../components/viewelement.vue'
+// import appViewelement from '../components/viewelement.vue'
 import appSearch from '../components/search.vue'
 
 export default {
   name: 'Home',
   components: {
+    appFindres,
     appSearch,
-    appViewelement,
+    // appViewelement,
     appElemtable
   },
   methods: {
