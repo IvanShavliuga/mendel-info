@@ -1,17 +1,19 @@
 <template>
-<table v-if="sellist!==null&&(sellist.length>0&&sellist.length<118)" class="results" border="0" cellspacing="1px" width="100%">
-<tr  class="results__row" bgcolor="#dedede"><td class="results__col-header" colspan="14" bgcolor="#dedede">Результаты поиска</td></tr>
-<tr  class="results__row" bgcolor="#dedede"><td class="results__col-header" colspan="14" bgcolor="#dedede">Всего результатов: {{sellist.length}}</td></tr>
-<tr  class="results__row" bgcolor="#dedede">
-<td class="results__col-header results__col-props index" bgcolor="#dedede"><div>№<br>Символ</div></td>
-<td class="results__col-header results__col-props name" bgcolor="#dedede"><div>Название</div></td>
-<td class="results__col-header results__col-props type" bgcolor="#dedede"><div>Тип<br>элемента</div></td>
-<td class="results__col-header results__col-props pos" bgcolor="#dedede"><div>Положение<br>(Период,<br>группа)</div></td>
-<td class="results__col-header results__col-props negative" bgcolor="#dedede"><div>Электро<br>отрицатель<br>ность</div></td>
-<td class="results__col-header results__col-props mass" bgcolor="#dedede"><div>Атомная<br> масса</div></td>
-<td class="results__col-header results__col-props oxi" bgcolor="#dedede"><div>Степени<br>Окисления</div></td>
-<!-- <td class="results__col-header results__col-props config" bgcolor="#dedede"><div>Конфигурация</div></td> -->
-<td class="results__col-header results__col-props temperature" bgcolor="#dedede"><div>t<sub>плав</sub><br>t<sub>кип</sub></div></td>
+<table class="results" border="0" cellspacing="1px" width="100%">
+<caption class="results__capiton">Нажмите на элемент, чтобы узнать подробно об элементе, или воспользуйтесь поиском выше.</caption>
+<tbody  v-if="sellist!==null&&(sellist.length>0&&sellist.length<118)">
+<tr  class="results__row" ><td class="results__col-header" colspan="14" >Результаты поиска</td></tr>
+<tr  class="results__row" ><td class="results__col-header" colspan="14" >Всего результатов: {{sellist.length}}</td></tr>
+<tr  class="results__row" >
+<td class="results__col-header results__col-props index" ><div>№<br>Символ</div></td>
+<td class="results__col-header results__col-props name" ><div>Название</div></td>
+<td class="results__col-header results__col-props type" ><div>Тип<br>элемента</div></td>
+<td class="results__col-header results__col-props pos" ><div>Положение<br>(Период,<br>группа)</div></td>
+<td class="results__col-header results__col-props negative" ><div>Электро<br>отрицатель<br>ность</div></td>
+<td class="results__col-header results__col-props mass" ><div>Атомная<br> масса</div></td>
+<td class="results__col-header results__col-props oxi" ><div>Степени<br>Окисления</div></td>
+<!-- <td class="results__col-header results__col-props config" ><div>Конфигурация</div></td> -->
+<td class="results__col-header results__col-props temperature" ><div>t<sub>плав</sub><br>t<sub>кип</sub></div></td>
 </tr>
 <tr v-for="(rs, key) in pagList" :key="key" :bgcolor="typecolor(rs.type)">
   <td class="results__col valcell index">{{rs.index}}<br>{{rs.shortname}}</td>
@@ -24,8 +26,9 @@
 <!-- <td class="results__col valcell config"><span v-html="rs.config"></span></td> -->
 <td class="results__col valcell temperature">{{rs.melting}}<br>{{rs.bolling}}</td>
 </tr>
-<tr v-if="endPage>1" class="results__row" bgcolor="#dedede"><td align="center" class="results__col-header" colspan="14" bgcolor="#dedede">
+<tr v-if="endPage>1" class="results__row" ><td align="center" class="results__col-header" colspan="14" >
 <span @click="prev">назад</span> | Страница: {{startPage+1}} из {{endPage}} | <span @click="next">вперед</span></td></tr>
+</tbody>
 </table>
 </template>
 <script>
@@ -60,14 +63,14 @@ export default {
       switch (typeElement) {
         case 'неметалл': return '#3473d2'
         case 'инертный газ': return '#239e8e'
-        case 'щелочный металл': return '#d3a223'
-        case 'щелочныйземельный металл': return '#d35223'
-        case 'полуметалл': return '#a1a310'
+        case 'щелочный металл': return '#ddaf23'
+        case 'щелочныйземельный металл': return '#bb4069'
+        case 'полуметалл': return '#cfc609'
         case 'галоген': return '#914390'
-        case 'легкий металл': return '#bb80a0'
+        case 'легкий металл': return '#d35223'
         case 'переходной металл': return '#9b9040'
-        case 'лантанид': return '#e455d0'
-        case 'актинид': return '#245870'
+        case 'лантанид': return '#245870'
+        case 'актинид': return '#a455d0'
       }
       return '#232323'
     },
@@ -77,9 +80,6 @@ export default {
     next () {
       if (this.startPage < this.endPage - 1) this.startPage++
     },
-    displayPos (p) {
-      return p.split('период').join('').trim().split('группа').join('').trim().split('-').join('').trim().split('й').join(' ').trim().split('()').join('').split(' ').join('')
-    },
     displayType (p) {
       return p.split(' ').join('<br>')
     }
@@ -88,6 +88,17 @@ export default {
 </script>
 <style scoped lang="less">
 .results {
+  margin: 15px 0;
+  border-collapse: collapse;
+  &__caption {
+    font-size: 14px;
+    @media (max-width: 1070px) {
+      font-size: 12px;
+    }
+    @media (max-width: 720px) {
+      font-size: 10px;
+    }
+  }
   &__col {
     color: white;
     height: 25px;
@@ -114,6 +125,7 @@ export default {
     }
     &-props {
       text-transform: uppercase;
+      background-color: #dedede;
     }
     @media (max-width: 1070px) {
       /* font-size: 12px; */

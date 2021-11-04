@@ -1,5 +1,5 @@
 <template>
-  <table class="table" border="0" cellspacing="1px" width="100%">
+  <table class="table" cellspacing="1px" width="100%">
     <app-rows
       v-for="(r, k) in rows"
       :key="k"
@@ -30,7 +30,6 @@ export default {
   max-width: 100vw;
   margin: 0;
   border: none;
-  // background-color: rgba(12,12,12,0.7);
   border-collapse: collapse;
 }
 </style>

@@ -1,17 +1,5 @@
 <template>
   <form class="searchelem" onsubmit="return false">
-    <!-- <div class="searchelem__block">
-      <label class="searchelem__block-label" for="typeelem">Тип элемента</label>
-      <select  class="searchelem__select" id="typeelem" v-model="selt" @click="seltype">
-        <option
-          v-for="(t, k) in types"
-          :key="k"
-          class="searchelem__select-option"
-        >
-          {{ t }}
-        </option>
-      </select>
-    </div> -->
     <div class="searchelem__block">
       <label class="searchelem__block-label" for="names">Имя элемента</label>
       <span class="searchelem__block-label searchelem__block-combo">
@@ -105,6 +93,9 @@
   @media (max-width: 370px) {
     width: 90vw;
   }
+  @media (max-width: 310px) {
+    width: 88vw;
+  }
   &__block {
     display: flex;
     flex-direction: column;
@@ -123,6 +114,7 @@
       margin: 0 auto;
       & > * {
         margin: 0 auto;
+        font-size: 15px;
       }
     }
     &-label {
@@ -163,10 +155,10 @@
   &__select {
     padding: 5px;
     @media (max-width: 555px) {
-      width: 310px;
+      width: 312px;
     }
     @media (max-width: 345px) {
-      width: 210px;
+      width: 213px;
     }
     @media (max-width: 240px) {
       width: 190px;
