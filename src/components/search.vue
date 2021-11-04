@@ -1,17 +1,5 @@
 <template>
   <form class="searchelem" onsubmit="return false">
-    <!-- <div class="searchelem__block">
-      <label class="searchelem__block-label" for="typeelem">Тип элемента</label>
-      <select  class="searchelem__select" id="typeelem" v-model="selt" @click="seltype">
-        <option
-          v-for="(t, k) in types"
-          :key="k"
-          class="searchelem__select-option"
-        >
-          {{ t }}
-        </option>
-      </select>
-    </div> -->
     <div class="searchelem__block">
       <label class="searchelem__block-label" for="names">Имя элемента</label>
       <span class="searchelem__block-label searchelem__block-combo">

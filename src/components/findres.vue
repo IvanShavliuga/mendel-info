@@ -80,9 +80,6 @@ export default {
     next () {
       if (this.startPage < this.endPage - 1) this.startPage++
     },
-    displayPos (p) {
-      return p.split('период').join('').trim().split('группа').join('').trim().split('-').join('').trim().split('й').join(' ').trim().split('()').join('').split(' ').join('')
-    },
     displayType (p) {
       return p.split(' ').join('<br>')
     }
