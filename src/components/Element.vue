@@ -75,12 +75,8 @@ export default {
   width: 26px;
   padding: 5px 2px;
   opacity: 0.8;
-  font-size: 18px;
-<<<<<<< HEAD
-=======
   font-weight: bold;
   color: rgba(255, 255, 255, 0.8);
->>>>>>> f62c74ede919ab8704661588f4b28adab3408774
 }
 a {
   color: #42b983;
