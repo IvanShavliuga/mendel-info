@@ -1,5 +1,5 @@
 <template>
-  <table class="table" border="0" cellspacing="1px" width="100%">
+  <table class="table" cellspacing="1px" width="100%">
     <app-rows
       v-for="(r, k) in rows"
       :key="k"

@@ -15,14 +15,13 @@ export default {
 </script>
 <style lang="less">
 #app {
-  background: white;
   font-family: Avenir, Helvetica, Arial, sans-serif;
   height: 100vh;
   width: 100%;
   margin: 0;
 }
 body {
-  background: white;
+  background-color: white;
   height: 100vh;
   width: 100%;
   margin: 0;

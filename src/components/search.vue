@@ -105,6 +105,9 @@
   @media (max-width: 370px) {
     width: 90vw;
   }
+  @media (max-width: 310px) {
+    width: 88vw;
+  }
   &__block {
     display: flex;
     flex-direction: column;
@@ -123,6 +126,7 @@
       margin: 0 auto;
       & > * {
         margin: 0 auto;
+        font-size: 15px;
       }
     }
     &-label {
@@ -163,10 +167,10 @@
   &__select {
     padding: 5px;
     @media (max-width: 555px) {
-      width: 310px;
+      width: 312px;
     }
     @media (max-width: 345px) {
-      width: 210px;
+      width: 213px;
     }
     @media (max-width: 240px) {
       width: 190px;
