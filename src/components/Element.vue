@@ -75,7 +75,6 @@ export default {
   width: 26px;
   padding: 5px 2px;
   opacity: 0.8;
-  font-size: 18px;
   font-weight: bold;
   color: rgba(255, 255, 255, 0.8);
 }
