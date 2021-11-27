@@ -30,6 +30,7 @@
           v-else
           class="searchelem__input"
           v-model="querystr"
+          @input="searchfn"
           type="text"
           placeholder="Что ищем?"
         />
