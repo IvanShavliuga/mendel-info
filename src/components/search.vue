@@ -4,62 +4,40 @@
       <label class="searchelem__block-label" for="names">Имя элемента</label>
       <span class="searchelem__block-label searchelem__block-combo">
         <select class="searchelem__select" id="names" v-model="nametype">
-          <option class="searchelem__select-option" value="short">Символ элемента</option>
+          <option class="searc-labelhelem__select-option" value="short">Символ элемента</option>
           <option class="searc-labelhelem__select-option" value="runame">Русское название</option>
           <option class="searc-labelhelem__select-option" value="lat">Латинское название</option>
+          <option class="searc-labelhelem__select-option" value="type">Тип элемента</option>
+          <option class="searc-labelhelem__select-option" value="mass">Масса</option>
+          <option class="searc-labelhelem__select-option" value="oxi">Степень окисления</option>
+          <option class="searc-labelhelem__select-option" value="num">Номер элемента</option>
+        </select>
+        <select
+          v-if="nametype==='type'"
+          class="searchelem__select"
+          id="types"
+          @click="searchfn"
+          v-model="seltype">
+          <option
+            v-for="(t,k) in types"
+            class="searc-labelhelem__select-option"
+            :value="t"
+            :key="k">
+            {{ t }}
+          </option>
         </select>
         <input
+          v-else
           class="searchelem__input"
-          v-model="nameelem"
+          v-model="querystr"
+          @input="searchfn"
           type="text"
-          placeholder="Xe"
-          @input="filtername"
+          placeholder="Что ищем?"
         />
       </span>
     </div>
     <div class="searchelem__block">
-      <label class="searchelem__block-label" for="mass">Масса</label>
-      <span class="searchelem__block-label">
-        <input
-          class="searchelem__input"
-          type="number"
-          id="mass"
-          v-model="masselem"
-          placeholder="1"
-          @keypress.space="resetfilter"
-          @input="selmass"
-        />
-      </span>
-    </div>
-    <div class="searchelem__block">
-      <label class="searchelem__block-label" for="mass">Порядковый номер</label>
-      <span class="searchelem__block-label">
-        <input
-          class="searchelem__input"
-          type="number"
-          id="num"
-          v-model="numselem"
-          placeholder="1"
-          @keypress.space="resetfilter"
-          @input="selnum"
-        />
-      </span>
-    </div>
-    <div class="searchelem__block">
-      <label class="searchelem__block-label">Степени окисления</label>
-      <span class="searchelem__block-label">
-        <input
-          class="searchelem__input"
-          type="text"
-          id="mass"
-          v-model="oxi"
-          @keypress.space="resetfilter"
-          @input="seloxi"
-          placeholder="-1, +2"
-        />
-      </span>
-    </div>
-    <div class="searchelem__block">
+      <button class="searchelem__button" @click="searchfn" @keypress.enter="searchfn">Найти</button>
       <button class="searchelem__button" @click="resetfilter" @keypress.space="resetfilter">Очистить</button>
       <button class="searchelem__button" style="display: none">Списком</button>
     </div>
@@ -141,27 +119,21 @@
   }
   &__input {
     padding: 6px 5px;
-    width: 150px;
-    @media (max-width: 600px) {
-      width: 300px;
-    }
-    @media (max-width: 345px) {
-      width: 200px;
-    }
-    @media (max-width: 240px) {
-      width: 180px;
+    width: 500px;
+    @media (max-width: 555px) {
+      width: 288px;
     }
   }
   &__select {
     padding: 5px;
+    &:last-child {
+      width: 500px;
+    }
     @media (max-width: 555px) {
-      width: 312px;
-    }
-    @media (max-width: 345px) {
-      width: 213px;
-    }
-    @media (max-width: 240px) {
-      width: 190px;
+      width: 300px;
+      &:last-child {
+        width: 300px;
+      }
     }
   }
   &__button {
@@ -216,55 +188,50 @@ export default {
         'актинид'
       ],
       selt: 'все',
-      nameelem: '',
-      nametype: 'short',
-      masselem: 1,
-      numselem: 1,
-      oxi: ''
+      seltype: '',
+      querystr: '',
+      nametype: 'short'
     }
   },
   methods: {
-    seltype () {
-      if (!this.selt.length) {
-        this.resetfilter()
+    searchfn () {
+      switch (this.nametype) {
+        case 'lat':
+        case 'runame':
+        case 'short':
+          this.$store.dispatch('selElements', {
+            type: this.nametype,
+            query: this.querystr
+          })
+          break
+        case 'type':
+          this.$store.dispatch('selElements', {
+            type: 'type',
+            query: this.querystr
+          })
+          break
+        case 'mass':
+          this.$store.dispatch('selElements', {
+            type: 'mass',
+            query: '' + this.querystr,
+            num: this.querystr
+          })
+          break
+        case 'oxi':
+          this.$store.dispatch('selElements', {
+            type: 'oxi',
+            query: this.querystr,
+            num: 0
+          })
+          break
+        case 'num':
+          this.$store.dispatch('selElements', {
+            type: 'num',
+            query: '' + this.querystr,
+            num: this.querystr
+          })
+          break
       }
-      this.$store.dispatch('selElements', {
-        type: 'type',
-        query: this.selt
-      })
-    },
-    seloxi () {
-      this.$store.dispatch('selElements', {
-        type: 'oxi',
-        query: this.oxi,
-        num: 0
-      })
-    },
-    selmass () {
-      this.$store.dispatch('selElements', {
-        type: 'mass',
-        query: '' + this.masselem,
-        num: this.masselem
-      })
-    },
-    selnum () {
-      console.log(this.numselem)
-      this.$store.dispatch('selElements', {
-        type: 'num',
-        query: '' + this.numselem,
-        num: this.numselem
-      })
-    },
-    filtername () {
-      this.selt = 'все'
-      if (!this.nameelem.length) {
-        this.resetfilter()
-      }
-      console.log(this.nameelem)
-      this.$store.dispatch('selElements', {
-        type: this.nametype,
-        query: this.nameelem
-      })
     },
     resetfilter () {
       this.masselem = null
