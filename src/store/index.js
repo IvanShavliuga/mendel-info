@@ -47,6 +47,7 @@ export default new Vuex.Store({
           if (state.elements[i].type === obj.query) {
             state.elements[i].select = true
             count++
+            state.sellist.push(state.elements[i])
           }
         }
         let flt = ''
