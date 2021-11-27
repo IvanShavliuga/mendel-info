@@ -118,27 +118,21 @@
   }
   &__input {
     padding: 6px 5px;
-    width: 150px;
-    @media (max-width: 600px) {
-      width: 300px;
-    }
-    @media (max-width: 345px) {
-      width: 200px;
-    }
-    @media (max-width: 240px) {
-      width: 180px;
+    width: 500px;
+    @media (max-width: 555px) {
+      width: 288px;
     }
   }
   &__select {
     padding: 5px;
+    &:last-child {
+      width: 500px;
+    }
     @media (max-width: 555px) {
-      width: 312px;
-    }
-    @media (max-width: 345px) {
-      width: 213px;
-    }
-    @media (max-width: 240px) {
-      width: 190px;
+      width: 300px;
+      &:last-child {
+        width: 300px;
+      }
     }
   }
   &__button {
@@ -194,7 +188,8 @@ export default {
       ],
       selt: 'все',
       seltype: '',
-      querystr: ''
+      querystr: '',
+      nametype: 'short'
     }
   },
   methods: {
@@ -211,7 +206,7 @@ export default {
         case 'type':
           this.$store.dispatch('selElements', {
             type: 'type',
-            query: this.seltype
+            query: this.querystr
           })
           break
         case 'mass':
