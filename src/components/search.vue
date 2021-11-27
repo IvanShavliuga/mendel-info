@@ -207,7 +207,7 @@ export default {
         case 'type':
           this.$store.dispatch('selElements', {
             type: 'type',
-            query: this.querystr
+            query: this.seltype
           })
           break
         case 'mass':
