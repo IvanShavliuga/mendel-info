@@ -46,37 +46,38 @@
 <style scoped lang="less">
 .searchelem {
   padding: 15px;
-  width: 90%;
+  width: auto;
   margin: 0 auto;
   border: 1px solid #45dbab;
   border-radius: 12px;
   background-color: rgba(#457bab ,0.2);
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   @media (max-width: 830px) {
     flex-wrap: wrap;
-    width: 80vw;
+    // width: 80vw;
     margin: 0 auto;
   }
   @media (max-width: 600px) {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    width: 70vw;
+    // width: 70vw;
     margin: 0 auto;
   }
   @media (max-width: 470px) {
-    width: 80vw;
+    // width: 80vw;
   }
   @media (max-width: 370px) {
-    width: 90vw;
+    // width: 90vw;
   }
   @media (max-width: 310px) {
-    width: 88vw;
+   // width: 88vw;
   }
   &__block {
     display: flex;
     flex-direction: column;
+    margin: 0 10px;
     /* @media (max-width: 740px) {
       width: 170px;
       margin: 10px auto;
@@ -86,6 +87,14 @@
       @media (max-width: 1125px) and (min-width: 800px){
         flex-direction: column;
       }
+    }
+    @media (min-width: 851px) {
+      &:first-child {
+        width: 70vw;
+      }
+    }
+    @media (max-width: 850px) {
+      margin: 0 5px;
     }
     @media (max-width: 600px) {
       // width: 80%;
@@ -120,6 +129,9 @@
   &__input {
     padding: 6px 5px;
     width: 500px;
+    @media (min-width: 851px) {
+      width: 70%;
+    }
     @media (max-width: 555px) {
       width: 288px;
     }
