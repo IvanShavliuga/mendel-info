@@ -108,7 +108,6 @@ export default new Vuex.Store({
         }
       }
       state.searchcount = count
-      console.log(state.sellist)
       if (count === 1) state.select = state.sellist[0]
       if (count === 0) state.select = null
       if (obj.type === 'type' && obj.query === 'все') state.modeview = false
@@ -129,7 +128,6 @@ export default new Vuex.Store({
       commit('SEL_ELEMENT', obj)
     },
     selElements ({ commit }, obj) {
-      console.log('action')
       commit('SEL_ELEMENTS', obj)
     },
     resetFilter ({ commit }) {
