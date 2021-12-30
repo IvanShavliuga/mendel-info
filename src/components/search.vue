@@ -84,7 +84,7 @@
     }*/
     &:last-child {
       flex-direction: row;
-      @media (max-width: 1125px) and (min-width: 800px){
+      @media (max-width: 945px) and (min-width: 740px){
         flex-direction: column;
       }
     }
