@@ -1,7 +1,8 @@
 <template>
-<table class="results" border="0" cellspacing="1px" width="100%">
-<caption class="results__capiton">Нажмите на элемент, чтобы узнать подробно об элементе, или воспользуйтесь поиском выше.</caption>
-<tbody  v-if="sellist!==null&&(sellist.length>0&&sellist.length<118)">
+<div>
+  <p>Нажмите на элемент, чтобы узнать подробно об элементе, или воспользуйтесь поиском выше.</p>
+<table  v-if="sellist" class="results" border="0" cellspacing="1px" width="100%">
+<tbody  v-if="tableList">
 <tr  class="results__row" ><td class="results__col-header" colspan="14" >Результаты поиска</td></tr>
 <tr  class="results__row" ><td class="results__col-header" colspan="14" >Всего результатов: {{sellist.length}}</td></tr>
 <tr  class="results__row" >
@@ -23,13 +24,27 @@
 <td class="results__col valcell negative">{{rs.electronegativity}}</td>
 <td class="results__col valcell mass">{{rs.mass.toFixed(3)}}</td>
 <td class="results__col valcell oxi">{{rs.oxidation}}</td>
-<!-- <td class="results__col valcell config"><span v-html="rs.config"></span></td> -->
 <td class="results__col valcell temperature">{{rs.melting}}<br>{{rs.bolling}}</td>
 </tr>
 <tr v-if="endPage>1" class="results__row" ><td align="center" class="results__col-header" colspan="14" >
 <span @click="prev">назад</span> | Страница: {{startPage+1}} из {{endPage}} | <span @click="next">вперед</span></td></tr>
 </tbody>
+<tbody v-else-if="mobileDetect && sellist.length < 118">
+<tr  class="results__row" ><td class="results__col-header" colspan="14" >Результаты поиска</td></tr>
+<tr  class="results__row" ><td class="results__col-header" colspan="14" >Всего результатов: {{sellist.length}}</td></tr>
+<tr><td class="results__col-header results__col-props"><div>№<br>Символ</div></td><td class="valcell">{{pagList.index}} {{pagList.shortname}}</td></tr>
+<tr><td class="results__col-header results__col-props" ><div>Название</div></td><td class="valcell"><a :href="fullurl(pagList.link)" :style="'color:'+typecolor(pagList.type)"  target="__blank">{{pagList.rusname}} {{pagList.lat}}</a></td></tr>
+<tr><td class="results__col-header results__col-props" ><div>Тип</div></td><td class="valcell"><span v-html="displayType(pagList.type)"></span></td></tr>
+<tr><td class="results__col-header results__col-props" ><div>Положение</div></td><td class="valcell">{{pagList.pos}}</td></tr>
+<tr><td class="results__col-header results__col-props" ><div>отрицательность</div></td><td class="valcell">{{pagList.electronegativity}}</td></tr>
+<tr><td class="results__col-header results__col-props" ><div>Атомная<br> масса</div></td><td class="valcell">{{pagList.mass.toFixed(3)}}</td></tr>
+<tr><td class="results__col-header results__col-props" ><div>Степени<br>Окисления</div></td><td class="valcell">{{pagList.oxidation}}</td></tr>
+<tr><td class="results__col-header results__col-props" ><div>t<sub>плав</sub><br>t<sub>кип</sub></div></td><td class="valcell">{{pagList.melting}}<br>{{pagList.bolling}}</td></tr>
+<tr v-if="endPage>1" class="results__row" ><td align="center" class="results__col-header" colspan="14" >
+<span @click="prev">назад</span> | Страница: {{startPage+1}} из {{endPage}} | <span @click="next">вперед</span></td></tr>
+</tbody>
 </table>
+</div>
 </template>
 <script>
 import { mapGetters } from 'vuex'
@@ -42,10 +57,27 @@ export default {
   },
   computed: {
     ...mapGetters(['sellist', 'fullurl']),
+    tableList () {
+      return (this.sellist.length > 0 && this.sellist.length < 118) && !this.mobileDetect
+    },
     endPage () {
+      if (this.mobileDetect) {
+        return this.sellist.length
+      }
       return ~~(this.sellist.length / 10 + 1)
     },
+    mobileDetect () {
+      if (window.innerWidth < 678) {
+        return true
+      } else {
+        return false
+      }
+    },
     pagList () {
+      if (this.mobileDetect) {
+        return this.sellist ? this.sellist[this.startPage] : []
+      }
+      if (!this.sellist) return []
       const pagelem = []
       const maxelem = (this.startPage < this.endPage) ? ((this.startPage + 1) * 10) : (this.sellist.length)
       for (let i = this.startPage * 10; i < maxelem; i++) if (this.sellist[i] !== undefined) pagelem.push(this.sellist[i])
@@ -81,7 +113,11 @@ export default {
       if (this.startPage < this.endPage - 1) this.startPage++
     },
     displayType (p) {
-      return p.split(' ').join('<br>')
+      if (p) {
+        return p.split(' ').join('<br>')
+      } else {
+        return ''
+      }
     }
   }
 }
@@ -114,9 +150,6 @@ export default {
         cursor: pointer;
         color: blue;
       }
-      @media (max-width: 560px) {
-        font-size: 10px;
-      }
     }
     a {
       color: black;
@@ -128,26 +161,6 @@ export default {
     &-props {
       text-transform: uppercase;
       background-color: #dedede;
-    }
-    @media (max-width: 1070px) {
-      /* font-size: 12px; */
-      &-header {
-        font-size: 12px;
-        font-weight: normal;
-      }
-    }
-    @media (max-width: 900px) {
-      &-props {
-        word-break: break-all;
-        font-size: 11px;
-      }
-      word-break: break-all;
-    }
-    @media (max-width: 400px) {
-      &-props {
-        font-size: 8px;
-        // writing-mode: vertical-rl;
-      }
     }
   }
 }
@@ -161,6 +174,9 @@ export default {
   width: 60px;
   @media (max-width: 900px) {
     width: 50px;
+  }
+  @media (max-width: 650px) {
+    width: 40px;
   }
 }
 .name {
@@ -216,7 +232,7 @@ export default {
   @media (max-width: 900px) {
     width: 60px;
   }
-  @media (max-width: 600px) {
+  @media (max-width: 650px) {
     width: 30px;
   }
   @media (max-width: 430px) {
@@ -231,7 +247,7 @@ export default {
     width: 70px;
   }
   @media (max-width: 700px) {
-    width: 60px;
+    width: 55px;
   }
   @media (max-width: 430px) {
     width: 40px;
@@ -242,19 +258,16 @@ export default {
   @media (max-width: 900px) {
     width: 70px;
   }
-  @media (max-width: 600px) {
-    width: 3s0px;
+  @media (max-width: 650px) {
+    width: 60px;
   }
   @media (max-width: 370px) {
     width: 30px;
   }
 }
 .valcell {
-  @media (max-width: 720px) {
-    font-size: 12px;
+  @media (max-width: 678px) {
+  background-color: #ededed;
   }
-  /* @media (max-width: 550px) {
-    font-size: 10px;
-  } */
 }
 </style>
