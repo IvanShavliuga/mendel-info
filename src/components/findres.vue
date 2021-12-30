@@ -5,19 +5,19 @@
 <tr  class="results__row" ><td class="results__col-header" colspan="14" >Результаты поиска</td></tr>
 <tr  class="results__row" ><td class="results__col-header" colspan="14" >Всего результатов: {{sellist.length}}</td></tr>
 <tr  class="results__row" >
-<td class="results__col-header results__col-props index" ><div>№<br>Символ</div></td>
+<td class="results__col-header results__col-props index"><div>№<br>Символ</div></td>
 <td class="results__col-header results__col-props name" ><div>Название</div></td>
-<td class="results__col-header results__col-props type" ><div>Тип<br>элемента</div></td>
-<td class="results__col-header results__col-props pos" ><div>Положение<br>(Период,<br>группа)</div></td>
-<td class="results__col-header results__col-props negative" ><div>Электро<br>отрицатель<br>ность</div></td>
+<td class="results__col-header results__col-props type" ><div>Тип</div></td>
+<td class="results__col-header results__col-props pos" ><div>Положение</div></td>
+<td class="results__col-header results__col-props negative" ><div>отрицательность</div></td>
 <td class="results__col-header results__col-props mass" ><div>Атомная<br> масса</div></td>
 <td class="results__col-header results__col-props oxi" ><div>Степени<br>Окисления</div></td>
 <!-- <td class="results__col-header results__col-props config" ><div>Конфигурация</div></td> -->
 <td class="results__col-header results__col-props temperature" ><div>t<sub>плав</sub><br>t<sub>кип</sub></div></td>
 </tr>
-<tr v-for="(rs, key) in pagList" :key="key" :bgcolor="typecolor(rs.type)">
-  <td class="results__col valcell index">{{rs.index}}<br>{{rs.shortname}}</td>
- <td class="results__col valcell name"><a :href="fullurl(rs.link)" target="__blank">{{rs.rusname}}<br>{{rs.lat}}</a></td>
+<tr v-for="(rs, key) in pagList" :key="key" >
+  <td class="results__col valcell index" :style="'color:'+typecolor(rs.type)" >{{rs.index}}<br>{{rs.shortname}}</td>
+ <td class="results__col valcell name"><a :href="fullurl(rs.link)" :style="'color:'+typecolor(rs.type)"  target="__blank">{{rs.rusname}} {{rs.lat}}</a></td>
  <td class="results__col valcell type"><span v-html="displayType(rs.type)"></span></td>
 <td class="results__col valcell pos">{{rs.pos}}</td>
 <td class="results__col valcell negative">{{rs.electronegativity}}</td>
@@ -100,7 +100,8 @@ export default {
     }
   }
   &__col {
-    color: white;
+    color: black;
+    background-color: #ededed;
     height: 25px;
     font-size: 14px;
     padding: 3px 1px;
@@ -118,9 +119,10 @@ export default {
       }
     }
     a {
-      color: white;
+      color: black;
+      font-weight: bold;
       &:visited {
-        color: silver;
+        color: gray;
       }
     }
     &-props {
@@ -134,16 +136,12 @@ export default {
         font-weight: normal;
       }
     }
-    @media (max-width: 890px) {
+    @media (max-width: 900px) {
       &-props {
         word-break: break-all;
+        font-size: 11px;
       }
       word-break: break-all;
-    }
-    @media (max-width: 720px) {
-      &-props {
-        font-size: 10px;
-      }
     }
     @media (max-width: 400px) {
       &-props {
@@ -156,17 +154,28 @@ export default {
 .index {
   width: 45px;
   @media (max-width: 540px) {
-    width: 20px;
+    width: 30px;
   }
 }
 .temperature {
   width: 60px;
-  @media (max-width: 540px) {
-    width: 40px;
+  @media (max-width: 900px) {
+    width: 50px;
+  }
+}
+.name {
+  @media (max-width: 700px) {
+    width: 150px;
+  }
+  @media (max-width: 600px) {
+    width: 130px;
   }
 }
 .type {
-  width: 300px;
+  width: 150px;
+  @media (min-width: 1150px) {
+    width: 200px;
+  }
   @media (max-width: 900px) {
     width: 150px;
   }
@@ -181,7 +190,10 @@ export default {
   }
 }
 .pos {
-  width: 80px;
+  width: 100px;
+  @media (min-width: 1150px) {
+    width: 200px;
+  }
   @media (max-width: 700px) {
     width: 70px;
   }
@@ -196,16 +208,19 @@ export default {
 .negative,
 .mass {
   width: 85px;
+  @media (min-width: 1150px) {
+    width: 200px;
+  }
 }
 .negative {
-  @media (max-width: 700px) {
-    width: 70px;
+  @media (max-width: 900px) {
+    width: 60px;
   }
-  @media (max-width: 540px) {
-    width: 50px;
+  @media (max-width: 600px) {
+    width: 30px;
   }
   @media (max-width: 430px) {
-    width: 40px;
+    width: 30px;
   }
   @media (max-width: 370px) {
     width: 30px;
@@ -216,19 +231,19 @@ export default {
     width: 70px;
   }
   @media (max-width: 700px) {
-    width: 50px;
+    width: 60px;
   }
   @media (max-width: 430px) {
     width: 40px;
   }
 }
 .oxi {
-  width: 80px;
-  @media (max-width: 700px) {
+  width: 100px;
+  @media (max-width: 900px) {
     width: 70px;
   }
-  @media (max-width: 540px) {
-    width: 40px;
+  @media (max-width: 600px) {
+    width: 3s0px;
   }
   @media (max-width: 370px) {
     width: 30px;
@@ -238,8 +253,8 @@ export default {
   @media (max-width: 720px) {
     font-size: 12px;
   }
-  @media (max-width: 550px) {
+  /* @media (max-width: 550px) {
     font-size: 10px;
-  }
+  } */
 }
 </style>
