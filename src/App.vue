@@ -5,12 +5,17 @@
 </template>
 <script>
 import appHome from './views/Home.vue'
-
+import Axios from 'axios'
 export default {
   name: 'Home',
   components: {
     appHome
-  }
+  },
+  data () {
+    return {
+      getDataTest: null
+    }
+  },
 }
 </script>
 <style lang="less">
